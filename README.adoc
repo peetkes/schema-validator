@@ -1,0 +1,102 @@
+= schematron-test
+:source-highlighter: rouge
+:source-language: xslt
+:icons: font
+
+*Adjust MarkLogic Schematron validation so it can accept parameters during schematron transformation*
+
+Did you ever wonder if it is possible to pass in external parameters during a schematron validation?
+
+With the default iso-schematron it is not possible out-of-the-box. +
+But as a schematron validation is in effect an xslt transformation, you should be able to pass in external parameters which can be used in a schematron rule/assert or report.
+
+== ISO Schematron implementation in MarkLogic
+
+The iso-schematron implementation used by MarkLogic consists of 4 xslt stylesheets and an xquery module:
+
+* iso_dsdl_include.xsl, inclusion preprocessor for the non-smart text inclusions of ISO DSDL
+* iso_abstract_expand.xsl, preprocessor which implements abstract patterns
+* iso_schematron_skeleton_for_ML.xsl, scheleton module for ISO Schematron specific for use in MarkLogic
+* iso_svrl_for_xslt2.xsl, implementation of Schematron Validation Report Language from ISO Schematron, imports the iso_schematron_skeleton_for_ML.xsl.
+* sch-lib.xqy, definition of a document function that is used inside the iso_dsdl_include stylesheet to pull documents from the database
+
+With these 5 components you can build a Schematron processor enirely in XSLT. It transforms a Schematron schema document into an XSLT stylesheet that can be applied to the xml document(s) to validate.
+
+The following set of parameters can be set to influence the validation process:
+
+.Schematron Parameters
+[options="header"]
+|===
+| Parameter | Value | Description
+| phase | NMTOKEN \| #ALL (default) | Select the phase for validation
+| allow-foreign | true \| false (default)  | Pass non-Schematron elements and rich markup to the generated stylesheet
+| diagnose | true (default) \| false  | Add the diagnostics to the assertion test in reports
+| property | true (default) \| false | Experimental: Add properties to the assertion test in reports
+| generate-paths | true (default) \| false | generate the @location attribute with XPaths
+| sch.exslt.imports |  | semi-colon delimited string of filenames for some EXSLT implementations
+| optimize | "visit-no-attributes" (default empty) | Use only when the schema has no attributes as the context nodes
+| generate-fired-rule | true (default) \| false | Generate fired-rule elements
+| terminate | true \| false (default) | Terminate on the first failed assertion or successful report
+|===
+
+First step is to apply the iso_dsdl_include.xsl stylesheet to the Schematron schema file. +
+Second step is to apply the iso_abstract_expand.xsl stylesheet to the result of step1. +
+The final step is to apply the iso_svrl_for_xslt2.xsl stylesheet to the result of step2.
+
+## XQuery implementation in MarkLogic
+
+The xquery implementation in MarkLogic consists of a set of xquery functions for compiling, storing, reading and executing the schematron validation.
+
+- schematron:compile($schema, [$params]), compiles the schematron schema into a validator-xslt stylesheet and returns it
+- schematron:delete($schematron-uri), deletes both the schematron schema from the schemas database and the validator-xslt stylesheet from the modules database
+- schematron:get($schematron-uri), returns the validator-xslt from the modules database
+- schematron:put($schematron-uri, [$params]), compiles the schematron schema from the schemas database and puts the generated validator-xslt into the modules database
+- schematron:validate($document, validator-xslt), validates the given document against the given validator-xslt and returns the output of the validation in SVRL (Schematron Validation Report Language) format
+
+As the default ISO Schematron implementation does not support passing parameters to the resulting schema validator xsl stylesheet, the xquery validation function also does not support that behaviour.
+
+If we want to accomplish the passing of parameters into the validation process, we need to first make sure the validator-xslt stylesheet has a parameter that can be passed in in the validation method.
+Fortunately we can accomplish that by extending the iso_svrl_for_xslt2.xsl stylesheet.
+
+For this purpose we create a new wrapper for the default *iso_svrl_for_xslt2* implementation that imports the original *iso_svrl_for_xslt2* implementation and call that *iso_svrl_for_xslt2_wrapper.xsl*.
+
+This file should overwrite the template *process-prolog* to also accept an extra parameter. See below on line 24
+
+.Wrapper for default iso_svrl_for_xslt2 implementation
+[source,xml,linenums,highlight='24']
+----
+<xsl:stylesheet
+        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+        xmlns:axsl="http://www.w3.org/1999/XSL/TransformAlias"
+        xmlns:exsl="http://exslt.org/common"
+        extension-element-prefixes="exsl"
+        version="2.0">
+
+  <xsl:import href="/MarkLogic/schematron/iso-schematron/iso_svrl_for_xslt2.xsl"/>
+
+  <xsl:template name="processing-instruction">
+    <xsl:copy-of select="./processing-instruction()" />
+  </xsl:template>
+
+  <xsl:template name="process-prolog">
+    <xsl:call-template name="processing-instruction"/>
+    <!--
+      This is used to pass in a parameter map which can be used inside the schematron rules
+      Param parameters is a map with key value items that can be used in the schematron rules.
+      To access values from the map you should use map:get($parameters,'key').
+      Make sure to add the following namespace definition into your schematron file:
+      <sch:ns prefix="map" uri="http://marklogic.com/xdmp/map"/>
+    -->
+    <axsl:param name="parameters"/>
+
+    <axsl:output method="xml" omit-xml-declaration="no" standalone="yes"
+                 indent="yes">
+      <xsl:if test=" string-length($output-encoding) &gt; 0">
+        <xsl:attribute name="encoding"><xsl:value-of select=" $output-encoding" /></xsl:attribute>
+      </xsl:if>
+    </axsl:output>
+  </xsl:template>
+
+</xsl:stylesheet>
+----
+
