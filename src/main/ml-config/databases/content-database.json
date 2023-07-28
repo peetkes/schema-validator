@@ -1,0 +1,56 @@
+{
+  "database-name" : "%%DATABASE%%",
+  "triggers-database": "%%TRIGGERS_DATABASE%%",
+  "schema-database": "%%SCHEMAS_DATABASE%%",
+  "range-element-attribute-index" : [ {
+    "scalar-type" : "string",
+    "parent-namespace-uri" : "urn:oasis:names:tc:entity:xmlns:xml:catalog",
+    "parent-localname" : "uri",
+    "namespace-uri" : "",
+    "localname" : "uri",
+    "collation" : "http://marklogic.com/collation/",
+    "range-value-positions" : true,
+    "invalid-values" : "reject"
+  }, {
+    "scalar-type" : "string",
+    "parent-namespace-uri" : "urn:oasis:names:tc:entity:xmlns:xml:catalog",
+    "parent-localname" : "uri",
+    "namespace-uri" : "",
+    "localname" : "name",
+    "collation" : "http://marklogic.com/collation/",
+    "range-value-positions" : true,
+    "invalid-values" : "reject"
+  }],
+  "field": [ {
+    "field-name": "range",
+    "metadata": "",
+    "stemmed-searches": "off",
+    "word-searches": false,
+    "field-value-searches": true,
+    "fast-phrase-searches": false,
+    "fast-case-sensitive-searches": false,
+    "fast-diacritic-sensitive-searches": false
+  }, {
+    "field-name": "schemaGroup",
+    "metadata": "",
+    "stemmed-searches": "off",
+    "word-searches": false,
+    "field-value-searches": true,
+    "fast-phrase-searches": false,
+    "fast-case-sensitive-searches": false,
+    "fast-diacritic-sensitive-searches": false
+  } ],
+  "range-field-index": [ {
+      "scalar-type": "string",
+      "collation": "http://marklogic.com/collation/",
+      "field-name": "range",
+      "range-value-positions": false,
+      "invalid-values": "reject"
+  }, {
+    "scalar-type": "string",
+    "collation": "http://marklogic.com/collation/",
+    "field-name": "schemaGroup",
+    "range-value-positions": false,
+    "invalid-values": "reject"
+  } ]
+}

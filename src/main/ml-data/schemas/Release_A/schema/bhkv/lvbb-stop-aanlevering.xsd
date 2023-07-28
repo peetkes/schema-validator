@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+  targetNamespace="https://standaarden.overheid.nl/lvbb/stop/aanlevering/" version="1.2.0"
+  xmlns:data="https://standaarden.overheid.nl/stop/imop/data/"
+  xmlns:gio="https://standaarden.overheid.nl/stop/imop/gio/"
+  xmlns:imop="https://standaarden.overheid.nl/stop/imop/"
+  xmlns:lvbba="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+  xmlns:se="http://www.opengis.net/se"
+  xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation>LVBB-Aanlevering-schema</xs:documentation>
+    <xs:documentation>versie 1.2.0</xs:documentation>
+  </xs:annotation>
+
+  <!-- xs:appinfo om geincludeerde STOP-versie vast te leggen -->
+  <xs:annotation>
+    <xs:appinfo>
+      <imop:STOPversie>1.3.0</imop:STOPversie>
+    </xs:appinfo>
+  </xs:annotation>
+
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/data/"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.3.0/imop-data.xsd" />
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/tekst/"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.3.0/imop-tekst.xsd" />
+  <xs:import namespace="http://www.opengis.net/se"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.3.0/se-FeatureStyle-imop.xsd" />
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/gio/"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.3.0/imop-gio.xsd" />
+
+  <!--
+    AANLEVEREN BESLUIT
+  -->
+  <xs:element name="AanleveringBesluit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="lvbba:BesluitVersie" />
+        <xs:element maxOccurs="unbounded" minOccurs="0" ref="lvbba:RegelingVersieInformatie" />
+      </xs:sequence>
+      <xs:attributeGroup ref="lvbba:agSchemaversie" />
+    </xs:complexType>
+  </xs:element>
+
+  <!-- 
+    AANLEVEREN GENERIEK INFORMATIEOBJECT
+  -->
+  <xs:element name="AanleveringInformatieObject">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="lvbba:InformatieObjectVersie" />
+      </xs:choice>
+      <xs:attributeGroup ref="lvbba:agSchemaversie" />
+    </xs:complexType>
+  </xs:element>
+
+  <!--
+    AANLEVEREN KENNISGEVING
+  -->
+  <xs:element name="AanleveringKennisgeving">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="lvbba:KennisgevingVersie" />
+      </xs:sequence>
+      <xs:attributeGroup ref="lvbba:agSchemaversie" />
+    </xs:complexType>
+  </xs:element>
+
+  <!-- 
+    AANLEVEREN REGELINGVERSIE (RENVOOISERVICE)
+  -->
+  <xs:element name="RegelingVersie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie" />
+          <xs:element maxOccurs="1" minOccurs="1" ref="data:RegelingVersieMetadata" />
+          <xs:element maxOccurs="1" minOccurs="0" ref="data:RegelingMetadata" />
+        </xs:sequence>
+        <xs:choice>
+          <xs:element maxOccurs="1" minOccurs="1" ref="tekst:RegelingKlassiek" />
+          <xs:element maxOccurs="1" minOccurs="1" ref="tekst:RegelingCompact" />
+          <xs:element maxOccurs="1" minOccurs="1" ref="tekst:RegelingTijdelijkdeel" />
+          <xs:element maxOccurs="1" minOccurs="1" ref="tekst:RegelingVrijetekst" />
+        </xs:choice>
+      </xs:sequence>
+      <xs:attributeGroup ref="lvbba:agSchemaversie" />
+    </xs:complexType>
+  </xs:element>
+
+  <!--
+    INSTRUMENT-SPECIFIEKE INCLUSIES
+  -->
+  <xs:element name="BesluitVersie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:BesluitMetadata" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloop" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:ConsolidatieInformatie" />
+        <xs:choice>
+          <xs:element maxOccurs="1" minOccurs="1" ref="tekst:BesluitKlassiek" />
+          <xs:element maxOccurs="1" minOccurs="1" ref="tekst:BesluitCompact" />
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="KennisgevingVersie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:KennisgevingMetadata" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="data:Procedureverloopmutatie" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="tekst:Kennisgeving" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="InformatieObjectVersie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="data:ExpressionIdentificatie" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:InformatieObjectVersieMetadata" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="data:InformatieObjectMetadata" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="se:FeatureTypeStyle" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="gio:JuridischeBorgingVan"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="RegelingVersieInformatie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:ExpressionIdentificatie" />
+        <xs:element maxOccurs="1" minOccurs="1" ref="data:RegelingVersieMetadata" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="data:RegelingMetadata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- generiek -->
+  <xs:attributeGroup name="agSchemaversie">
+    <xs:attribute name="schemaversie" type="xs:token" use="required" />
+  </xs:attributeGroup>
+
+</xs:schema>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="https://standaarden.overheid.nl/lvbb/1.2.0/gb-meta.xsd" uri="gb-meta.xsd"/>
+  <uri name="https://standaarden.overheid.nl/lvbb/1.2.0/lvbb-stop-aanlevering.xsd" uri="lvbb-stop-aanlevering.xsd"/>
+  <uri name="https://standaarden.overheid.nl/lvbb/1.2.0/lvbb-transport.xsd" uri="lvbb-transport.xsd"/>
+  <uri name="https://standaarden.overheid.nl/lvbb/1.2.0/stop_toevoeging.xsd" uri="stop_toevoeging.xsd"/>
+  <uri name="https://standaarden.overheid.nl/lvbb/1.2.0/lvbb-aanlevering-io.sch" uri="lvbb-aanlevering-io.sch"/>
+  <uri name="https://standaarden.overheid.nl/lvbb/1.2.0/lvbb-aanlevering.sch" uri="lvbb-aanlevering.sch"/>
+</catalog>

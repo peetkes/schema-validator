@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+	xmlns:stop="http://www.overheid.nl/2017/stop"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" targetNamespace="http://www.overheid.nl/2017/stop"
+	version="1.2.0">
+
+	<!--===========================================================================
+	
+	Uitbreidingen van het STOP schema om meldingen te modelleren
+
+	Dit schema onderdeel zal deel gaan uitmaken van het STOP schema.
+
+	============================================================================-->
+
+	<xs:complexType name="melding">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string"/>
+			<xs:element name="ernst" type="stop:MeldingErnstType"/>
+			<xs:element name="soort" type="stop:MeldingSoortCode"/>
+			<xs:element name="categorie" type="xs:string" minOccurs="0"/>
+			<xs:element name="beschrijving" type="xs:string"/>
+			<xs:element name="metadata" minOccurs="0">
+				<!--
+				Hier verwijzing naar STOP metadata type opnemen
+				-->
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="uitspraak" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType mixed="true">
+								<xs:attribute name="property" type="xs:string" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="MeldingErnstType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="fout"/>
+			<xs:enumeration value="waarschuwing"/>
+			<xs:enumeration value="informatie"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="MeldingSoortCode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="technisch"/>
+			<xs:enumeration value="inhoudelijk"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

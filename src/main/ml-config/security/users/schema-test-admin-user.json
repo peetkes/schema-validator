@@ -1,0 +1,5 @@
+{
+  "user-name" : "schema-test-admin",
+  "password" : "schema-test-admin",
+  "role" : [ "schema-test-admin" ]
+}

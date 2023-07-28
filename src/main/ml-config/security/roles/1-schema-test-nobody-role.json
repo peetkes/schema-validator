@@ -1,0 +1,5 @@
+{
+  "role-name" : "schema-test-nobody",
+  "description" : "Unauthenticated user",
+  "role" : [ ]
+}
