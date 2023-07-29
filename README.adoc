@@ -12,7 +12,7 @@ But as a schematron validation is in effect an xslt transformation, you should b
 
 == ISO Schematron implementation in MarkLogic
 
-The iso-schematron implementation used by MarkLogic consists of 4 xslt stylesheets and an xquery module:
+The iso-schematron implementation used by MarkLogic consists of 4 xslt stylesheets and 1 xquery module:
 
 * iso_dsdl_include.xsl, inclusion preprocessor for the non-smart text inclusions of ISO DSDL
 * iso_abstract_expand.xsl, preprocessor which implements abstract patterns
@@ -60,7 +60,7 @@ Fortunately we can accomplish that by extending the iso_svrl_for_xslt2.xsl style
 
 For this purpose we create a new wrapper for the default *iso_svrl_for_xslt2* implementation that imports the original *iso_svrl_for_xslt2* implementation and call that *iso_svrl_for_xslt2_wrapper.xsl*.
 
-This file should overwrite the template *process-prolog* to also accept an extra parameter. See below on line 24
+This file should overwrite the template *process-prolog* to also accept an extra parameter. See below `<axsl:param name="parameters"/>` on line 24
 
 .Wrapper for default iso_svrl_for_xslt2 implementation
 [source,xml,linenums,highlight='24']
@@ -100,3 +100,189 @@ This file should overwrite the template *process-prolog* to also accept an extra
 </xsl:stylesheet>
 ----
 
+Next step is to create a custom module that wraps the original MarkLogic schematron:* functions mentioned in the list above. +
+There are 2 functions that don't need to be changed, we can just create a default wrapper for those functions:
+
+- schematron:get
+_ schematron:delete
+
+.Default xquery wrapper functions
+[source,xquery]
+----
+xquery version "1.0-ml";
+module namespace schematron = "http://marklogic.com/xdmp/my-schematron";
+import module namespace ml-schematron="http://marklogic.com/xdmp/schematron" at "/MarkLogic/schematron/schematron.xqy";
+
+declare option xdmp:mapping "false";
+
+declare function schematron:get(
+  $schematron-uri as xs:string
+) as document-node()
+{
+  ml-schematron:get($schematron-uri)
+};
+
+declare function schematron:delete(
+  $schematron-uri as xs:string
+) as empty-sequence()
+{
+  ml-schematron:delete($schematron-uri)
+};
+----
+
+.Override for MarkLogic schematron:compile, schematron:put and schematron:validate
+[source,xquery]
+----
+xquery version "1.0-ml";
+module namespace schematron = "http://marklogic.com/xdmp/my-schematron";
+import module namespace ml-schematron="http://marklogic.com/xdmp/schematron" at "/MarkLogic/schematron/schematron.xqy";
+
+declare namespace sch = "http://purl.oclc.org/dsdl/schematron";
+
+declare option xdmp:mapping "false";
+
+declare variable $TRACE_ID as xs:string := "koop-schematron";
+
+declare variable $SVRL-FOR-XSLT2 := "iso-schematron/iso_svrl_for_xslt2_wrapper.xsl";
+declare variable $INCLUDE := "/MarkLogic/schematron/iso-schematron/iso_dsdl_include.xsl";
+declare variable $EXPAND := "/MarkLogic/schematron/iso-schematron/iso_abstract_expand.xsl";
+
+(:~
+ : Empty params wrapper for the schematron:compile function
+ :
+ : @param $schema     the schematron schema node to compile
+ : @return The compiled schematron schema as validator-xslt
+ :)
+declare function schematron:compile(
+    $schema as element(sch:schema)
+) as document-node()
+{
+  schematron:compile($schema, ())
+};
+
+(:~
+ : Compile Schematron schema and return the validator XSLT.
+ : Default behaviour is no validation of the schematron schema
+ : If schema validation is required, pass in a parameter key 'validate-schema' with value true
+ : Throws an error if the schematron schema is bad
+ :
+ : @param $schema     the schematron schema node to compile
+ : @param $params     map with parameters for the transformation
+ : @return The compiled schematron schema as validator-xslt
+ :)
+declare function schematron:compile(
+    $schema as element(sch:schema),
+    $params as map:map?
+) as document-node()
+{
+  let $step1 := xdmp:xslt-invoke($INCLUDE, document { $schema }, $params)
+
+  let $validate-schema :=
+    if (xs:string(map:get($params, "validate-schema"))="true")
+    then validate full { $step1 }
+    else ()
+
+  let $step2 := xdmp:xslt-invoke($EXPAND, $step1, $params)
+  let $validator-xslt := xdmp:xslt-invoke($SVRL-FOR-XSLT2, $step2, $params)
+  return document { $validator-xslt }
+};
+
+(:~
+ : Empty params wrapper for the schematron:put function
+ :
+ : @param $schematron-uri     the uro of the schematron schema in teh schemas database
+ : @return empty-sequence
+ :)
+declare function schematron:put(
+  $schematron-uri as xs:string
+) as empty-sequence()
+{
+  schematron:put($schematron-uri, ())
+};
+
+(:~
+ : Compile Schematron schema from Schemas database and store the compiled schema in modules database
+ : Default behaviour is no validation of the schematron schema
+ : If schema validation is required, pass in a parameter key 'validate-schema' with value true
+ : Throws an error if the schematron schema is bad or cannot be found
+ :
+ : @param $schematron-uri     the uri of the schematron schema in teh schemas database
+ : @param $params             map with parameters for the transformation
+ : @return empty-sequence
+ :)
+declare function schematron:put(
+  $schematron-uri as xs:string,
+  $params as map:map?
+) as empty-sequence()
+{
+  let $schema := xdmp:eval(
+    $ml-schematron:get-schema,
+    (xs:QName("schematron-uri"), $schematron-uri),
+    <options xmlns="xdmp:eval">
+      <database>{xdmp:schema-database()}</database>
+    </options>)
+
+  let $schema-presence-check :=
+    if (fn:exists ($schema))
+    then ()
+    else (fn:error((), 'SCHEMATRON-SCHEMANOTFOUND', $schematron-uri))
+
+  let $step1 := xdmp:xslt-invoke($INCLUDE, $schema, $params)
+  let $validate-schema :=
+    if (xs:string(map:get($params, "validate-schema"))="true")
+    then validate full { $step1 }
+    else ()
+
+  let $step2 := xdmp:xslt-invoke($EXPAND, $step1, $params)
+  let $validator-xslt := xdmp:xslt-invoke($SVRL-FOR-XSLT2, $step2, $params)
+  let $validator-uri := fn:concat($schematron-uri,"-validator.xsl")
+  return xdmp:eval($ml-schematron:put-validator,
+    ( xs:QName("validator-uri"), $validator-uri,
+      xs:QName("validator-xslt"), $validator-xslt
+    ),
+    <options xmlns="xdmp:eval">
+      <database>{xdmp:modules-database()}</database>
+    </options>)
+};
+
+(:~
+ : Empty params wrapper for the schematron:validate function
+ :
+ : @param  $document        document node to validate
+ : @param  $validator-xslt  validator-xslt node to use for validation
+ : @return  output of the validation in SVRL format
+ :)
+declare function schematron:validate(
+  $document as node(),
+  $validator-xslt as document-node()
+) as node()
+{
+  xdmp:trace($TRACE_ID, fn:concat("Inside validate#2")),
+  schematron:validate($document, $validator-xslt, ())
+};
+
+(:~
+ : Validator function that validates the given document against the given validator-xslt
+ : one can pass in an optional map with parameters
+ :
+ : @param  $document        document node to validate
+ : @param  $validator-xslt  validator-xslt node to use for validation
+ : @return  output of the validation in SVRL format
+ :)
+declare function schematron:validate(
+  $document as node(),
+  $validator-xslt as document-node(),
+  $params as map:map?
+) as node()
+{
+  let $parameters := map:map()=>map:with("parameters", if (fn:exists($params)) then $params else map:map())
+  return
+    if (xdmp:node-kind($document)="document")
+    then xdmp:xslt-eval($validator-xslt, $document, $parameters)
+    else xdmp:xslt-eval($validator-xslt, document { $document }, $parameters)
+};
+----
+
+## A working example
+
+Now that we have all the plumbing set up it is time to do a test run.

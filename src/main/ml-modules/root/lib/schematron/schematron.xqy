@@ -1,4 +1,5 @@
 xquery version "1.0-ml";
+(: Copyright (c) 2020 MarkLogic Corporation :)
 module namespace schematron = "http://marklogic.com/xdmp/my-schematron";
 import module namespace ml-schematron="http://marklogic.com/xdmp/schematron" at "/MarkLogic/schematron/schematron.xqy";
 

@@ -1,0 +1,271 @@
+<export><workspace name="Schemas"><query name="Query 1" focus="false" listorder="1" taborder="1" active="true" database="16814690712747322813" server="14941421935129092831" database-name="lvbb-stop-content" server-name="lvbb-stop" mode="xquery" optimize="1">xquery version "1.0-ml";
+declare namespace cat = "urn:oasis:names:tc:entity:xmlns:xml:catalog";
+
+declare option xdmp:mapping "false";
+
+declare private function local:adjust-location(
+  $org as xs:string,
+  $new as xs:string
+) as xs:string
+{
+  let $org-split := fn:tokenize($org, "/")
+  let $new-split := fn:tokenize($new, "/")
+  return 
+    if (fn:count(fn:filter(function($a) { $a eq ".." }, $org-split)) gt fn:count($new-split)-1)
+    then fn:error(xs:QName("LOCATION"),"org does not match new", ($org, $new))
+    else local:adjust-location-recurse($org-split, $new-split)
+};
+
+declare function local:adjust-location-recurse(
+  $origin as xs:string*,
+  $new as xs:string*
+) as xs:string
+{
+  if (fn:head($origin) ne "..")
+  then fn:string-join(($new, $origin),"/")
+  else local:adjust-location-recurse($origin[2 to last()], $new[1 to last()-1])
+    
+};
+
+declare private function local:adjust-absolute-location(
+  $node as node()
+) as item()*
+{
+  let $original-location := $node/@schemaLocation/fn:string()
+  let $catalog-uri := cts:uris((), ("limit=1"), cts:element-attribute-range-query(xs:QName("cat:uri"), xs:QName("name"), "=", $original-location))
+  let $prefix := fn:string-join(fn:tokenize($catalog-uri,"/")[1 to last()-1] ,"/")
+  let $newLocation := fn:doc($catalog-uri)//cat:uri[@name eq $original-location]/@uri/fn:string()
+  return (
+    "--abs--",
+    $original-location,
+    fn:concat($prefix, "/", $newLocation),
+    "++abs++"
+  )
+};
+
+declare private function local:adjust-relative-location(
+  $node as node(),
+  $location as xs:string
+) as item()*
+{
+  let $original-location := $node/@schemaLocation/fn:string()
+  let $newLocation := 
+    if (fn:starts-with($original-location, "./") or fn:not(fn:starts-with($original-location, "../")))
+    then fn:concat($location, "/", fn:replace($original-location, "./", ""))
+    else local:adjust-location($original-location, $location)
+  return (
+    "--rel--",
+    $original-location,
+    $newLocation,
+    "++rel++"
+  ) 
+};
+
+declare private function local:adjust-schemaLocation(
+  $uri as xs:string
+) as item()*
+{
+  let $doc := fn:doc($uri)
+  let $nodes := $doc//(xs:import|xs:include)
+  let $location := fn:string-join(fn:tokenize($uri,"/")[1 to last()-1],"/")
+  for $node in $nodes
+  let $is-absolute := fn:matches($node/@schemaLocation/fn:string(), "^(https?://|/)")
+  return 
+    if ($is-absolute)
+    then local:adjust-absolute-location($node)
+    else local:adjust-relative-location($node, $location)
+};
+
+
+let $schema-uri := "/schemas/Release_A/schema/extern/opengis/gml/20070417/gco/basicTypes.xsd"
+let $schema-uri := "/schemas/Release_A/schema/imow/bestanden-ow/deelbestand-ow/IMOW_Deelbestand.xsd"
+return local:adjust-schemaLocation($schema-uri)</query><query name="Query 2" focus="false" listorder="2" taborder="2" active="true" database="16814690712747322813" server="14941421935129092831" database-name="lvbb-stop-content" server-name="lvbb-stop" mode="xquery" optimize="1">xquery version "1.0-ml";
+
+declare private function local:adjust-location(
+  $org as xs:string,
+  $new as xs:string
+) as xs:string
+{
+  let $org-split := fn:tokenize($org, "/")
+  let $new-split := fn:tokenize($new, "/")
+  return 
+    if (fn:count(fn:filter(function($a) { $a eq ".." }, $org-split)) gt fn:count($new-split)-1)
+    then fn:error(xs:QName("LOCATION"),"org does not match new", ($org, $new))
+    else local:adjust-location-recurse($org-split, $new-split)
+};
+
+declare function local:adjust-location-recurse(
+  $origin as xs:string*,
+  $new as xs:string*
+) as xs:string
+{
+  if (fn:head($origin) ne "..")
+  then fn:string-join(($new, $origin),"/")
+  else local:adjust-location-recurse($origin[2 to last()], $new[1 to last()-1])
+    
+};
+
+let $a := "../../../../../../hallo/wereld/file.ext"
+let $loc := "/a/b/c/d/e/f"
+return (
+  local:adjust-location($a, $loc)
+  )</query><query name="Query 3" focus="false" listorder="3" taborder="3" active="true" database="16814690712747322813" server="14941421935129092831" database-name="lvbb-stop-content" server-name="lvbb-stop" mode="xquery" optimize="1">xquery version "1.0-ml";
+
+import module namespace my-schematron="http://marklogic.com/xdmp/my-schematron" at "/lib/schematron/schematron.xqy";
+import module namespace schematron="http://marklogic.com/xdmp/schematron" at "/MarkLogic/schematron/schematron.xqy";
+
+declare namespace sch = "http://purl.oclc.org/dsdl/schematron";
+
+let $schema :=
+&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2" schemaVersion="1.0"&gt;
+&lt;sch:title&gt;user-validation&lt;/sch:title&gt;
+&lt;sch:phase id="phase1"&gt;
+  &lt;sch:active pattern="structural"&gt;&lt;/sch:active&gt;
+&lt;/sch:phase&gt;
+&lt;sch:phase id="phase2"&gt;
+  &lt;sch:active pattern="co-occurence"&gt;&lt;/sch:active&gt;
+&lt;/sch:phase&gt;
+&lt;sch:pattern id="structural"&gt;
+  &lt;sch:rule context="user"&gt;
+    &lt;sch:assert test="@id"&gt;user element should have an id attribute&lt;/sch:assert&gt;
+    &lt;sch:assert test="count(*) = 5"&gt;
+        user element should have 5 child elements: name, gender, age, score and result
+    &lt;/sch:assert&gt;
+    &lt;sch:assert test="score/@total"&gt;score element should have a total attribute&lt;/sch:assert&gt;
+    &lt;sch:assert test="score/count(*) = 2"&gt;score element should have two child elements&lt;/sch:assert&gt;
+  &lt;/sch:rule&gt;
+&lt;/sch:pattern&gt;
+&lt;sch:pattern id="co-occurence"&gt;
+  &lt;sch:rule context="score"&gt;
+    &lt;sch:assert test="@total = test-1 + test-2"&gt;total score must be a sum of test-1 
+                                                and test-2 scores&lt;/sch:assert&gt;
+    &lt;sch:assert test="(@total gt 30 and ../result = 'pass') or 
+                      (@total le 30 and ../result = 'fail')" diagnostics="d1"&gt;
+               if the score is greater than 30 then the result should be 'pass' else 'fail'
+    &lt;/sch:assert&gt;
+  &lt;/sch:rule&gt;
+&lt;/sch:pattern&gt;
+&lt;sch:diagnostics&gt;
+&lt;sch:diagnostic id="d1"&gt;the score does not match with the result&lt;/sch:diagnostic&gt;
+&lt;/sch:diagnostics&gt;
+&lt;/sch:schema&gt;
+
+let $params := map:map()
+let $_put := map:put($params, 'phase', '#ALL')
+let $_put := map:put($params, 'terminate', fn:false())
+let $_put := map:put($params, 'generate-fired-rule', fn:true())
+let $_put := map:put($params, 'generate-paths', fn:true())
+let $_put := map:put($params, 'diagnose', fn:true())
+let $_put := map:put($params, 'allow-foreign', fn:false())
+let $_put := map:put($params, 'validate-schema', fn:true())
+
+return my-schematron:compile($schema, $params) 
+
+
+</query><query name="Query 4" focus="false" listorder="4" taborder="4" active="true" database="6220209346682792732" server="11265807460780016388" database-name="Modules" server-name="App-Services" mode="xquery" optimize="1">xquery version "1.0-ml";
+
+let $uris := cts:uris((),("document"))
+for $uri in  $uris
+let $doc := fn:doc($uri)
+let $permissions := xdmp:document-get-permissions($uri)
+return xdmp:invoke-function(
+  function() {
+    xdmp:document-insert($uri, $doc, $permissions)
+  },
+  map:map()
+  =&gt;map:with("database", xdmp:database("Modules"))
+)
+</query><query name="Insert Schematron" focus="true" listorder="5" taborder="5" active="true" database="9181747992406987430" server="11265807460780016388" database-name="lvbb-stop-schemas" server-name="App-Services" mode="xquery" optimize="1">xquery version "1.0-ml";
+
+xdmp:document-insert("/userSchema.sch",
+&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xdmp="http://marklogic.com/xdmp"
+    queryBinding="xslt2" schemaVersion="1.0"&gt;
+
+  &lt;sch:title&gt;user-validation&lt;/sch:title&gt;
+  &lt;sch:ns prefix="map" uri="http://marklogic.com/xdmp/map"/&gt;
+  
+  &lt;sch:let name="children" value="xs:integer(map:get($parameters,'children'))"/&gt;
+  &lt;sch:let name="score" value="xs:integer(map:get($parameters,'score'))"/&gt;
+  &lt;sch:let name="total" value="xs:integer(map:get($parameters,'total'))"/&gt;
+
+  &lt;sch:phase id="phase1"&gt;
+    &lt;sch:active pattern="structural"&gt;&lt;/sch:active&gt;
+  &lt;/sch:phase&gt;
+  &lt;sch:phase id="phase2"&gt;
+    &lt;sch:active pattern="co-occurence"&gt;&lt;/sch:active&gt;
+  &lt;/sch:phase&gt;
+  &lt;sch:pattern id="structural"&gt;
+    &lt;sch:rule context="user"&gt;
+      &lt;sch:let name="elements" value="string-join(*/local-name(),','"/&gt;
+      &lt;sch:assert test="@id"&gt;user element should have an id attribute&lt;/sch:assert&gt;
+      &lt;sch:assert test="count(*) = $children"&gt;user element should have &lt;sch:value-of select="$children"/&gt; child elements:  
+                                    &lt;sch:value-of select="$elements"/&gt;   
+      &lt;/sch:assert&gt;
+      &lt;sch:assert test="score/@total"&gt;score element should have a total attribute&lt;/sch:assert&gt;
+      &lt;sch:assert test="score/count(*) = $score"&gt;score element should have &lt;sch:value-of select="$score"/&gt; child elements&lt;/sch:assert&gt;
+    &lt;/sch:rule&gt;
+  &lt;/sch:pattern&gt;
+  &lt;sch:pattern id="co-occurence"&gt;
+    &lt;sch:rule context="score"&gt;
+      &lt;sch:assert test="@total = test-1 + test-2"&gt;total score must be a sum  
+                                                  of test-1 and test-2 scores   
+      &lt;/sch:assert&gt;
+      &lt;sch:assert test="(@total gt $total and ../result = 'pass') or  
+                        (@total le $total and ../result = 'fail')" diagnostics="d1"&gt;  
+          if the score is greater than &lt;sch:value-of select="$total"/&gt; then the result should be 'pass' else 'fail'  
+      &lt;/sch:assert&gt;
+    &lt;/sch:rule&gt;
+  &lt;/sch:pattern&gt;
+  &lt;sch:diagnostics&gt;
+    &lt;sch:diagnostic id="d1"&gt;the score does not match with the result&lt;/sch:diagnostic&gt;
+  &lt;/sch:diagnostics&gt;
+&lt;/sch:schema&gt;)</query><query name="Compile and Put Schematron" focus="false" listorder="6" taborder="6" active="true" database="16814690712747322813" server="14941421935129092831" database-name="lvbb-stop-content" server-name="lvbb-stop" mode="xquery" optimize="1">xquery version "1.0-ml"; 
+ 
+import module namespace schematron = "http://marklogic.com/xdmp/my-schematron" 
+      at "/lib/schematron/schematron.xqy";
+
+let $params := map:map()
+let $_put := map:put($params, 'phase', '#ALL')
+let $_put := map:put($params, 'terminate', fn:false())
+let $_put := map:put($params, 'generate-fired-rule', fn:true())
+let $_put := map:put($params, 'generate-paths', fn:true())
+let $_put := map:put($params, 'diagnose', fn:true())
+let $_put := map:put($params, 'allow-foreign', fn:false())
+let $_put := map:put($params, 'validate-schema', fn:true())
+return schematron:put("/userSchema.sch", $params)   
+</query><query name="Query 7" focus="false" listorder="7" taborder="7" active="true" database="16814690712747322813" server="14941421935129092831" database-name="lvbb-stop-content" server-name="lvbb-stop" mode="xquery" optimize="1">xquery version "1.0-ml";
+xdmp:document-insert("/data/user001.xml",
+&lt;user id="001"&gt;
+  &lt;name&gt;Alan&lt;/name&gt;
+  &lt;gender&gt;Male&lt;/gender&gt;
+  &lt;age&gt;14&lt;/age&gt;
+  &lt;score total="90"&gt;
+    &lt;test-1&gt;50&lt;/test-1&gt;
+    &lt;test-2&gt;40&lt;/test-2&gt;
+  &lt;/score&gt;  
+  &lt;result&gt;fail&lt;/result&gt; 
+&lt;/user&gt;)
+
+</query><query name="Query 8" focus="false" listorder="8" taborder="8" active="true" database="16814690712747322813" server="14941421935129092831" database-name="lvbb-stop-content" server-name="lvbb-stop" mode="xquery" optimize="1">xquery version "1.0-ml"; 
+ 
+import module namespace schematron = "http://marklogic.com/xdmp/my-schematron" 
+      at "/lib/schematron/schematron.xqy";
+
+declare option xdmp:mapping "false";
+
+let $params := map:map()
+=&gt;map:with("children", 4)
+=&gt;map:with("score", 2)
+=&gt;map:with("total", 80)
+
+
+return schematron:validate(fn:doc("/data/user001.xml"), schematron:get("/userSchema.sch"),$params)
+</query><query name="Query 9" focus="false" listorder="9" taborder="9" active="true" database="16814690712747322813" server="14941421935129092831" database-name="lvbb-stop-content" server-name="lvbb-stop" mode="xquery" optimize="1">xquery version "1.0-ml";
+
+let $p:= ()
+let $params := map:map()
+=&gt;map:with("params", if (fn:exists($p)) then $p else map:map())
+
+return $params</query></workspace></export>
