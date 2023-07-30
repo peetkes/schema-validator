@@ -48,5 +48,12 @@ task processSchemas(type: com.marklogic.gradle.task.CorbTask) {
     processModule = "transform.xqy"
 }
 
-mlLoadData.finalizedBy processSchemas
-//mlPostDeploy.finalizedBy processSchemas
+task processSchematrons(type: com.marklogic.gradle.task.CorbTask) {
+    xccConnectionUri = contentXccUrl
+    moduleRoot = "/corb/schematron"
+    urisModule = "uris.xqy"
+    processModule = "transform.xqy"
+}
+
+mlLoadData.finalizedBy(processSchemas, processSchematrons)
+mlPostDeploy.finalizedBy(processSchemas, processSchematrons)
