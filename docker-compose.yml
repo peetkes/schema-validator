@@ -1,0 +1,41 @@
+version: '3.6'
+
+services:
+  bootstrap:
+    image: marklogicdb/marklogic-db:10.0-10.2-centos-1.0.2
+    hostname: schematron-test
+    container_name: schematron-test
+    dns_search: ""
+    environment:
+      - MARKLOGIC_INIT=true
+      - MARKLOGIC_ADMIN_USERNAME=admin
+      - MARKLOGIC_ADMIN_PASSWORD=admin
+      - TZ=Europe/Prague
+    volumes:
+      - ./data/MarkLogic/Logs:/var/opt/MarkLogic/Logs:delegated
+      - schematron-test:/var/opt/MarkLogic
+    ports:
+      - 7997:7997
+      - 8000-8002:8000-8002
+      - 8010-8019:8010-8019
+    networks:
+    - external_net
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 8G
+    extra_hosts:
+      host.docker.internal: host-gateway
+
+secrets:
+  mldb_admin_password:
+    file: mldb_admin_password.txt
+  mldb_admin_username:
+    file: mldb_admin_username.txt
+
+networks:
+  external_net: {}
+
+volumes:
+  schematron-test:
