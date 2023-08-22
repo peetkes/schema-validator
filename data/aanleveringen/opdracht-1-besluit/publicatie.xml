@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lvbba:AanleveringBesluit xmlns:lvbba="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+                          schemaversie="1.2.0">
+   <lvbba:BesluitVersie>
+      <data:ExpressionIdentificatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:FRBRWork>/akn/nl/bill/gm0307/2023/B_2023072411_3215743_1</data:FRBRWork>
+         <data:FRBRExpression>/akn/nl/bill/gm0307/2023/B_2023072411_3215743_1/nld@2023-07-24;1</data:FRBRExpression>
+         <data:soortWork>/join/id/stop/work_003</data:soortWork>
+      </data:ExpressionIdentificatie>
+      <data:BesluitMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:eindverantwoordelijke>/tooi/id/gemeente/gm0307</data:eindverantwoordelijke>
+         <data:maker>/tooi/id/gemeente/gm0307</data:maker>
+         <data:officieleTitel>Officiele titel van de aanlevering</data:officieleTitel>
+         <data:onderwerpen>
+            <data:onderwerp>/tooi/def/concept/c_9d1917e9</data:onderwerp>
+         </data:onderwerpen>
+         <data:soortProcedure>/join/id/stop/proceduretype_definitief</data:soortProcedure>
+         <data:soortBestuursorgaan>/tooi/def/thes/kern/c_2a7d8663</data:soortBestuursorgaan>
+      </data:BesluitMetadata>
+      <data:Procedureverloop xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:bekendOp>2023-07-24</data:bekendOp>
+         <data:procedurestappen>
+            <data:Procedurestap>
+               <data:soortStap>/join/id/stop/procedure/stap_003</data:soortStap>
+               <data:voltooidOp>2023-07-24</data:voltooidOp>
+            </data:Procedurestap>
+         </data:procedurestappen>
+      </data:Procedureverloop>
+      <data:ConsolidatieInformatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:BeoogdeRegelgeving>
+            <data:BeoogdeRegeling>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm0307/2023/D_2023072411_3215743_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/akn/nl/act/gm0307/2023/R_2023072411_3215743/nld@1</data:instrumentVersie>
+               <data:eId>art_besluit1</data:eId>
+            </data:BeoogdeRegeling>
+            <data:BeoogdeRegeling>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm0307/2023/D_2023072411_3215743_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/akn/nl/act/gm0356/2023/R_2023072411_3215743/nld@1</data:instrumentVersie>
+               <data:eId>art_besluit1x1</data:eId>
+            </data:BeoogdeRegeling>
+            <data:BeoogdeRegeling>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm0307/2023/D_2023072411_3215743_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/akn/nl/act/gm0344/2023/R_2023072411_3215743/nld@1</data:instrumentVersie>
+               <data:eId>art_besluit1x2</data:eId>
+            </data:BeoogdeRegeling>
+         </data:BeoogdeRegelgeving>
+         <data:Tijdstempels>
+            <data:Tijdstempel>
+               <data:doel>/join/id/proces/gm0307/2023/D_2023072411_3215743_1</data:doel>
+               <data:soortTijdstempel>juridischWerkendVanaf</data:soortTijdstempel>
+               <data:datum>2023-07-24</data:datum>
+               <data:eId>art_besluit2</data:eId>
+            </data:Tijdstempel>
+         </data:Tijdstempels>
+      </data:ConsolidatieInformatie>
+      <tekst:BesluitCompact xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <tekst:RegelingOpschrift eId="longTitle" wId="longTitle">
+            <tekst:Al>Officiele titel van de aanlevering</tekst:Al>
+         </tekst:RegelingOpschrift>
+         <tekst:Aanhef eId="formula_1" wId="formula_1">
+            <tekst:Al>Aanhef van het besluit</tekst:Al>
+         </tekst:Aanhef>
+         <tekst:Lichaam eId="body" wId="body">
+            <tekst:WijzigArtikel eId="art_besluit1" wId="gm0307_1__art_besluit1">
+               <tekst:Kop>
+                  <tekst:Label>Artikel</tekst:Label>
+                  <tekst:Nummer>I</tekst:Nummer>
+               </tekst:Kop>
+               <tekst:Wat>Wijzigingen zoals opgenomen in <tekst:IntRef ref="cmp_besluit">Bijlage A</tekst:IntRef> worden vastgesteld.</tekst:Wat>
+            </tekst:WijzigArtikel>
+            <tekst:WijzigArtikel eId="art_besluit1x1" wId="gm0356_1__art_besluit1">
+               <tekst:Kop>
+                  <tekst:Label>Artikel</tekst:Label>
+                  <tekst:Nummer>I</tekst:Nummer>
+               </tekst:Kop>
+               <tekst:Wat>Wijzigingen zoals opgenomen in <tekst:IntRef ref="cmp_besluitx1">Bijlage A</tekst:IntRef> worden vastgesteld.</tekst:Wat>
+            </tekst:WijzigArtikel>
+            <tekst:WijzigArtikel eId="art_besluit1x2" wId="gm0344_1__art_besluit1">
+               <tekst:Kop>
+                  <tekst:Label>Artikel</tekst:Label>
+                  <tekst:Nummer>I</tekst:Nummer>
+               </tekst:Kop>
+               <tekst:Wat>Wijzigingen zoals opgenomen in <tekst:IntRef ref="cmp_besluitx2">Bijlage A</tekst:IntRef> worden vastgesteld.</tekst:Wat>
+            </tekst:WijzigArtikel>
+            <tekst:Artikel eId="art_besluit2" wId="gm0307_1__art_besluit2">
+               <tekst:Kop>
+                  <tekst:Label>Artikel</tekst:Label>
+                  <tekst:Nummer>II</tekst:Nummer>
+               </tekst:Kop>
+               <tekst:Inhoud>
+                  <tekst:Al>Dit besluit treedt in werking per 24-07-2023</tekst:Al>
+               </tekst:Inhoud>
+            </tekst:Artikel>
+         </tekst:Lichaam>
+         <tekst:Sluiting eId="formula_2" wId="formula_2">
+            <tekst:Al>Sluiting van het besluit</tekst:Al>
+            <tekst:Ondertekening>
+               <tekst:Al>Ondertekening van het besluit</tekst:Al>
+            </tekst:Ondertekening>
+         </tekst:Sluiting>
+         <tekst:WijzigBijlage eId="cmp_besluit" wId="gm0307_1__cmp_besluit">
+            <tekst:Kop>
+               <tekst:Label>Bijlage</tekst:Label>
+               <tekst:Nummer>A</tekst:Nummer>
+               <tekst:Opschrift>Bijlage bij artikel I</tekst:Opschrift>
+            </tekst:Kop>
+            <tekst:RegelingCompact wordt="/akn/nl/act/gm0307/2023/R_2023072411_3215743/nld@1"
+                                   componentnaam="main">
+               <tekst:RegelingOpschrift eId="longTitle" wId="longTitle">
+                  <tekst:Al>Officiele titel van de regeling</tekst:Al>
+               </tekst:RegelingOpschrift>
+               <tekst:Lichaam wId="body" eId="body">
+                  <tekst:Hoofdstuk wId="gm0307_1__chp_1" eId="chp_1">
+                     <tekst:Kop>
+                        <tekst:Label>Hoofdstuk</tekst:Label>
+                        <tekst:Nummer>1</tekst:Nummer>
+                        <tekst:Opschrift>Hoofdstuk 1</tekst:Opschrift>
+                     </tekst:Kop>
+                     <tekst:Artikel wId="gm0307_1__chp_1__art_1" eId="chp_1__art_1">
+                        <tekst:Kop>
+                           <tekst:Label>Artikel</tekst:Label>
+                           <tekst:Nummer>1</tekst:Nummer>
+                           <tekst:Opschrift>Artikel 1</tekst:Opschrift>
+                        </tekst:Kop>
+                        <tekst:Inhoud>
+                           <tekst:Al>Inhoud van artikel 1 binnen hoofdstuk 1 binnen lichaam</tekst:Al>
+                        </tekst:Inhoud>
+                     </tekst:Artikel>
+                  </tekst:Hoofdstuk>
+               </tekst:Lichaam>
+            </tekst:RegelingCompact>
+         </tekst:WijzigBijlage>
+         <tekst:WijzigBijlage eId="cmp_besluitx1" wId="gm0356_1__cmp_besluit">
+            <tekst:Kop>
+               <tekst:Label>Bijlage</tekst:Label>
+               <tekst:Nummer>A</tekst:Nummer>
+               <tekst:Opschrift>Bijlage bij artikel I</tekst:Opschrift>
+            </tekst:Kop>
+            <tekst:RegelingCompact wordt="/akn/nl/act/gm0356/2023/R_2023072411_3215743/nld@1"
+                                   componentnaam="mainx1">
+               <tekst:RegelingOpschrift wId="longTitle" eId="longTitle">
+                  <tekst:Al>Officiele titel van de regeling</tekst:Al>
+               </tekst:RegelingOpschrift>
+               <tekst:Lichaam wId="body" eId="body">
+                  <tekst:Hoofdstuk wId="gm0356_1__chp_1" eId="chp_1">
+                     <tekst:Kop>
+                        <tekst:Label>Hoofdstuk</tekst:Label>
+                        <tekst:Nummer>1</tekst:Nummer>
+                        <tekst:Opschrift>Hoofdstuk 1</tekst:Opschrift>
+                     </tekst:Kop>
+                     <tekst:Artikel wId="gm0356_1__chp_1__art_1" eId="chp_1__art_1">
+                        <tekst:Kop>
+                           <tekst:Label>Artikel</tekst:Label>
+                           <tekst:Nummer>1</tekst:Nummer>
+                           <tekst:Opschrift>Artikel 1</tekst:Opschrift>
+                        </tekst:Kop>
+                        <tekst:Inhoud>
+                           <tekst:Al>Inhoud van artikel 1 binnen hoofdstuk 1 binnen lichaam</tekst:Al>
+                        </tekst:Inhoud>
+                     </tekst:Artikel>
+                  </tekst:Hoofdstuk>
+               </tekst:Lichaam>
+            </tekst:RegelingCompact>
+         </tekst:WijzigBijlage>
+         <tekst:WijzigBijlage eId="cmp_besluitx2" wId="gm0344_1__cmp_besluit">
+            <tekst:Kop>
+               <tekst:Label>Bijlage</tekst:Label>
+               <tekst:Nummer>A</tekst:Nummer>
+               <tekst:Opschrift>Bijlage bij artikel I</tekst:Opschrift>
+            </tekst:Kop>
+            <tekst:RegelingCompact wordt="/akn/nl/act/gm0344/2023/R_2023072411_3215743/nld@1"
+                                   componentnaam="mainx2">
+               <tekst:RegelingOpschrift wId="longTitle" eId="longTitle">
+                  <tekst:Al>Officiele titel van de regeling</tekst:Al>
+               </tekst:RegelingOpschrift>
+               <tekst:Lichaam wId="body" eId="body">
+                  <tekst:Hoofdstuk wId="gm0344_1__chp_1" eId="chp_1">
+                     <tekst:Kop>
+                        <tekst:Label>Hoofdstuk</tekst:Label>
+                        <tekst:Nummer>1</tekst:Nummer>
+                        <tekst:Opschrift>Hoofdstuk 1</tekst:Opschrift>
+                     </tekst:Kop>
+                     <tekst:Artikel wId="gm0344_1__chp_1__art_1" eId="chp_1__art_1">
+                        <tekst:Kop>
+                           <tekst:Label>Artikel</tekst:Label>
+                           <tekst:Nummer>1</tekst:Nummer>
+                           <tekst:Opschrift>Artikel 1</tekst:Opschrift>
+                        </tekst:Kop>
+                        <tekst:Inhoud>
+                           <tekst:Al>Inhoud van artikel 1 binnen hoofdstuk 1 binnen lichaam</tekst:Al>
+                        </tekst:Inhoud>
+                     </tekst:Artikel>
+                  </tekst:Hoofdstuk>
+               </tekst:Lichaam>
+            </tekst:RegelingCompact>
+         </tekst:WijzigBijlage>
+      </tekst:BesluitCompact>
+   </lvbba:BesluitVersie>
+   <lvbba:RegelingVersieInformatie>
+      <data:ExpressionIdentificatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:FRBRWork>/akn/nl/act/gm0307/2023/R_2023072411_3215743</data:FRBRWork>
+         <data:FRBRExpression>/akn/nl/act/gm0307/2023/R_2023072411_3215743/nld@1</data:FRBRExpression>
+         <data:soortWork>/join/id/stop/work_019</data:soortWork>
+      </data:ExpressionIdentificatie>
+      <data:RegelingVersieMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:versienummer>1</data:versienummer>
+      </data:RegelingVersieMetadata>
+      <data:RegelingMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:eindverantwoordelijke>/tooi/id/gemeente/gm0307</data:eindverantwoordelijke>
+         <data:maker>/tooi/id/gemeente/gm0307</data:maker>
+         <data:officieleTitel>Officiele titel van de regeling</data:officieleTitel>
+         <data:onderwerpen>
+            <data:onderwerp>/tooi/def/concept/c_9d1917e9</data:onderwerp>
+         </data:onderwerpen>
+         <data:soortRegeling>/join/id/stop/regelingtype_003</data:soortRegeling>
+         <data:soortBestuursorgaan>/tooi/def/thes/kern/c_2a7d8663</data:soortBestuursorgaan>
+      </data:RegelingMetadata>
+   </lvbba:RegelingVersieInformatie>
+   <lvbba:RegelingVersieInformatie>
+      <data:ExpressionIdentificatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:FRBRWork>/akn/nl/act/gm0356/2023/R_2023072411_3215743</data:FRBRWork>
+         <data:FRBRExpression>/akn/nl/act/gm0356/2023/R_2023072411_3215743/nld@1</data:FRBRExpression>
+         <data:soortWork>/join/id/stop/work_019</data:soortWork>
+      </data:ExpressionIdentificatie>
+      <data:RegelingVersieMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:versienummer>1</data:versienummer>
+      </data:RegelingVersieMetadata>
+      <data:RegelingMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:eindverantwoordelijke>/tooi/id/gemeente/gm0356</data:eindverantwoordelijke>
+         <data:maker>/tooi/id/gemeente/gm0356</data:maker>
+         <data:officieleTitel>Officiele titel van de regeling</data:officieleTitel>
+         <data:onderwerpen>
+            <data:onderwerp>/tooi/def/concept/c_9d1917e9</data:onderwerp>
+         </data:onderwerpen>
+         <data:soortRegeling>/join/id/stop/regelingtype_003</data:soortRegeling>
+         <data:soortBestuursorgaan>/tooi/def/thes/kern/c_2a7d8663</data:soortBestuursorgaan>
+      </data:RegelingMetadata>
+   </lvbba:RegelingVersieInformatie>
+   <lvbba:RegelingVersieInformatie>
+      <data:ExpressionIdentificatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:FRBRWork>/akn/nl/act/gm0344/2023/R_2023072411_3215743</data:FRBRWork>
+         <data:FRBRExpression>/akn/nl/act/gm0344/2023/R_2023072411_3215743/nld@1</data:FRBRExpression>
+         <data:soortWork>/join/id/stop/work_019</data:soortWork>
+      </data:ExpressionIdentificatie>
+      <data:RegelingVersieMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:versienummer>1</data:versienummer>
+      </data:RegelingVersieMetadata>
+      <data:RegelingMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:eindverantwoordelijke>/tooi/id/gemeente/gm0344</data:eindverantwoordelijke>
+         <data:maker>/tooi/id/gemeente/gm0344</data:maker>
+         <data:officieleTitel>Officiele titel van de regeling</data:officieleTitel>
+         <data:onderwerpen>
+            <data:onderwerp>/tooi/def/concept/c_9d1917e9</data:onderwerp>
+         </data:onderwerpen>
+         <data:soortRegeling>/join/id/stop/regelingtype_003</data:soortRegeling>
+         <data:soortBestuursorgaan>/tooi/def/thes/kern/c_2a7d8663</data:soortBestuursorgaan>
+      </data:RegelingMetadata>
+   </lvbba:RegelingVersieInformatie>
+</lvbba:AanleveringBesluit>

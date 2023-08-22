@@ -15,6 +15,8 @@ plugins {
 
 repositories {
     mavenCentral()
+    // Needed for some mlcp dependencies, such as commons-csv:1.5.1-marklogic
+    maven { url "https://developer.marklogic.com/maven2/" }
 }
 
 configurations {
@@ -26,6 +28,7 @@ configurations {
             attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage, Usage.JAVA_RUNTIME))
         }
     }
+    mlcp
 }
 
 dependencies {
@@ -34,6 +37,8 @@ dependencies {
     corb "com.marklogic:marklogic-xcc:${mlVersion}"
     // optional
     //corb 'org.jasypt:jasypt:1.9.2' // would be necessary to leverage JasyptDecrypter
+    mlcp "com.marklogic:mlcp:${mlVersion}"
+    mlcp files("mlcp")
 }
 
 ext {
@@ -55,5 +60,20 @@ task processSchematrons(type: com.marklogic.gradle.task.CorbTask) {
     processModule = "transform.xqy"
 }
 
+mlReloadModules.finalizedBy(processSchematrons)
 mlLoadData.finalizedBy(processSchemas, processSchematrons)
 mlPostDeploy.finalizedBy(processSchemas, processSchematrons)
+
+task loadAanleveringen(type: com.marklogic.gradle.task.MlcpTask) {
+    classpath = configurations.mlcp
+    command = "IMPORT"
+    port = Integer.parseInt(mlRestPort)
+    database = mlAppConfig.contentDatabaseName
+    input_file_path = "data/aanleveringen/opdracht-1-besluit"
+    output_collections = "/opera/options/opdrachtbestanden"
+    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/aanleveringen,'/opera/import'"
+    transform_module = "/transform/envelope.xqy"
+    transform_namespace = "http://koop.overheid.nl/lvbb/transform/envelope"
+    transform_param = "oin=1q2w3e4r,id-levering=aanlevering-1,id-bevoegdgezag=bg-1"
+}

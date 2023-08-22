@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lvbb:publicatieOpdracht xmlns:lvbb="http://www.overheid.nl/2017/lvbb">
+   <lvbb:idLevering>opdracht_O_2023072411_3215743_2</lvbb:idLevering>
+   <lvbb:idBevoegdGezag>00000001003214345000</lvbb:idBevoegdGezag>
+   <lvbb:idAanleveraar>00000001003214345000</lvbb:idAanleveraar>
+   <lvbb:publicatie>publicatie.xml</lvbb:publicatie>
+   <lvbb:datumBekendmaking>2023-07-25</lvbb:datumBekendmaking>
+</lvbb:publicatieOpdracht>
