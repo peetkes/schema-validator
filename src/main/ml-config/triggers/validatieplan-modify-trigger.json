@@ -1,0 +1,21 @@
+{
+  "name": "ValidatieplanModifyTrigger",
+  "description": "Trigger that adds collections and permissions to updated validatieplan file",
+  "event": {
+    "data-event": {
+      "collection-scope": {
+        "uri": "/opera/options/validatieplan"
+      },
+      "document-content": {
+        "update-kind": "modify"
+      },
+      "when": "post-commit"
+    }
+  },
+  "module": "triggers/validatieplan-trigger.xqy",
+  "module-db": "%%MODULES_DATABASE%%",
+  "module-root": "/",
+  "enabled": true,
+  "recursive": true,
+  "task-priority": "normal"
+}

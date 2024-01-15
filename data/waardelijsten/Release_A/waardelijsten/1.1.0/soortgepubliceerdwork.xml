@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.1.0"
+  xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/join/id/stop/soortgepubliceerdwork</id>
+    <label>soorten gepubliceerd work zoals gebruikt in de juridische verantwoording</label>
+    <beschrijving>De juridische verantwoording verwijst naar de publicatie; deze publicaties kunnen
+      worden getypeerd met het soort word dat is gepubliceerd.</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/join/id/stop/gepubliceerdwork_001</id>
+    <label>Besluit</label>
+    <beschrijving>Een gepubliceerd besluit</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/gepubliceerdwork_002</id>
+    <label>Ontwerpbesluit</label>
+    <beschrijving>Een gepubliceerd ontwerpbesluit</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/gepubliceerdwork_003</id>
+    <label>Rectificatie</label>
+    <beschrijving>Een gepubliceerde rectificatie</beschrijving>
+  </Waarde>
+</Waardelijst>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand">
+   <sl:standBestand xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek">
+      <sl:dataset>Voorbeeld-dataset</sl:dataset>
+      <sl:inhoud>
+         <sl:gebied>Voorbeeld-gebied</sl:gebied>
+         <sl:leveringsId>ID-IMOW-2024011109-1653066-1</sl:leveringsId>
+         <sl:objectTypen>
+            <sl:objectType>Gebiedengroep</sl:objectType>
+            <sl:objectType>Gebied</sl:objectType>
+         </sl:objectTypen>
+      </sl:inhoud>
+      <sl:stand>
+         <ow-dc:owObject>
+            <l:Gebied xmlns:l="http://www.geostandaarden.nl/imow/locatie">
+               <l:identificatie>nl.imow-gm9920.gebied.80b493121b8d427e852046f5b0ea97b5</l:identificatie>
+               <l:geometrie>
+                  <l:GeometrieRef xmlns:xlink="http://www.w3.org/1999/xlink"
+                                  xlink:href="80b49312-1b8d-427e-8520-46f5b0ea97b5"/>
+               </l:geometrie>
+            </l:Gebied>
+         </ow-dc:owObject>
+      </sl:stand>
+      <sl:stand>
+         <ow-dc:owObject>
+            <l:Gebiedengroep xmlns:l="http://www.geostandaarden.nl/imow/locatie">
+               <l:identificatie>nl.imow-gm9920.gebiedengroep.R202401110916530661</l:identificatie>
+               <l:noemer>Voorbeeld-gebied-R202401110916530661</l:noemer>
+               <l:groepselement>
+                  <l:GebiedRef xmlns:xlink="http://www.w3.org/1999/xlink"
+                               xlink:href="nl.imow-gm9920.gebied.80b493121b8d427e852046f5b0ea97b5"/>
+               </l:groepselement>
+            </l:Gebiedengroep>
+         </ow-dc:owObject>
+      </sl:stand>
+   </sl:standBestand>
+</ow-dc:owBestand>

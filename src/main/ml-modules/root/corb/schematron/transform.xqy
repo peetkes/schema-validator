@@ -1,6 +1,9 @@
 xquery version "1.0-ml";
-import module namespace util = "http://koop.overheid.nl/lvbb/corb/util" at "/corb/util.xqy";
-import module namespace schematron = "http://marklogic.com/xdmp/my-schematron" at "/lib/schematron/schematron.xqy";
+import module namespace helper = "http://marklogic.com/schema-validator/corb/helper" at "/corb/helper.xqy";
+import module namespace schematron = "http://marklogic.com/schema-validator/lib/validation/schematron/schematron-validator"
+  at "/lib/validation/schematron/schematron-validator.xqy";
+
+declare namespace sch="http://purl.oclc.org/dsdl/schematron";
 
 declare option xdmp:mapping "false";
 
@@ -14,24 +17,46 @@ declare variable $PARAMS := map:map()
 =>map:with('allow-foreign', fn:true())
 =>map:with('validate-schema', fn:false());
 
-xdmp:trace("koop-corb", "Calling Corb schematron transform on URI: " || $URI),
-xdmp:invoke-function(function() { util:adjust-schemaLocation($URI) }),
-let $collections := xdmp:document-get-collections($URI)
+xdmp:trace($helper:TRACE-ID, "TRANSFORM-SCHEMATRON::Calling Corb schematron transform on URI: " || $URI),
+xdmp:invoke-function(function() { helper:adjust-schematron-location($URI) }),
+let $schematron-version := fn:doc($URI)/node()/sch:p[fn:starts-with(.,"Versie")]/fn:data()
+let $version := if (fn:exists($schematron-version))
+  then fn:tokenize($schematron-version, " ")[last()]
+  else ()
+let $schematron-collection :=
+  if (fn:exists($version))
+  then fn:concat("version/", $version)
+  else ()
+let $name := helper:get-catalog-name-for-uri($URI, $version)
+let $collections := fn:distinct-values((xdmp:document-get-collections($URI), $schematron-collection))
 let $permissions := xdmp:document-get-permissions($URI)
 let $schematron-to-compile := xdmp:invoke-function(function() { fn:doc($URI) })
 return (
-    xdmp:invoke-function(
-        function() {
-          xdmp:trace("koop-corb", "Should copy to schemas database"),
-          xdmp:document-insert($URI, $schematron-to-compile, $permissions, $collections )
-        },
-        map:map()
-        =>map:with("database", xdmp:database("lvbb-stop-schemas"))
-    ),
-    xdmp:invoke-function(
-        function() {
-          xdmp:trace("koop-corb", "Should compile schematron and store in modules database"),
-          schematron:put($URI, $PARAMS)
-        }
-    )
+  xdmp:trace($helper:TRACE-ID,("TRANSFORM-SCHEMATRON::name", $name, "uri", $URI, "version", $version)),
+  xdmp:invoke-function(
+    function() {
+      xdmp:trace($helper:TRACE-ID, "Should copy to schemas database"),
+      xdmp:document-insert($URI, $schematron-to-compile, $permissions, $collections )
+    },
+    map:map()
+    =>map:with("database", xdmp:schema-database())
+    =>map:with("update","true")
+  ),
+  xdmp:invoke-function(
+    function() {
+      xdmp:trace($helper:TRACE-ID, "Should compile schematron and store in modules database"),
+      schematron:put($URI, $PARAMS),
+      if (fn:exists($name))
+      then (
+        let $metadata := xdmp:document-get-metadata($URI)
+        return (
+          map:put($metadata, "catalog-name", $name),
+          xdmp:document-set-metadata($URI, $metadata)
+        )
+      )
+      else ()
+    },
+    map:map()
+    =>map:with("update","true")
+  )
 )

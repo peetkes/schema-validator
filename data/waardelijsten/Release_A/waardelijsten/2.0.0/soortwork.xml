@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="2.0.0"
+   xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+   xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+   https://standaarden.overheid.nl/stop/2.0.0/imop-resources.xsd">
+   <WaardelijstInfo>
+      <id>/join/id/stop/soortwork</id>
+      <label>worktypes</label>
+      <beschrijving>Alle worktypes zoals gedefinieerd in het Informatiemodel STOP</beschrijving>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/set/scw_stop_worktypes</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+      <uitbreidbaar>0</uitbreidbaar>
+      <versie>2.0.0</versie>
+   </WaardelijstInfo>
+   <Waarde>
+      <id>/join/id/stop/work_003</id>
+      <label>Besluit</label>
+      <beschrijving>Een generiek besluit</beschrijving>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_2307a3ff</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_005</id>
+      <label>Geconsolideerd informatieobject</label>
+      <beschrijving>Consolidatie van een informatieobject</beschrijving>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_46a1f04c</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_006</id>
+      <label>Geconsolideerde regeling</label>
+      <beschrijving>Consolidatie van een Regeling</beschrijving>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_1c4446cb</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_010</id>
+      <label>Informatieobject</label>
+      <beschrijving>Een informatieobject. Het formaat van het informatieobject wordt vastgelegd
+         middels waardenlijst /join/id/stop/formaatinformatieobject. </beschrijving>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_ea80bf73</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_015</id>
+      <label>Officiële Publicatie</label>
+      <beschrijving>Officiële publicatie. Verdere typering van officiele publicaties wordt
+         vastgelegd middels waardelijst /join/id/stop/soortpublicatie.</beschrijving>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_89625c86</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_018</id>
+      <label>Rectificatie</label>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_cb739009</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_019</id>
+      <label>Regeling</label>
+      <beschrijving>Een Regeling. Verdere typering van regelingen wordt vastgelegd middels
+         waardelijst /join/id/stop/soortregeling.</beschrijving>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_840059b4</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_021</id>
+      <label>Tijdelijk regelingdeel</label>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_59e0259b</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_022</id>
+      <label>Consolidatie van een tijdelijk regelingdeel</label>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_43d8e132</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_023</id>
+      <label>Kennisgeving</label>
+      <vindplaatsen>
+         <heeftVindplaats>
+            <Vindplaats>
+               <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_64981328</url>
+            </Vindplaats>
+         </heeftVindplaats>
+      </vindplaatsen>
+   </Waarde>
+   <Waarde>
+      <id>/join/id/stop/work_024</id>
+      <label>Versieinformatie</label>
+      <beschrijving>Alleen voor gebruik in een Uitwisselingspakket. Bevat versieinformatie over de
+         andere componenten in een uitwisselingspakket.</beschrijving>
+     <vindplaatsen>
+       <heeftVindplaats>
+         <Vindplaats>
+           <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_7e7d6677</url>
+         </Vindplaats>
+       </heeftVindplaats>
+     </vindplaatsen>
+   </Waarde>
+</Waardelijst>

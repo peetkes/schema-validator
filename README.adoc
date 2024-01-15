@@ -1,4 +1,4 @@
-= schematron-test
+= Schema-validator
 :source-highlighter: rouge
 :source-language: xslt
 :icons: font

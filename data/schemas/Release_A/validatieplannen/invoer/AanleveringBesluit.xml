@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ValidatieTransformatieplan xmlns="https://standaarden.overheid.nl/stop/imop/schemata/" schemaversie="2.0.0">
+  <naam>VP_AanlevingBesluit</naam>
+  <root>AanleveringBesluit</root>
+  <namespace>https://standaarden.overheid.nl/lvbb/stop/aanlevering/</namespace>
+  <version>1.2.0</version>
+  <Resultaat>
+    <validatiemeldingen/>
+  </Resultaat>
+  <Groep>
+    <Schemavalidatie>
+      <schema>https://standaarden.overheid.nl/lvbb/1.2.0/lvbb-stop-aanlevering.xsd</schema>
+      <Fout>
+        <code>LVBB9999</code>
+        <melding>De XML voldoet niet aan het schema https://standaarden.overheid.nl/lvbb/1.2.0/lvbb-stop-aanlevering.xsd</melding>
+        <ernst>fout</ernst>
+      </Fout>
+    </Schemavalidatie>
+  </Groep>
+  <Groep>
+    <Schematronvalidatie>
+      <schematron>https://standaarden.overheid.nl/lvbb/1.2.0/lvbb-aanlevering.sch</schematron>
+    </Schematronvalidatie>
+    <Schematronvalidatie>
+      <schematron>https://standaarden.overheid.nl/stop/1.2.0/imop-metadata.sch</schematron>
+    </Schematronvalidatie>
+    <Schematronvalidatie>
+      <schematron>https://standaarden.overheid.nl/stop/1.2.0/imop-aknjoin.sch</schematron>
+    </Schematronvalidatie>
+    <Schematronvalidatie>
+      <schematron>https://standaarden.overheid.nl/stop/1.2.0/imop-tekst.sch</schematron>
+    </Schematronvalidatie>
+    <Schematronvalidatie>
+      <schematron>https://standaarden.overheid.nl/stop/1.2.0/imop-tekstmutaties.sch</schematron>
+    </Schematronvalidatie>
+    <Schematronvalidatie>
+      <schematron>https://standaarden.overheid.nl/stop/1.2.0/imop-procedure.sch</schematron>
+    </Schematronvalidatie>
+  </Groep>
+</ValidatieTransformatieplan>

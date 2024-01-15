@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.1.0" xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/ https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd" xmlns="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WaardelijstInfo>
+    <id>/tooi/def/class/Gemeente</id>
+    <label>gemeente Gemeenten</label>
+    <beschrijving>Alle extra gemeenten t.b.v. testen op ETO en ACC</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9901</id>
+    <label>gemeente TST_01</label>
+    <beschrijving>Gemeente TST_01</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9902</id>
+    <label>gemeente TST_02</label>
+    <beschrijving>Gemeente TST_02</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9903</id>
+    <label>gemeente TST_03</label>
+    <beschrijving>Gemeente TST_03</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9904</id>
+    <label>gemeente TST_04</label>
+    <beschrijving>Gemeente TST_04</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9905</id>
+    <label>gemeente TST_05</label>
+    <beschrijving>Gemeente TST_05</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9906</id>
+    <label>gemeente TST_06</label>
+    <beschrijving>Gemeente TST_06</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9907</id>
+    <label>gemeente TST_07</label>
+    <beschrijving>Gemeente TST_07</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9908</id>
+    <label>gemeente TST_08</label>
+    <beschrijving>Gemeente TST_08</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9909</id>
+    <label>gemeente TST_09</label>
+    <beschrijving>Gemeente TST_09</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9910</id>
+    <label>gemeente TST_10</label>
+    <beschrijving>Gemeente TST_10</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9911</id>
+    <label>gemeente TST_11</label>
+    <beschrijving>Gemeente TST_11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9912</id>
+    <label>gemeente TST_12</label>
+    <beschrijving>Gemeente TST_12</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9913</id>
+    <label>gemeente TST_13</label>
+    <beschrijving>Gemeente TST_13</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9914</id>
+    <label>gemeente TST_14</label>
+    <beschrijving>Gemeente TST_14</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9915</id>
+    <label>gemeente TST_15</label>
+    <beschrijving>Gemeente TST_15</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9916</id>
+    <label>gemeente TST_16</label>
+    <beschrijving>Gemeente TST_16</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9917</id>
+    <label>gemeente TST_17</label>
+    <beschrijving>Gemeente TST_17</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9918</id>
+    <label>gemeente TST_18</label>
+    <beschrijving>Gemeente TST_18</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9919</id>
+    <label>gemeente TST_19</label>
+    <beschrijving>Gemeente TST_19</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9920</id>
+    <label>gemeente TST_20</label>
+    <beschrijving>Gemeente TST_20</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9921</id>
+    <label>gemeente TST_21</label>
+    <beschrijving>Gemeente TST_21</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9922</id>
+    <label>gemeente TST_22</label>
+    <beschrijving>Gemeente TST_22</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9923</id>
+    <label>gemeente TST_23</label>
+    <beschrijving>Gemeente TST_23</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9924</id>
+    <label>gemeente TST_24</label>
+    <beschrijving>Gemeente TST_24</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/gemeente/gm9925</id>
+    <label>gemeente TST_25</label>
+    <beschrijving>Gemeente TST_25</beschrijving>
+  </Waarde>
+</Waardelijst>

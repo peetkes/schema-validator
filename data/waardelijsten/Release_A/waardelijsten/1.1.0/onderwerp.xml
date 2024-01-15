@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.1.0"
+  xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/tooi/def/concept/conceptScheme_7e4501f7</id>
+    <label>TOP-lijst</label>
+    <beschrijving>Deze lijst wordt ook wel de "TOPlijst" genoemd. In versie 1.1.0 is de
+      hiërarchie van de waardelijst genoteerd door in de beschrijving van de subterm te verwijzen
+      naar zijn hoofdterm. Dit zal overbodig worden als de lijsten van TOOI eenmaal publiek
+      beschikbaar zijn.</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/def/concept/c_d0463fb7</id>
+    <label>zorg en gezondheid</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_124eaf3a</id>
+    <label>wonen</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9d1917e9</id>
+    <label>werk</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_849842ac</id>
+    <label>verkeer</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d4890526</id>
+    <label>sociale zekerheid</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_cfc7d5ab</id>
+    <label>ruimte en infrastructuur</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f4679acc</id>
+    <label>recht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_391585db</id>
+    <label>overheidsfinanciën</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3eb6243b</id>
+    <label>organisatie en bedrijfsvoering</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d58b78ca</id>
+    <label>openbare orde en veiligheid</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c232ae4a</id>
+    <label>onderwijs en wetenschap</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_afa30a11</id>
+    <label>natuur en milieu</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_399f194b</id>
+    <label>migratie en integratie</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f47ad6ca</id>
+    <label>internationaal</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d363776f</id>
+    <label>economie</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_0361ffb3</id>
+    <label>cultuur en recreatie</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_341c5bef</id>
+    <label>zorgverzekeringen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9a574af9</id>
+    <label>ziekten en behandelingen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f02ce1b3</id>
+    <label>ouderenzorg</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_0fe7c5e7</id>
+    <label>jeugdzorg</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8b081a63</id>
+    <label>gezondheidsrisico's</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_6b9627b5</id>
+    <label>geneesmiddelen en medische hulpmiddelen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_218c52ee</id>
+    <label>ethiek</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_17a86a17</id>
+    <label>woningmarkt</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_124eaf3a</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a6a9eddd</id>
+    <label>bouwen en verbouwen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_124eaf3a</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_7fe16af8</id>
+    <label>werkgelegenheid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_9d1917e9</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1f37c612</id>
+    <label>arbeidsverhoudingen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_9d1917e9</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4e83eca7</id>
+    <label>arbeidsomstandigheden</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_9d1917e9</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d3b599f8</id>
+    <label>scheepvaart</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_849842ac</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f411e390</id>
+    <label>rail- en wegverkeer</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_849842ac</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_319461d7</id>
+    <label>openbaar vervoer</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_849842ac</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_2835e395</id>
+    <label>luchtvaart</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_849842ac</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_2ee165c4</id>
+    <label>ziekte en arbeidsongeschiktheid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d4890526</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1781ce20</id>
+    <label>ouderen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d4890526</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_76136c82</id>
+    <label>gezin en kinderen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d4890526</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a71dc533</id>
+    <label>waterbeheer</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_cfc7d5ab</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9af4b880</id>
+    <label>ruimtelijke ordening</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_cfc7d5ab</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_85a72eb3</id>
+    <label>netwerken</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_cfc7d5ab</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_98e03e32</id>
+    <label>strafrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1fe409d0</id>
+    <label>staatsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_72138db9</id>
+    <label>rechtspraak</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d2b1338a</id>
+    <label>rechten en vrijheden</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_824ce7ff</id>
+    <label>privaatrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e3d35361</id>
+    <label>bezwaar en klachten</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_beb01b1c</id>
+    <label>bestuursrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_01a4140b</id>
+    <label>subsidie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_68e408ff</id>
+    <label>inkomensbeleid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1dd2bcc9</id>
+    <label>financieel toezicht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_25e30d03</id>
+    <label>belasting</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4348dad1</id>
+    <label>begroting</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f2c9a613</id>
+    <label>overheidspersoneel</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f28344a5</id>
+    <label>koninkrijksrelaties</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f6d7f591</id>
+    <label>interne organisatie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f37fd49d</id>
+    <label>inrichting van de overheid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_068da9fb</id>
+    <label>inkoop en beheer</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_ee06665e</id>
+    <label>informatievoorziening en ICT</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_cf421a08</id>
+    <label>dienstverlening</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d772bf06</id>
+    <label>veiligheid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d58b78ca</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4872b086</id>
+    <label>terrorisme</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d58b78ca</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_fcac43e4</id>
+    <label>criminaliteit</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d58b78ca</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_980b8db2</id>
+    <label>voortgezet onderwijs</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_08d12aef</id>
+    <label>onderzoek en wetenschap</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4eb912c1</id>
+    <label>onderwijsvoorzieningen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_516ec027</id>
+    <label>hoger onderwijs</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_b46b92e7</id>
+    <label>beroepsonderwijs</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_7b01f260</id>
+    <label>basisonderwijs</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_389a72e6</id>
+    <label>water</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_61d3e636</id>
+    <label>stoffen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_db2fbedb</id>
+    <label>natuur- en landschapsbeheer</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_28ddcea5</id>
+    <label>lucht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9f410ab6</id>
+    <label>geluid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a81687f1</id>
+    <label>flora en fauna</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f4f1867a</id>
+    <label>energie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_7ce8a10c</id>
+    <label>bodem</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d96f9cd3</id>
+    <label>afval</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_2e9944e7</id>
+    <label>migratie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_399f194b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a94e1fa4</id>
+    <label>integratie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_399f194b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8940ed07</id>
+    <label>ontwikkelingssamenwerking</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f47ad6ca</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_576c2bd7</id>
+    <label>internationale betrekkingen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f47ad6ca</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_68609e19</id>
+    <label>Europese zaken</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f47ad6ca</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_daaa67b3</id>
+    <label>defensie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f47ad6ca</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_195b5b5e</id>
+    <label>transport</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3afc269f</id>
+    <label>ondernemen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_dc437d00</id>
+    <label>markttoezicht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_989e37d9</id>
+    <label>landbouw, visserij, voedselkwaliteit</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_87d3d66c</id>
+    <label>kenniseconomie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_83db27fc</id>
+    <label>handel</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4d1c84a7</id>
+    <label>dienstensector</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e277e756</id>
+    <label>religie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a6c5e5b8</id>
+    <label>recreatie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_6b728132</id>
+    <label>media</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_75809540</id>
+    <label>horeca</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_70e03904</id>
+    <label>evenementen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f72b706a</id>
+    <label>cultuur</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_2408fb5a</id>
+    <label>cultureel erfgoed</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+  </Waarde>
+</Waardelijst>

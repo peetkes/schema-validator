@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="@@@IMOPVERSIE@@@" xmlns="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/@@@IMOPVERSIE@@@/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/tooi/def/concept/conceptScheme_7e4501f7</id>
+    <label>TOP-lijst gemapt op TBA-begrippen t.b.v. OEP</label>
+    <beschrijving>Deze oorspronkelijke lijst (waaruit de URI's zijn behouden) wordt ook wel de "TOPlijst" genoemd. Omdat de OP-portalen nog geen gebruik maken van de TOP-lijst maar van de Taxonomie Beleidsagenda (TBA-lijst) is hier een mapping gemaakt naar de labels zoals daar gebruikt.
+      In versie @@@IMOPVERSIE@@@ is de inhoud aangepast aan versie 1.2 van de TOP-lijst (geldend
+      vanaf 31 januari 2020). </beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://repository.officiele-overheidspublicaties.nl/waardelijsten/beleidsagenda/1/xml/beleidsagenda.xml</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>@@@IMOPVERSIE@@@</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/def/concept/c_d0463fb7</id>
+    <label>Zorg en gezondheid</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_d0463fb7</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_124eaf3a</id>
+    <label>Huisvesting</label>
+    <!-- wonen -->
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_124eaf3a</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9d1917e9</id>
+    <label>Werk</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_9d1917e9</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_849842ac</id>
+    <label>Verkeer</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_849842ac</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d4890526</id>
+    <label>Sociale zekerheid</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_d4890526</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_cfc7d5ab</id>
+    <label>Ruimte en infrastructuur</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_cfc7d5ab</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f4679acc</id>
+    <label>Recht</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f4679acc</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_391585db</id>
+    <label>Financiën</label>
+    <!-- overheidsfinanciën -->
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_391585db</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3eb6243b</id>
+    <label>Bestuur</label>
+    <!-- organisatie en bedrijfsvoering -->
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_3eb6243b</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d58b78ca</id>
+    <label>Openbare orde en veiligheid</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_d58b78ca</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c232ae4a</id>
+    <label>Onderwijs en wetenschap</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_c232ae4a</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_afa30a11</id>
+    <label>Natuur en milieu</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_afa30a11</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_399f194b</id>
+    <label>Migratie en integratie</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_399f194b</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f47ad6ca</id>
+    <label>Internationaal</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f47ad6ca</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d363776f</id>
+    <label>Economie</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_d363776f</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_0361ffb3</id>
+    <label>Cultuur en recreatie</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_0361ffb3</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_341c5bef</id>
+    <label>Zorg en gezondheid | zorgverzekeringen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_341c5bef</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9a574af9</id>
+    <label>Zorg en gezondheid | ziekten en behandelingen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_9a574af9</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f02ce1b3</id>
+    <label>Zorg en gezondheid | Ouderen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f02ce1b3</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_0fe7c5e7</id>
+    <label>Zorg en gezondheid | Jongeren</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_0fe7c5e7</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8b081a63</id>
+    <label>Zorg en gezondheid | Gezondheidsrisico's</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_8b081a63</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_6b9627b5</id>
+    <label>Zorg en gezondheid | Geneesmiddelen en medische hulpmiddelen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_6b9627b5</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_218c52ee</id>
+    <label>Zorg en gezondheid | Ethiek</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_218c52ee</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_17a86a17</id>
+    <label>Huisvesting</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_124eaf3a</beschrijving>
+    <!-- 1: n (Huren en verhuren, Kopen en verkopen), gemapt naar hoofdterm --><vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_17a86a17</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a6a9eddd</id>
+    <label>Huisvesting | Bouwen en verbouwen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_124eaf3a</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_a6a9eddd</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_7fe16af8</id>
+    <label>Werk | werkgelegenheid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_9d1917e9</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_7fe16af8</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigTot>2020-01-30</geldigTot>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1f37c612</id>
+    <label>Werk | Arbeidsvoorwaarden</label>
+    <!--1: n (TOP-concept is "arbeidsverhoudingen". Wordt ook gemapt op: Levensloop, Ontslag) -->
+    <beschrijving>subterm van: /tooi/def/concept/c_9d1917e9</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_1f37c612</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4e83eca7</id>
+    <label>Werk | Arbeidsomstandigheden</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_9d1917e9</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_4e83eca7</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d3b599f8</id>
+    <label>Verkeer | Water</label>
+    <!-- scheepvaart -->
+    <beschrijving>subterm van: /tooi/def/concept/c_849842ac</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_d3b599f8</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f411e390</id>
+    <label>Verkeer | Weg</label>
+    <!-- TOP-concept: "rail- en wegverkeer", beetje discutabel in de context van de omgevingswet, zie Spoor hieronder -->   
+    <beschrijving>subterm van: /tooi/def/concept/c_849842ac</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f411e390</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_319461d7</id>
+    <label>Verkeer | Spoor</label>
+    <!-- openbaar vervoer -->
+    <beschrijving>subterm van: /tooi/def/concept/c_849842ac</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_319461d7</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_2835e395</id>
+    <label>Verkeer | Luchtvaart</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_849842ac</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_2835e395</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_2ee165c4</id>
+    <label>Sociale zekerheid | Ziekte en arbeidsongeschiktheid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d4890526</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_2ee165c4</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigTot>2020-01-30</geldigTot>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_2ee165c4</id>
+    <label>Sociale zekerheid | Arbeidsongeschiktheid en werkloosheid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d4890526</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_2ee165c4</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigVanaf>2020-01-31</geldigVanaf>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1781ce20</id>
+    <label>Sociale zekerheid | Ouderen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d4890526</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_1781ce20</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_76136c82</id>
+    <label>Sociale zekerheid | Gezin en kinderen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d4890526</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_76136c82</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a71dc533</id>
+    <label>Ruimte en infrastructuur | Waterkeringen en waterbeheer</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_cfc7d5ab</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_a71dc533</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9af4b880</id>
+    <label>Ruimte en infrastructuur | Ruimtelijke ordening</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_cfc7d5ab</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_9af4b880</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_85a72eb3</id>
+    <label>Ruimte en infrastructuur | Netwerken</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_cfc7d5ab</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_85a72eb3</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_98e03e32</id>
+    <label>Recht | Strafrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_98e03e32</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1fe409d0</id>
+    <label>Recht | Staatsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_1fe409d0</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_72138db9</id>
+    <label>Recht | Rechtspraak</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_72138db9</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d2b1338a</id>
+    <label>Recht</label>    
+    <!-- rechten en vrijheden -->
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_d2b1338a</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_824ce7ff</id>
+    <label>Recht | Burgerlijk recht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_824ce7ff</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e3d35361</id>
+    <label>Recht | Bezwaar en klachten</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_e3d35361</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_beb01b1c</id>
+    <label>Recht | Bestuursrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f4679acc</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_beb01b1c</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_01a4140b</id>
+    <label>Financiën</label>
+    <!-- subsidie -->
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_01a4140b</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigTot>2020-01-30</geldigTot>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_68e408ff</id>
+    <label>Financiën | Inkomensbeleid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_68e408ff</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigTot>2020-01-30</geldigTot>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1dd2bcc9</id>
+    <label>Financiën | Financieel toezicht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_1dd2bcc9</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigTot>2020-01-30</geldigTot>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_25e30d03</id>
+    <label>Financiën | Belasting</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_25e30d03</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4348dad1</id>
+    <label>Financiën | Begroting</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_391585db</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_4348dad1</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f2c9a613</id>
+    <label>Bestuur</label>
+    <!-- overheidspersoneel -->
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f2c9a613</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f28344a5</id>
+    <label>Bestuur | De Nederlandse Antillen en Aruba</label>
+    <!-- koninkrijksrelaties -->
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f28344a5</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f6d7f591</id>
+    <label>Bestuur</label>
+    <!-- interne organisatie -->
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f6d7f591</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f37fd49d</id>
+    <label>Bestuur</label>
+    <!-- inrichting van de overheid -->
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f37fd49d</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_068da9fb</id>
+    <label>Bestuur</label>
+    <!-- inkoop en beheer -->
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_068da9fb</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_ee06665e</id>
+    <label>Bestuur</label>
+    <!-- informatievoorziening en ICT -->
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_ee06665e</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_cf421a08</id>
+    <label>Bestuur</label>
+    <!-- dienstverlening (dit is een term uit TOP 1.0) -->
+    <beschrijving>subterm van: /tooi/def/concept/c_3eb6243b</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_cf421a08</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigTot>2020-01-30</geldigTot>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d772bf06</id>
+    <label>Openbare orde en veiligheid</label>
+    <!-- TOP-concept: veiligheid, mapping 1: n (Politie, brandweer en hulpdiensten; Rampen) -->
+    <beschrijving>subterm van: /tooi/def/concept/c_d58b78ca</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_d772bf06</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4872b086</id>
+    <label>Openbare orde en veiligheid | Terrorisme</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d58b78ca</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_4872b086</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_fcac43e4</id>
+    <label>Openbare orde en veiligheid | Criminaliteit</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d58b78ca</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_fcac43e4</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_980b8db2</id>
+    <label>Onderwijs en wetenschap | Voortgezet onderwijs</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_980b8db2</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_08d12aef</id>
+    <label>Onderwijs en wetenschap | Onderzoek en wetenschap</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_08d12aef</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4eb912c1</id>
+    <label>Onderwijs en wetenschap</label>
+    <!-- onderwijsvoorzieningen -->
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_4eb912c1</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_516ec027</id>
+    <label>Onderwijs en wetenschap | Hoger onderwijs</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_516ec027</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_b46b92e7</id>
+    <label>Onderwijs en wetenschap | Beroepsonderwijs</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_b46b92e7</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_7b01f260</id>
+    <label>Onderwijs en wetenschap | Basisonderwijs</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_c232ae4a</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_7b01f260</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_389a72e6</id>
+    <label>Natuur en milieu | Water</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_389a72e6</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_61d3e636</id>
+    <label>Natuur en milieu | Stoffen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_61d3e636</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_db2fbedb</id>
+    <label>Natuur en milieu | Natuur- en landschapsbeheer</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_db2fbedb</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_28ddcea5</id>
+    <label>Natuur en milieu | Lucht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_28ddcea5</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9f410ab6</id>
+    <label>Natuur en milieu | Geluid</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_9f410ab6</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a81687f1</id>
+    <label>Natuur en milieu</label>
+    <!-- flora en fauna -->
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_a81687f1</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigTot>2020-01-30</geldigTot>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f4f1867a</id>
+    <label>Natuur en milieu | Energie</label>
+    <!-- Is in TOP1.1 een sub van economie -->
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f4f1867a</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_7ce8a10c</id>
+    <label>Natuur en milieu | Bodem</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_7ce8a10c</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d96f9cd3</id>
+    <label>Natuur en milieu | Afval</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_d96f9cd3</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_2e9944e7</id>
+    <label>Migratie en integratie</label>
+    <!-- 1: n (Emigratie, Immigratie, Tijdelijk verblijf) -->
+    <beschrijving>subterm van: /tooi/def/concept/c_399f194b</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_2e9944e7</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a94e1fa4</id>
+    <label>Migratie en integratie | Integratie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_399f194b</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_a94e1fa4</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8940ed07</id>
+    <label>Internationaal | Ontwikkelingssamenwerking</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f47ad6ca</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_8940ed07</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_576c2bd7</id>
+    <label>Internationaal | Internationale samenwerking</label>
+    <!-- internationale betrekkingen -->
+    <beschrijving>subterm van: /tooi/def/concept/c_f47ad6ca</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_576c2bd7</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_68609e19</id>
+    <label>Internationale samenwerking | Europese zaken</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f47ad6ca</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_68609e19</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_daaa67b3</id>
+    <label>Internationale samenwerking | Defensie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f47ad6ca</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_daaa67b3</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_195b5b5e</id>
+    <label>Economie | Transport</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_195b5b5e</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3afc269f</id>
+    <label>Economie | Ondernemen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_3afc269f</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_dc437d00</id>
+    <label>Economie | Markttoezicht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_dc437d00</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_989e37d9</id>
+    <label>Economie</label>
+    <!-- landbouw, visserij, voedselkwaliteit -->
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_989e37d9</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_87d3d66c</id>
+    <label>Economie | ICT</label>
+    <!-- kenniseconomie -->
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_87d3d66c</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_83db27fc</id>
+    <label>Economie | Handel</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_83db27fc</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4d1c84a7</id>
+    <label>Economie</label>
+    <!-- dienstensector -->
+    <beschrijving>subterm van: /tooi/def/concept/c_d363776f</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_4d1c84a7</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e277e756</id>
+    <label>Cultuur en recreatie | Religie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_e277e756</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a6c5e5b8</id>
+    <label>Cultuur en recreatie | Recreatie</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_a6c5e5b8</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_6b728132</id>
+    <label>Cultuur en recreatie | Media</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_6b728132</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_75809540</id>
+    <label>Cultuur en recreatie</label>
+    <!-- horeca -->
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_75809540</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_70e03904</id>
+    <label>Cultuur en recreatie</label>
+    <!-- evenementen -->
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_70e03904</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f72b706a</id>
+    <label>Cultuur en recreatie | Cultuur</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_f72b706a</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_2408fb5a</id>
+    <label>Cultuur en recreatie</label>
+    <!-- cultureel erfgoed -->
+    <beschrijving>subterm van: /tooi/def/concept/c_0361ffb3</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_2408fb5a</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1f781691</id>
+    <label>Onderwijs en wetenschap</label>
+   <!-- speciaal onderwijs -->
+    <beschrijving>subterm van: /tooi/def/concept/c_08d12aef</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_1f781691</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigVanaf>2020-01-31</geldigVanaf>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_7a0f87d5</id>
+    <label>Zorg en gezondheid</label>
+    <!-- zorginstellingen -->
+    <beschrijving>subterm van: /tooi/def/concept/c_d0463fb7</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_7a0f87d5</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <geldigVanaf>2020-01-31</geldigVanaf>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_79010191</id>
+    <label>Natuur en milieu</label>
+    <!-- klimaatverandering -->
+    <beschrijving>subterm van: /tooi/def/concept/c_afa30a11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/concept/c_79010191</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+</Waardelijst>

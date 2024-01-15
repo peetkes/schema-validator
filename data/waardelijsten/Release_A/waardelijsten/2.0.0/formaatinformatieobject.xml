@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="2.0.0"
+  xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/2.0.0/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/join/id/stop/formaatinformatieobject</id>
+    <label>Typering van informatieobjecten naar dataformaat</label>
+    <beschrijving>De waardelijst beschrijft de typering van het informatieobject aan de hand van het
+      technische uitwisselformaat zoals die door STOP ondersteund worden.</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/set/scw_stop_formaten_informatieobjecten</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>2.0.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/join/id/stop/informatieobject/gio_002</id>
+    <label>Geoinformatieobject</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_3aa96d08</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/informatieobject/doc_001</id>
+    <label>PDF-document</label>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/def/thes/kern/c_75029aa4</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+</Waardelijst>

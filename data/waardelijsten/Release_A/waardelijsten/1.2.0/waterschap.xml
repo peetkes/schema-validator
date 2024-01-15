@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.2.0" xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/ https://standaarden.overheid.nl/stop/1.2.0/imop-resources.xsd" xmlns="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WaardelijstInfo>
+    <id>/tooi/def/class/Waterschap</id>
+    <label>Waterschappen</label>
+    <beschrijving>Alle waterschappen uit GRS </beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.2.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0654</id>
+    <label>waterschap Aa en Maas</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0155</id>
+    <label>waterschap Amstel, Gooi en Vecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0652</id>
+    <label>waterschap Brabantse Delta</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0539</id>
+    <label>waterschap De Dommel</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0664</id>
+    <label>waterschap Drents Overijsselse Delta</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0655</id>
+    <label>waterschap Hollandse Delta</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0636</id>
+    <label>Hoogheemraadschap De Stichtse Rijnlanden</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0651</id>
+    <label>Hoogheemraadschap Hollands Noorderkwartier</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0372</id>
+    <label>Hoogheemraadschap van Delfland</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0616</id>
+    <label>Hoogheemraadschap van Rijnland</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0656</id>
+    <label>Hoogheemraadschap van Schieland en de Krimpenerwaard</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0646</id>
+    <label>waterschap Hunze en Aa's</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0647</id>
+    <label>waterschap Noorderzijlvest</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0152</id>
+    <label>waterschap Rijn en IJssel</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0621</id>
+    <label>waterschap Rivierenland</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0661</id>
+    <label>waterschap Scheldestromen</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0662</id>
+    <label>waterschap Vallei en Veluwe</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0663</id>
+    <label>waterschap Vechtstromen</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0665</id>
+    <label>waterschap Limburg</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0653</id>
+    <label>Wetterskip Fryslân</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws0650</id>
+    <label>waterschap Zuiderzeeland</label>
+  </Waarde>
+</Waardelijst>

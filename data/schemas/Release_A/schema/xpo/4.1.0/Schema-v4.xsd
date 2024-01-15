@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" version="4.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--
+    XPO.xsd
+      Beschrijft de structuur van een XPO (XML Publicatie Object)
+    Huidige versie:
+      Versienummer: 4.1
+      Datum: 2020-09-09
+      Auteur(s): Arjan van der Smeede
+      Omschrijving: XPO versie 4
+  -->
+  <xs:element name="xpo" type="XpoType"/>
+ 
+  <xs:element name="batch">
+    <xs:complexType>
+      <xs:choice minOccurs="1" maxOccurs="unbounded">
+        <xs:element name="xpo" type="XpoType"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+ 
+  <xs:complexType name="publicatiedoelType">
+    <xs:sequence>
+      <xs:element name="verschijningsvorm" minOccurs="0" maxOccurs="unbounded" type="VerschijningsvormType"/>     
+    </xs:sequence>
+    <xs:attribute name="key" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Key van het publicatiedoel
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="publicatietijdstip" type="xs:dateTime" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Tijdstip waarop er gepubliceerd is naar dir doel
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="doelstatus" type="xs:string"  use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Een identificatie van de publicatie op het doel.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="locatieidentifier" type="xs:string"  use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Een identificatie van de publicatie op het doel.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType> 
+  <xs:complexType name="XpoType">
+    <xs:sequence>
+      <xs:choice>
+        <xs:element name="toevoegenwork" type="OpdrachtType"/>
+        <xs:element name="toevoegenexpression" type="OpdrachtType"/>
+        <xs:element name="verwijderenwork" type="OpdrachtType"/>
+        <xs:element name="bijwerkenverschijningsvorm" type="OpdrachtType"/>
+        <xs:element name="bijwerkenexpression" type="OpdrachtType"/>
+        <xs:element name="afbreken" type="OpdrachtType"/>
+        <xs:element name="bijwerkencontext" type="OpdrachtType"/>
+        <xs:element name="bijwerkenwork" type="OpdrachtType"/>
+        <xs:element name="verwijderenverschijningsvorm" type="OpdrachtType"/>
+        <xs:element name="verwijderenexpression" type="OpdrachtType"/>
+        <xs:element name="toevoegenverschijningsvorm" type="OpdrachtType"/>
+        <xs:element name="beginpublicatiemoment" type="OpdrachtType"/>
+        <xs:element name="eindpublicatiemoment" type="OpdrachtType"/>
+        <xs:element name="herstelwork" type="OpdrachtType"/>
+      </xs:choice>
+       
+      <xs:element name="notificatieadres" type="AdresType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="status" type="StatusType" minOccurs="0"/>
+      <xs:element name="procesinformatie" minOccurs="0">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="statusverandering" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:simpleContent>
+                  <xs:extension base="xs:string">
+                    <xs:attribute name="datumtijd" type="xs:dateTime" use="required">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Datum/tijd waarop de statusverandering is
+                          gebeurd.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:attribute>
+                  </xs:extension>
+                </xs:simpleContent>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="publicatiegebeurtenis" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:attribute name="datumtijd" type="xs:dateTime" use="required">
+                  <xs:annotation>
+                    <xs:documentation>
+                      Datum/tijd waarop de gebeurtenis
+                      plaatsvond.
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="publicatiedoel" type="xs:string" use="required">
+                  <xs:annotation>
+                    <xs:documentation>
+                      Doel waarop gepubliceerd wordt, bijvoorbeeld:
+                      publicatieRepository.
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="locatie" type="xs:string" use="required">
+                  <xs:annotation>
+                    <xs:documentation>Locatie waarnaar gepubliceerd is.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="verschijningsvorm_gegenereerd" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:attribute ref="bestandstype" use="required"/>
+                <xs:attribute name="datumtijd" type="xs:dateTime" use="required">
+                  <xs:annotation>
+                    <xs:documentation>Moment waarop het genereren voltooid was.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="bestand_gekopieerd" minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:attribute name="bron" type="xs:string" use="required">
+                  <xs:annotation>
+                    <xs:documentation>Bronbestand.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="bestemming" type="xs:string" use="required">
+                  <xs:annotation>
+                    <xs:documentation>
+                      Bestand dat gekopieerd is. Indien dit de laatste entry is, is
+                      dit gelijk aan het bestand in Bron of Verschijningsvormen.
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="datumtijd" type="xs:dateTime" use="required">
+                  <xs:annotation>
+                    <xs:documentation>Moment waarop het kopieren voltooid was.</xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="meldingen">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="melding" type="MeldingType" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:string" use="required">
+                  <xs:annotation>
+                    <xs:documentation>
+                      Unieke ID van de XPO waarop de fout betrekking heeft.
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="gepubliceerdedoelen"  minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="publicatiedoel" type="publicatiedoelType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="publicatietijdstip" type="xs:dateTime" use="required">
+                  <xs:annotation>
+                    <xs:documentation>
+                      Overal tijdstip van deze publicatie.
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="uitgevoerdetransformaties"  minOccurs="1" maxOccurs="1">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="transformatie" type="transformatiedoelType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="versie" type="xs:int" use="required"/>
+    <xs:attributeGroup ref="ids"/>
+    <xs:attribute name="userid" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern
+            value="\{[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}\}"
+          />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+ 
+  <xs:complexType name="VerschijningsvormType">
+    <xs:complexContent>
+      <xs:extension base="RefType">
+        <xs:attribute name="verschijningsvormtype" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+ 
+  <xs:complexType name="transformatiedoelType">
+    <xs:attribute name="tijdstip"  type="xs:dateTime" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Het tijdstip waarop de transformatie is gestart
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="doelid" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Het id van het transformatieplan dat gebruikt is.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="id" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Het id van de transformatie aan de kant van de transformatieprovider
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>  
+    <xs:attribute name="tijdstipafgerond"  type="xs:dateTime" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Het tijdstip waarop de transformatie is afgerond
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+   
+  <xs:complexType name="OpdrachtType">
+    <xs:sequence>
+      <xs:element name="work">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="metadata" minOccurs="0" maxOccurs="1" type="MetadataType"/>           
+            <xs:element name="expression" minOccurs="0" maxOccurs="1" type="ExpressionType"/>  
+            <xs:element name="wti" minOccurs="0" maxOccurs="1" type="ItemType"/>         
+          </xs:sequence>
+          <xs:attribute name="label" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="relaties" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="publiceren_na" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attributeGroup ref="relatieIds"/>
+                <xs:attribute name="publicerenindienafgebroken" type="xs:boolean" use="required">
+                  <xs:annotation>
+                    <xs:documentation>
+                      Geeft aan of deze publicatie uitgevoerd moet worden als de
+                      gerelateerde publicatie afgebroken wordt.
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="publicerenindienfout" type="xs:boolean" use="required">
+                  <xs:annotation>
+                    <xs:documentation>
+                      Geeft aan of deze publicatie uitgevoerd moet worden als de
+                      gerelateerde publicatie door een fout (tijdelijk) niet gepubliceerd wordt.
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+                <xs:attribute name="bijoverschrijdingpublicatiedatumpublicerenna" type="xs:time"
+                  use="optional">
+                  <xs:annotation>
+                    <xs:documentation>
+                      Geeft de tijd aan waarna deze publicatie gepubliceerd moet
+                      worden indien de gerelateerde publicatie nog niet gepubliceerd is en de eigen
+                      PublicerenNa waarde overschreden is. Indien niet aanwezig wordt gewacht tot de
+                      gerelateerde publicatie gedaan is.
+                    </xs:documentation>
+                  </xs:annotation>
+                </xs:attribute>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="stuurgegevens">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="area" minOccurs="1" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="publicerenNa" minOccurs="1" maxOccurs="1" type="xs:dateTime"/>           
+            <xs:element name="publicerenVoor" minOccurs="0" maxOccurs="1" type="xs:dateTime"/>           
+            <xs:element name="configuratie" minOccurs="0" maxOccurs="1" type="xs:anyURI"/>           
+            <xs:element name="prioriteit" minOccurs="0" maxOccurs="1" type="PrioriteitType"/>           
+            <xs:element name="embargo" minOccurs="0" maxOccurs="1" type="xs:boolean"/>           
+            <xs:element name="publicatieplan" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="AanleverendSysteem" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="BWBId" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="Collectie" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="Documentstatus" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="Documenttype" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="ExpressionLabel" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="InternId" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="is_privacygevoelig" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="is_spoedpublicatie" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="OrganisatieContext" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="Organisatietype" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="Publicatiesoort" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="ToestandId" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+            <xs:element name="KetenId" minOccurs="0" maxOccurs="1" type="xs:string"/>           
+          </xs:all>
+        </xs:complexType>
+      </xs:element>   
+    </xs:sequence>
+  </xs:complexType>
+ 
+  <xs:complexType name="ExpressionType">
+    <xs:sequence>
+      <xs:element name="metadata" minOccurs="0" maxOccurs="1" type="MetadataType"/>           
+      <xs:element name="manifestation" minOccurs="0" maxOccurs="unbounded" type="ManifestationType"/>
+    </xs:sequence>
+    <xs:attribute name="label" type="xs:string" use="required"/>
+  </xs:complexType>  
+ 
+  <xs:complexType name="ManifestationType">
+    <xs:sequence>
+      <xs:element name="metadata" minOccurs="0" maxOccurs="1" type="MetadataType"/>           
+      <xs:element name="item" minOccurs="0" maxOccurs="unbounded" type="ItemType"/>
+      <xs:element name="bron" minOccurs="0" maxOccurs="unbounded" type="BronType"/>
+    </xs:sequence>
+    <xs:attribute name="label" type="xs:string" use="required"/>
+  </xs:complexType>  
+ 
+  <xs:complexType name="ItemType">
+    <xs:sequence>
+      <xs:element name="metadata" minOccurs="0" maxOccurs="1" type="MetadataType"/>           
+    </xs:sequence>
+    <xs:attribute name="label" type="xs:string" use="required"/>
+    <xs:attribute name="protocol" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Protocol dat gebruikt wordt op het bestand of endpoint te benaderen.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="adres" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>Adres van een bestand of endpoint.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="size" type="xs:long">
+      <xs:annotation>
+        <xs:documentation>De grootte van het bestand</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="hash" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>De hash van het bestand</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>  
+ 
+  <xs:complexType name="BronType">
+    <xs:sequence>
+      <xs:element name="metadata" minOccurs="0" maxOccurs="1" type="MetadataType"/>           
+    </xs:sequence>
+    <xs:attribute name="label" type="xs:string" use="required"/>
+    <xs:attribute name="protocol" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>Protocol dat gebruikt wordt op het bestand of endpoint te benaderen.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="adres" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>Adres van een bestand of endpoint.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="size" type="xs:long">
+      <xs:annotation>
+        <xs:documentation>De grootte van het bestand</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="hash" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>De hash van het bestand</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>  
+ 
+  <xs:complexType name="MetadataType">
+    <xs:sequence>
+      <xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded" processContents="lax" />   
+    </xs:sequence>
+  </xs:complexType>  
+     
+  <xs:complexType name="RefType">
+    <xs:complexContent>
+      <xs:extension base="AdresType">
+        <xs:sequence>
+          <xs:element name="metadata" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+              <xs:simpleContent>
+                <xs:extension base="xs:string">
+                  <xs:attribute name="key" type="xs:string" use="required">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Key van de metadata waarde (waarde is
+                        content).
+                      </xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="schema" type="xs:string" use="optional">
+                    <xs:annotation>
+                      <xs:documentation>
+                        Schema van de metadata.
+                      </xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="doel" use="required">
+                    <xs:annotation>
+                      <xs:documentation>
+                        De plaats waar de metadata gepubliceerd moet
+                        worden.
+                      </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:enumeration value="Work"/>
+                        <xs:enumeration value="Expression"/>
+                        <xs:enumeration value="Manifestation"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:extension>
+              </xs:simpleContent>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute ref="bestandstype" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+ 
+  <xs:complexType name="AdresType">
+    <xs:attribute name="protocol" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Protocol dat gebruikt wordt op het bestand of endpoint te
+          benaderen.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="adres" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>Adres van een bestand of endpoint.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="size" type="xs:long">
+      <xs:annotation>
+        <xs:documentation>De grootte van het bestand</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="hash" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>De hash van het bestand</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+ 
+  <xs:complexType name="MeldingType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="tijdstip" type="xs:dateTime">
+          <xs:annotation>
+            <xs:documentation>
+              Datum/tijd waarop de melding plaatsvond.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="nummer" type="xs:int" use="required">
+          <xs:annotation>
+            <xs:documentation>Unieke nummer van het type fout dat is opgetreden.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="locatie" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>
+              XPath expressie die het foutieve element aanwijst. Alleen van
+              toepassing wanneer een functionele fout in de XML is gevonden.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="bericht" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Eventueel bericht bij de melding. </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>      
+        <xs:attribute name="meldingtype" use="required">
+          <xs:annotation>
+            <xs:documentation>Het type melding </xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Error"/>
+              <xs:enumeration value="Warning"/>
+              <xs:enumeration value="Info"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+ 
+  <xs:attributeGroup name="ids">
+    <xs:attribute name="id" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Identificatie van de XPO waarop deze XPO afhankelijk
+          is.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+ 
+  <xs:attributeGroup name="relatieIds">
+    <xs:attribute name="id" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Identificatie van de XPO waarop deze XPO afhankelijk
+          is.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="subid" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Sub Identificatie van de XPO waarop deze XPO afhankelijk
+          is.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+   
+  <xs:simpleType name="StatusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Onbekend"/>
+      <xs:enumeration value="Ontvangen"/>
+      <xs:enumeration value="Gevalideerd"/>
+      <xs:enumeration value="InVoorbereidingswachtrij"/>
+      <xs:enumeration value="VoorbereidingGestart"/>
+      <xs:enumeration value="Voorbereid"/>
+      <xs:enumeration value="InPublicatiewachtrij"/>
+      <xs:enumeration value="PublicatieGestart"/>
+      <xs:enumeration value="SuccesvolUitgevoerd"/>
+      <xs:enumeration value="Afgebroken"/>
+      <xs:enumeration value="Fout"/>
+      <xs:enumeration value="AanleverFout"/>
+      <xs:enumeration value="NietAfgebroken"/>
+    </xs:restriction>
+  </xs:simpleType>
+   
+  <xs:simpleType name="PrioriteitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Spoed"/>
+      <xs:enumeration value="Hoog"/>
+      <xs:enumeration value="Normaal"/>
+      <xs:enumeration value="Laag"/>
+    </xs:restriction>
+  </xs:simpleType>
+ 
+  <xs:attribute name="bestandstype">
+    <xs:annotation>
+      <xs:documentation>Type bestand, bijvoorbeeld: PDF, HTML.</xs:documentation>
+    </xs:annotation>
+  </xs:attribute>
+</xs:schema>

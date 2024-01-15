@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.0.4"
+   xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/1.0.4/imop-resources.xsd" >
+  <WaardelijstInfo>
+    <id>/tooi/def/class/Bestuursorgaan</id>
+    <label>Bestuursorganen</label>
+    <beschrijving>Alle bestuursorganen die van belang zijn voor de Omgevingswet</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.0.4</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_2c4e7407</id>
+    <label>burgemeester</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan gemeente (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_2a1d64e7)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_28ecfd6d</id>
+    <label>college van burgemeester en wethouders</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan gemeente (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_2a1d64e7)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_2a7d8663</id>
+    <label>gemeenteraad</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan gemeente (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_2a1d64e7)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_e24d39f6</id>
+    <label>commissaris van de Koning</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan provincie (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_3469893d)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_61676cbc</id>
+    <label>gedeputeerde staten</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan provincie (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_3469893d)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_411b4e4a</id>
+    <label>provinciale staten</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan provincie (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_3469893d)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_bcfb7b4e</id>
+    <label>minister</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan staat (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_e3cf586b)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_91fb5e42</id>
+    <label>regering</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan staat (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_e3cf586b)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_3aaa4d12</id>
+    <label>staatssecretaris</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan staat (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_e3cf586b)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_70c87e3d</id>
+    <label>algemeen bestuur</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan waterschap (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_be4c3d94)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_5cc92c89</id>
+    <label>dagelijks bestuur</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan waterschap (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_be4c3d94)</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/thes/kern/c_f70a6113</id>
+    <label>dijkgraaf</label>
+    <beschrijving>Behoort tot de groep: bestuursorgaan waterschap (https://identifier.overheid.nl/tooi/def/thes/kern/skosCollection_be4c3d94)</beschrijving>
+  </Waarde>
+</Waardelijst>

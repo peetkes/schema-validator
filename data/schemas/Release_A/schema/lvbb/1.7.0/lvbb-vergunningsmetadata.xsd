@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:vgm="https://standaarden.overheid.nl/lvbb/vergunningsmetadata/"
+           elementFormDefault="qualified"
+           targetNamespace="https://standaarden.overheid.nl/lvbb/vergunningsmetadata/"
+           version="1.7.0">
+   <xs:element name="Vergunning">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:Vergunning"/>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="vgm:referentienummer" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="vgm:eindverantwoordelijke" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="vgm:soortVergunning" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="vgm:gepubliceerdIn" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="vgm:officieleTitel" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="vgm:IMRO-planidentificatie"
+                        minOccurs="0"
+                        maxOccurs="unbounded"/>
+            <xs:element ref="vgm:bekendOp" maxOccurs="1" minOccurs="1"/>
+            <xs:element ref="vgm:geldigOp" minOccurs="1" maxOccurs="1"/>
+            <xs:element ref="vgm:juridischWerkendOp" minOccurs="1" maxOccurs="1"/>
+         </xs:sequence>
+         <xs:attribute name="schemaversie" type="xs:string" use="required"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="referentienummer" type="xs:string">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:referentienummer"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="eindverantwoordelijke" type="xs:string">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:eindverantwoordelijke"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="soortVergunning" type="vgm:wlSoortVergunning">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:soortVergunning"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="gepubliceerdIn" type="xs:string">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:gepubliceerdIn"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="officieleTitel" type="xs:string">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:officieleTitel"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="IMRO-planidentificatie" type="xs:string">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:IMRO-planidentificatie"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="bekendOp" type="xs:date">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:bekendOp"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:element name="geldigOp">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:geldigOp"/>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:group ref="vgm:mgPeriode"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="juridischWerkendOp">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:juridischWerkendOp"/>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:group ref="vgm:mgPeriode"/>
+      </xs:complexType>
+   </xs:element>
+   <xs:group name="mgPeriode">
+      <xs:sequence>
+         <xs:element ref="vgm:Periode" maxOccurs="unbounded" minOccurs="1"/>
+      </xs:sequence>
+   </xs:group>
+   <xs:element name="Periode">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:Periode"/>
+      </xs:annotation>
+      <xs:complexType>
+         <xs:sequence>
+            <xs:element ref="vgm:vanaf" minOccurs="1" maxOccurs="1"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+   <xs:element name="vanaf" type="xs:date">
+      <xs:annotation>
+         <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/go.html?id=xsd:vgm:vanaf"/>
+      </xs:annotation>
+   </xs:element>
+   <xs:simpleType name="wlSoortVergunning">
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="Omgevingsvergunning"/>
+      </xs:restriction>
+   </xs:simpleType>
+</xs:schema>

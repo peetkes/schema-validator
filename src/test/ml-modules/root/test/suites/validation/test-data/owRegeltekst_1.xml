@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ow-dc:owBestand xmlns:ow-dc="http://www.geostandaarden.nl/imow/bestanden/deelbestand">
+   <sl:standBestand xmlns:sl="http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek">
+      <sl:dataset>Voorbeeld-dataset</sl:dataset>
+      <sl:inhoud>
+         <sl:gebied>Voorbeeld-gebied</sl:gebied>
+         <sl:leveringsId>ID-IMOW-2023072411-3215743-1</sl:leveringsId>
+         <sl:objectTypen>
+            <sl:objectType>Regeltekst</sl:objectType>
+            <sl:objectType>RegelVoorIedereen</sl:objectType>
+         </sl:objectTypen>
+      </sl:inhoud>
+      <sl:stand>
+         <ow-dc:owObject>
+            <r:Regeltekst xmlns:r="http://www.geostandaarden.nl/imow/regels"
+                          wId="gm0307_1__chp_1__art_1">
+               <r:identificatie>nl.imow-gm0307.regeltekst.R202307241132157431I135187252</r:identificatie>
+            </r:Regeltekst>
+         </ow-dc:owObject>
+      </sl:stand>
+      <sl:stand>
+         <ow-dc:owObject>
+            <r:RegelVoorIedereen xmlns:r="http://www.geostandaarden.nl/imow/regels">
+               <r:identificatie>nl.imow-gm0307.juridischeregel.R202307241132157431I135187252</r:identificatie>
+               <r:idealisatie>http://standaarden.omgevingswet.overheid.nl/idealisatie/id/concept/Exact</r:idealisatie>
+               <r:artikelOfLid>
+                  <r:RegeltekstRef xmlns:xlink="http://www.w3.org/1999/xlink"
+                                   xlink:href="nl.imow-gm0307.regeltekst.R202307241132157431I135187252"/>
+               </r:artikelOfLid>
+               <r:locatieaanduiding>
+                  <l:LocatieRef xmlns:l="http://www.geostandaarden.nl/imow/locatie"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                xlink:href="nl.imow-gm0307.ambtsgebied.R202307241132157431I1"/>
+               </r:locatieaanduiding>
+            </r:RegelVoorIedereen>
+         </ow-dc:owObject>
+      </sl:stand>
+   </sl:standBestand>
+</ow-dc:owBestand>

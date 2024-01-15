@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+  targetNamespace="https://standaarden.overheid.nl/stop/imop/geo/" version="1.2.3"
+  xmlns:basisgeo="http://www.geostandaarden.nl/basisgeometrie/1.0"
+  xmlns:geo="https://standaarden.overheid.nl/stop/imop/geo/"
+  xmlns:gio="https://standaarden.overheid.nl/stop/imop/gio/"
+  xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/goto.html?to=stop&amp;id=xsd:geo">"GEO-schema" van STOP. </xs:documentation>
+    <xs:documentation>Dit schema definieert de "geo"-elementen voor de
+      STOP-modules</xs:documentation>
+    <xs:documentation>versie 1.2.3</xs:documentation>
+  </xs:annotation>
+
+  <xs:import namespace="http://www.geostandaarden.nl/basisgeometrie/1.0"
+    schemaLocation="https://register.geostandaarden.nl/gmlapplicatieschema/basisgeometrie/1.0.0/basisgeometrie.xsd"/>
+  <xs:import namespace="http://www.opengis.net/gml/3.2"
+    schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/gio/"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.2.3/imop-gio.xsd"/>
+
+  <xs:element name="GeoInformatieObjectVaststelling" type="geo:GeoInformatieObjectVaststellingType"/>
+  <xs:complexType name="GeoInformatieObjectVaststellingType">
+    <xs:complexContent>
+      <xs:extension base="gml:AbstractFeatureType">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="context">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="1" ref="gio:GeografischeContext"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="1" name="vastgesteldeVersie">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="1" ref="geo:GeoInformatieObjectVersie"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" name="wasID" type="xs:anyURI"/>
+        </xs:sequence>
+        <xs:attribute name="schemaversie" type="xs:token" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="GeoInformatieObjectVersie" type="geo:GeoInformatieObjectVersieType"/>
+  <xs:complexType name="GeoInformatieObjectVersieType">
+    <xs:complexContent>
+      <xs:extension base="gml:AbstractFeatureType">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="1" name="FRBRWork" type="xs:anyURI"/>
+          <xs:element maxOccurs="1" minOccurs="1" name="FRBRExpression" type="xs:anyURI"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="eenheidlabel" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="eenheidID" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="normlabel" type="xs:string"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="normID" type="xs:string"/>
+          <xs:element minOccurs="0" name="groepen">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="geo:Groep"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="1" name="locaties">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="1" ref="geo:Locatie"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:sequence>
+        <xs:attribute name="schemaversie" type="xs:token" use="optional"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="Groep" type="geo:GroepType"/>
+  <xs:complexType name="GroepType">
+    <xs:sequence>
+      <xs:element maxOccurs="1" minOccurs="1" ref="geo:groepID"/>
+      <xs:element maxOccurs="1" minOccurs="1" name="label" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Locatie" type="geo:LocatieType"/>
+  <xs:complexType name="LocatieType">
+    <xs:complexContent>
+      <xs:extension base="gml:AbstractFeatureType">
+        <xs:sequence>
+          <xs:element maxOccurs="1" minOccurs="0" name="naam" type="xs:string"/>
+          <xs:element minOccurs="1" name="geometrie">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="1" minOccurs="1" ref="basisgeo:Geometrie"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element maxOccurs="1" minOccurs="0" ref="geo:groepID"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="kwantitatieveNormwaarde" type="xs:double"/>
+          <xs:element maxOccurs="1" minOccurs="0" name="kwalitatieveNormwaarde" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="groepID" type="geo:dtGroepID"/>
+    
+  <!-- datatypes -->
+  <xs:simpleType name="dtGroepID">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[A-Za-z0-9][A-Za-z0-9_-]*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

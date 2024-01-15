@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.1.0"
+  xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/tooi/def/concept/conceptScheme_eb721505</id>
+    <label>BWB-overheidsthema</label>
+    <beschrijving>De lijst met overheidsthema's zoals die op wetten.nl wordt gebruikt. Deze lijst
+      was gebaseerd op de themalijst van Rijksoverheid.nl, en had daarmee in sync moeten blijven,
+      maar dat is niet gebeurd. De Rijksoverheid.nl-thema's zijn gewijzigd, maar deze lijst is
+      hetzelfde gebleven. </beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/def/concept/c_bed49b60</id>
+    <label>belastingen</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3708ac5e</id>
+    <label>bouwen, wonen en leefomgeving</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c70d3447</id>
+    <label>cultuur, sport, vrije tijd</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_30e85e85</id>
+    <label>werk- en loopbaan</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9fbcfc19</id>
+    <label>economie en ondernemen</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_6bdc2b89</id>
+    <label>familie, jeugd en gezin</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_dfcf3a97</id>
+    <label>financi\u00EBn</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c95f4dd4</id>
+    <label>gezondheid en zorg</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_56a74243</id>
+    <label>immigratie, integratie en inburgering</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_33cf4691</id>
+    <label>internationale- en ontwikkelingssamenwerking</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_67671688</id>
+    <label>landbouw, natuur en voedsel</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_86b84a9d</id>
+    <label>milieu, ruimte en water</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a058394a</id>
+    <label>onderwijs en wetenschap</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e8ff69cb</id>
+    <label>openbare orde en veiligheid</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_fd285f2b</id>
+    <label>overheid, bestuur en koninkrijk</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1c504a92</id>
+    <label>defensie</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_17f08b1f</id>
+    <label>subsidies, uitkeringen en toeslagen</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9153c2b4</id>
+    <label>verkeer en vervoer</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_49cf6ea2</id>
+    <label>rechtspraak</label>
+  </Waarde>
+</Waardelijst>

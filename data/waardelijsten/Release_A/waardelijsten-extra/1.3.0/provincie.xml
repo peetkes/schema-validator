@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.3.0" xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/ https://standaarden.overheid.nl/stop/1.3.0/imop-resources.xsd" xmlns="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WaardelijstInfo>
+    <id>/tooi/def/class/Provincie</id>
+    <label>Provincies</label>
+    <beschrijving>Alle extra provincies tbv testen op ACC en ETO</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/id/provincie/pv61</id>
+    <label>provincie TST_01</label>
+    <beschrijving>Provincie TST_01</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv61</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv62</id>
+    <label>provincie TST_02</label>
+    <beschrijving>Provincie TST_02</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv62</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv63</id>
+    <label>provincie TST_03</label>
+    <beschrijving>Provincie TST_03</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv63</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv64</id>
+    <label>provincie TST_04</label>
+    <beschrijving>Provincie TST_04</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv64</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv65</id>
+    <label>provincie TST_05</label>
+    <beschrijving>Provincie TST_05</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv65</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv66</id>
+    <label>provincie TST_06</label>
+    <beschrijving>Provincie TST_06</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv66</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv67</id>
+    <label>provincie TST_07</label>
+    <beschrijving>Provincie TST_07</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv67</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv68</id>
+    <label>provincie TST_08</label>
+    <beschrijving>Provincie TST_08</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv68</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv69</id>
+    <label>provincie TST_09</label>
+    <beschrijving>Provincie TST_09</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv69</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv70</id>
+    <label>provincie TST_10</label>
+    <beschrijving>Provincie TST_10</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv70</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv71</id>
+    <label>provincie TST_11</label>
+    <beschrijving>Provincie TST_11</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv71</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv72</id>
+    <label>provincie TST_12</label>
+    <beschrijving>Provincie TST_12</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv72</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv73</id>
+    <label>provincie TST_13</label>
+    <beschrijving>Provincie TST_13</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv73</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv74</id>
+    <label>provincie TST_14</label>
+    <beschrijving>Provincie TST_14</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv74</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv75</id>
+    <label>provincie TST_15</label>
+    <beschrijving>Provincie TST_15</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv75</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv76</id>
+    <label>provincie TST_16</label>
+    <beschrijving>Provincie TST_16</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv76</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv77</id>
+    <label>provincie TST_17</label>
+    <beschrijving>Provincie TST_17</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv77</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv78</id>
+    <label>provincie TST_18</label>
+    <beschrijving>Provincie TST_18</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv78</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv79</id>
+    <label>provincie TST_19</label>
+    <beschrijving>Provincie TST_19</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv79</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv80</id>
+    <label>provincie TST_20</label>
+    <beschrijving>Provincie TST_20</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv80</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv81</id>
+    <label>provincie TST_21</label>
+    <beschrijving>Provincie TST_21</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv81</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv82</id>
+    <label>provincie TST_22</label>
+    <beschrijving>Provincie TST_22</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv82</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv83</id>
+    <label>provincie TST_23</label>
+    <beschrijving>Provincie TST_23</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv83</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv84</id>
+    <label>provincie TST_24</label>
+    <beschrijving>Provincie TST_24</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv84</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv85</id>
+    <label>provincie TST_25</label>
+    <beschrijving>Provincie TST_25</beschrijving>
+    <vindplaatsen>
+      <heeftVindplaats>
+        <Vindplaats>
+          <url>https://identifier.overheid.nl/tooi/id/provincie/pv85</url>
+        </Vindplaats>
+      </heeftVindplaats>
+    </vindplaatsen>
+  </Waarde>
+</Waardelijst>

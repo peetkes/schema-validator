@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.1.0"
+  xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/join/id/stop/soortwork</id>
+    <label>worktypes</label>
+    <beschrijving>Alle worktypes zoals gedefinieerd in het Informatiemodel STOP</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/join/id/stop/work_003</id>
+    <label>Besluit</label>
+    <beschrijving>Een generiek besluit</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/work_005</id>
+    <label>Geconsolideerd informatieobject</label>
+    <beschrijving>Consolidatie van een informatieobject</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/work_006</id>
+    <label>Geconsolideerde regeling</label>
+    <beschrijving>Consolidatie van een Regeling</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/work_010</id>
+    <label>Informatieobject</label>
+    <beschrijving>Een informatieobject. Het formaat van het informatieobject wordt vastgelegd
+      middels waardenlijst /join/id/stop/formaatinformatieobject. </beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/work_015</id>
+    <label>Officiële Publicatie</label>
+    <beschrijving>Officiële publicatie. Verdere typering van officiele publicaties wordt vastgelegd
+      middels waardelijst /join/id/stop/soortpublicatie.</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/work_018</id>
+    <label>Rectificatie</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/work_019</id>
+    <label>Regeling</label>
+    <beschrijving>Een Regeling. Verdere typering van regelingen wordt vastgelegd middels waardelijst
+      /join/id/stop/soortregeling.</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/work_021</id>
+    <label>Tijdelijk regelingdeel</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/work_022</id>
+    <label>Consolidatie van een tijdelijk regelingdeel</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/work_023</id>
+    <label>Kennisgeving</label>
+  </Waarde>
+</Waardelijst>

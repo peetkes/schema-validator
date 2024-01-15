@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.1.0"
+  xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/tooi/def/class/Ministerie</id>
+    <label>Ministeries</label>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1010</id>
+    <label>Ministerie van Algemene Zaken</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1034</id>
+    <label>Ministerie van Binnenlandse Zaken en Koninkrijksrelaties</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1013</id>
+    <label>Ministerie van Buitenlandse Zaken</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1018</id>
+    <label>Ministerie van Defensie</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1045</id>
+    <label>Ministerie van Economische Zaken en Klimaat</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1090</id>
+    <label>Ministerie van Financiën</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1130</id>
+    <label>Ministerie van Infrastructuur en Waterstaat</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1058</id>
+    <label>Ministerie van Justitie en Veiligheid</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1153</id>
+    <label>Ministerie van Landbouw, Natuur en Voedselkwaliteit</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1109</id>
+    <label>Ministerie van Onderwijs, Cultuur en Wetenschap</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1073</id>
+    <label>Ministerie van Sociale Zaken en Werkgelegenheid</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/ministerie/mnre1025</id>
+    <label>Ministerie van Volksgezondheid, Welzijn en Sport</label>
+  </Waarde>
+</Waardelijst>

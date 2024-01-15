@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ValidatieTransformatieplan xmlns="https://standaarden.overheid.nl/stop/imop/schemata/" schemaversie="2.0.0">
+  <naam>ValideerValidatieTransformatiePlan</naam>
+  <root>ValidatieTransformatieplan</root>
+  <Resultaat>
+    <validatiemeldingen/>
+  </Resultaat>
+  <Groep>
+    <Schemavalidatie>
+      <schema>stop/2.0.0/imop-plan.xsd</schema>
+      <Fout>
+        <code>LVBB9999</code>
+        <melding>De XML voldoet niet aan het schema https://standaarden.overheid.nl/stop/2.0.0/imop-plan.xsd</melding>
+        <ernst>fout</ernst>
+      </Fout>
+    </Schemavalidatie>
+  </Groep>
+</ValidatieTransformatieplan>

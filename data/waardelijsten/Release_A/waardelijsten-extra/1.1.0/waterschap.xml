@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.1.0" xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/ https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd" xmlns="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WaardelijstInfo>
+    <id>/tooi/def/class/Waterschap</id>
+    <label>Waterschappen</label>
+    <beschrijving>Alle extra waterschappen tbv testen ACC en ETO</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9901</id>
+    <label>waterschap TST_01</label>
+    <beschrijving>Waterschap TST_01</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9902</id>
+    <label>waterschap TST_02</label>
+    <beschrijving>Waterschap TST_02</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9903</id>
+    <label>waterschap TST_03</label>
+    <beschrijving>Waterschap TST_03</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9904</id>
+    <label>waterschap TST_04</label>
+    <beschrijving>Waterschap TST_04</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9905</id>
+    <label>waterschap TST_05</label>
+    <beschrijving>Waterschap TST_05</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9906</id>
+    <label>waterschap TST_06</label>
+    <beschrijving>Waterschap TST_06</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9907</id>
+    <label>waterschap TST_07</label>
+    <beschrijving>Waterschap TST_07</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9908</id>
+    <label>waterschap TST_08</label>
+    <beschrijving>Waterschap TST_08</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9909</id>
+    <label>waterschap TST_09</label>
+    <beschrijving>Waterschap TST_09</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9910</id>
+    <label>waterschap TST_10</label>
+    <beschrijving>Waterschap TST_10</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9911</id>
+    <label>waterschap TST_11</label>
+    <beschrijving>Waterschap TST_11</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9912</id>
+    <label>waterschap TST_12</label>
+    <beschrijving>Waterschap TST_12</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9913</id>
+    <label>waterschap TST_13</label>
+    <beschrijving>Waterschap TST_13</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9914</id>
+    <label>waterschap TST_14</label>
+    <beschrijving>Waterschap TST_14</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9915</id>
+    <label>waterschap TST_15</label>
+    <beschrijving>Waterschap TST_15</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9916</id>
+    <label>waterschap TST_16</label>
+    <beschrijving>Waterschap TST_16</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9917</id>
+    <label>waterschap TST_17</label>
+    <beschrijving>Waterschap TST_17</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9918</id>
+    <label>waterschap TST_18</label>
+    <beschrijving>Waterschap TST_18</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9919</id>
+    <label>waterschap TST_19</label>
+    <beschrijving>Waterschap TST_19</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9920</id>
+    <label>waterschap TST_20</label>
+    <beschrijving>Waterschap TST_20</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9921</id>
+    <label>waterschap TST_21</label>
+    <beschrijving>Waterschap TST_21</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9922</id>
+    <label>waterschap TST_22</label>
+    <beschrijving>Waterschap TST_22</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9923</id>
+    <label>waterschap TST_23</label>
+    <beschrijving>Waterschap TST_23</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9924</id>
+    <label>waterschap TST_24</label>
+    <beschrijving>Waterschap TST_24</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/waterschap/ws9925</id>
+    <label>waterschap TST_25</label>
+    <beschrijving>Waterschap TST_25</beschrijving>
+  </Waarde>
+</Waardelijst>

@@ -1,0 +1,21 @@
+{
+  "name": "SchematronDeleteTrigger",
+  "description": "Trigger that works on deleted created schematron file",
+  "event": {
+    "data-event": {
+      "collection-scope": {
+        "uri": "/opera/options/schematron"
+      },
+      "document-content": {
+        "update-kind": "delete"
+      },
+      "when": "post-commit"
+    }
+  },
+  "module": "triggers/schemtron-trigger.xqy",
+  "module-db": "%%MODULES_DATABASE%%",
+  "module-root": "/",
+  "enabled": true,
+  "recursive": true,
+  "task-priority": "normal"
+}

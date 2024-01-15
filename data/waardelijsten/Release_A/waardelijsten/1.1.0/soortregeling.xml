@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Waardelijst schemaversie="1.1.0"
+  xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/join/id/stop/soortregeling</id>
+    <label>Typering van regelingen</label>
+    <beschrijving>De waardelijst beschrijft de regelingtypen die door STOP onderkend worden. Dat is
+      inclusief domein-specifieke besluiten uit in toepassingsprofielen voor zover het onderscheiden
+      daarvan het STOP domein raakt. Dat laatste is bijvoorbeeld het geval als bepaalde tijdstempels
+      van rechtswege bepaald worden.</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_001</id>
+    <label>AMvB</label>
+    <beschrijving>Algemene Maatregel van Bestuur</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_002</id>
+    <label>Ministeriële Regeling</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_003</id>
+    <label>Omgevingsplan</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_004</id>
+    <label>Omgevingsverordening</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_005</id>
+    <label>Waterschapsverordening</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_006</id>
+    <label>Omgevingsvisie</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_007</id>
+    <label>Projectbesluit</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_008</id>
+    <label>Instructie</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_009</id>
+    <label>Voorbeschermingsregels</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_010</id>
+    <label>Programma</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_011</id>
+    <label>Reactieve interventie</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_012</id>
+    <label>Aanwijzingsbesluit N2000</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/regelingtype_013</id>
+    <label>Toegangsbeperkingsbesluit</label>
+  </Waarde>
+</Waardelijst>

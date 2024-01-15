@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="qualified" targetNamespace="http://www.opengis.net/se"
+  version="1.2.3" xmlns:ogc="http://www.opengis.net/ogc" xmlns:se="http://www.opengis.net/se"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!-- This version of se/1.1.0 was previously versioned as '1.1.1' . -->
+
+  <xsd:import namespace="http://www.opengis.net/ogc"
+    schemaLocation="https://standaarden.overheid.nl/stop/1.2.3/se-filter-imop.xsd" />
+  <!-- *********************************************************************** -->
+  <xsd:annotation>
+    <xsd:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/goto.html?to=stop&amp;id=xsd:se"> 
+      Symbology Encoding FEATURE STYLE version 1.1.0 (2010-02-01)
+      ***************************************************** 
+      Ingeperkte versie t.b.v. STOP versie
+      1.2.3 SE Symbolizer en SE Common geintegreerd in dit schema
+      ***************************************************** 
+      originele schema's:
+      http://schemas.opengis.net/se/1.1.0/FeatureStyle.xsd
+      http://schemas.opengis.net/se/1.1.0/Symbolizer.xsd
+      http://schemas.opengis.net/se/1.1.0/common.xsd 
+      
+      Symbology Encoding is an OGC Standard.
+      Copyright (c) 2005,2010 Open Geospatial Consortium. To obtain additional rights of use, visit
+      http://www.opengeospatial.org/legal/ . </xsd:documentation>
+  </xsd:annotation>
+
+  <xsd:element name="FeatureTypeStyle" type="se:FeatureTypeStyleType">
+    <xsd:annotation>
+      <xsd:documentation> A FeatureTypeStyle contains styling information specific to one feature
+        type. STOP GIO version. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FeatureTypeStyleType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" ref="se:Name" />
+      <xsd:element minOccurs="0" ref="se:Description" />
+      <xsd:element ref="se:FeatureTypeName" />
+      <xsd:element ref="se:SemanticTypeIdentifier" />
+      <xsd:element maxOccurs="unbounded" ref="se:Rule" />
+    </xsd:sequence>
+    <xsd:attribute name="version" type="se:VersionType" />
+  </xsd:complexType>
+
+  <xsd:element name="SemanticTypeIdentifier" type="xsd:QName" />
+
+  <xsd:element name="Rule" type="se:RuleType">
+    <xsd:annotation>
+      <xsd:documentation> A Rule is used to attach property/scale conditions to and group the
+        individual symbols used for rendering. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="RuleType">
+    <xsd:sequence>
+      <xsd:element ref="se:Name" />
+      <xsd:element ref="se:Description" />
+      <xsd:element minOccurs="0" ref="ogc:Filter" />
+      <xsd:element maxOccurs="unbounded" ref="se:Symbolizer" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- *********************************************************************** -->
+  <xsd:annotation>
+    <xsd:documentation> SE Symbolizer schema </xsd:documentation>
+  </xsd:annotation>
+  <!-- *********************************************************************** -->
+  <xsd:element abstract="true" name="Symbolizer" type="se:SymbolizerType" />
+  <xsd:complexType abstract="true" name="SymbolizerType">
+    <xsd:annotation>
+      <xsd:documentation> A "SymbolizerType" is an abstract type for encoding the graphical
+        properties used to portray geographic information. Concrete Symbolizer types are derived
+        from this base type. </xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element ref="se:Name" />
+    </xsd:sequence>
+    <xsd:attribute name="version" type="se:VersionType" />
+  </xsd:complexType>
+
+  <!-- *********************************************************************** -->
+  <xsd:annotation>
+    <xsd:documentation> LINE Symbolizer </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="LineSymbolizer" substitutionGroup="se:Symbolizer" type="se:LineSymbolizerType">
+    <xsd:annotation>
+      <xsd:documentation> A LineSymbolizer is used to render a "stroke" along a linear geometry.
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="LineSymbolizerType">
+    <xsd:complexContent>
+      <xsd:extension base="se:SymbolizerType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" ref="se:Stroke" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="Stroke" type="se:StrokeType">
+    <xsd:annotation>
+      <xsd:documentation> A "Stroke" specifies the appearance of a linear geometry. It is defined in
+        parallel with SVG strokes. The following SvgParameters may be used: "stroke" (color),
+        "stroke-opacity", "stroke-width", "stroke-linejoin", "stroke-linecap", "stroke-dasharray",
+        and "stroke-dashoffset". Others are not officially supported. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="StrokeType">
+    <xsd:sequence>
+      <xsd:element maxOccurs="unbounded" ref="se:SvgParameter" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="SvgParameter">
+    <xsd:annotation>
+      <xsd:documentation> A "SvgParameter" refers to an SVG/CSS graphical-formatting parameter. The
+        parameter is identified using the "name" attribute and the content of the element gives the
+        SVG/CSS-coded value. </xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType mixed="true">
+      <xsd:attribute name="name" type="xsd:string" use="required" />
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="GraphicFill" type="se:GraphicFillType">
+    <xsd:annotation>
+      <xsd:documentation> A "GraphicFill" defines repeated-graphic filling (stippling) pattern for
+        an area geometry. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GraphicFillType">
+    <xsd:sequence>
+      <xsd:element ref="se:Graphic" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- *********************************************************************** -->
+  <xsd:annotation>
+    <xsd:documentation> POLYGON Symbolizer </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="PolygonSymbolizer" substitutionGroup="se:Symbolizer"
+    type="se:PolygonSymbolizerType">
+    <xsd:annotation>
+      <xsd:documentation> A "PolygonSymbolizer" specifies the rendering of a polygon or area
+        geometry, including its interior fill and border stroke. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="PolygonSymbolizerType">
+    <xsd:complexContent>
+      <xsd:extension base="se:SymbolizerType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" ref="se:Fill" />
+          <xsd:element minOccurs="0" ref="se:Stroke" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:element name="Fill" type="se:FillType">
+    <xsd:annotation>
+      <xsd:documentation> A "Fill" specifies the pattern for filling an area geometry. The allowed
+        SvgParameters are: "fill" (color) and "fill-opacity". </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="FillType">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" ref="se:GraphicFill" />
+      <xsd:element maxOccurs="unbounded" minOccurs="0" ref="se:SvgParameter" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- *********************************************************************** -->
+  <xsd:annotation>
+    <xsd:documentation> POINT Symbolizer </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="PointSymbolizer" substitutionGroup="se:Symbolizer"
+    type="se:PointSymbolizerType">
+    <xsd:annotation>
+      <xsd:documentation> A "PointSymbolizer" specifies the rendering of a "graphic Symbolizer" at a
+        point. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="PointSymbolizerType">
+    <xsd:complexContent>
+      <xsd:extension base="se:SymbolizerType">
+        <xsd:sequence>
+          <xsd:element ref="se:Graphic" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:element name="Graphic" type="se:GraphicType">
+    <xsd:annotation>
+      <xsd:documentation> A "Graphic" specifies or refers to a "graphic Symbolizer" with inherent
+        shape, size, and coloring. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="GraphicType">
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element ref="se:ExternalGraphic" />
+        <xsd:element ref="se:Mark" />
+      </xsd:choice>
+      <xsd:element minOccurs="0" ref="se:Size" />
+      <xsd:element minOccurs="0" ref="se:Rotation" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="Size" type="xsd:decimal" />
+  <xsd:element name="Rotation" type="xsd:decimal" />
+  <xsd:element name="ExternalGraphic" type="se:ExternalGraphicType">
+    <xsd:annotation>
+      <xsd:documentation> An "ExternalGraphic" gives a reference to a raster or vector graphical
+        object, either online or inline, in an externally-defined graphic format.
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="ExternalGraphicType">
+    <xsd:sequence>
+      <xsd:element ref="se:InlineContent" />
+      <xsd:element ref="se:Format" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="Format" type="xsd:string" />
+
+  <xsd:element name="Mark" type="se:MarkType">
+    <xsd:annotation>
+      <xsd:documentation> A "Mark" specifies a geometric shape and applies coloring to it.
+      </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="MarkType">
+    <xsd:sequence>
+      <xsd:element ref="se:WellKnownName" />
+      <xsd:element minOccurs="0" ref="se:Fill" />
+      <xsd:element minOccurs="0" ref="se:Stroke" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="WellKnownName" type="xsd:string" />
+
+  <!-- *********************************************************************** -->
+  <xsd:annotation>
+    <xsd:documentation> SE COMMON schema </xsd:documentation>
+  </xsd:annotation>
+  <!-- *********************************************************************** -->
+  <xsd:simpleType name="VersionType">
+    <xsd:annotation>
+      <xsd:documentation> The "VersionType" merely restricts the version string that may be used
+        with XML documents based on this schema. </xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="1.1.0" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <!-- *********************************************************************** -->
+  <xsd:element name="Name" type="xsd:string" />
+  <xsd:element name="Description" type="se:DescriptionType">
+    <xsd:annotation>
+      <xsd:documentation> A "Description" gives human-readable descriptive information for the
+        object it is included within. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType name="DescriptionType">
+    <xsd:sequence>
+      <xsd:element name="Title" type="xsd:string" />
+      <xsd:element minOccurs="0" name="Abstract" type="xsd:string" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- *********************************************************************** -->
+  <xsd:element name="FeatureTypeName" type="xsd:QName" />
+  <!-- *********************************************************************** -->
+  <xsd:element name="InlineContent" type="se:InlineContentType">
+    <xsd:annotation>
+      <xsd:documentation> "InlineContent" is XML- or base64-encoded encoded content in some
+        externally-defined format that is included in an SE in-line. </xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
+  <xsd:complexType mixed="true" name="InlineContentType">
+    <xsd:attribute name="encoding" use="required">
+      <xsd:simpleType>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="base64" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:attribute>
+  </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Waardelijst schemaversie="1.1.0"
+  xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/join/id/stop/formaatinformatieobject</id>
+    <label>Typering van informatieobjecten naar dataformaat</label>
+    <beschrijving>De waardelijst beschrijft de typering van het informatieobject aan de hand van het
+      technische uitwisselformaat zoals die door STOP ondersteund worden.</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/join/id/stop/informatieobject/gio_002</id>
+    <label>Geoinformatieobject</label>
+  </Waarde>
+  <Waarde>
+    <id>/join/id/stop/informatieobject/doc_001</id>
+    <label>PDF-document</label>
+  </Waarde>
+</Waardelijst>

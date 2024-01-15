@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.2.0" xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/ https://standaarden.overheid.nl/stop/1.2.0/imop-resources.xsd" xmlns="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WaardelijstInfo>
+    <id>/tooi/def/class/Provincie</id>
+    <label>Provincies</label>
+    <beschrijving>Alle provincies uit GRS </beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.2.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/id/provincie/pv22</id>
+    <label>provincie Drenthe</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv24</id>
+    <label>provincie Flevoland</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv21</id>
+    <label>provincie Fryslân</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv25</id>
+    <label>provincie Gelderland</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv20</id>
+    <label>provincie Groningen</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv31</id>
+    <label>provincie Limburg</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv30</id>
+    <label>provincie Noord-Brabant</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv27</id>
+    <label>provincie Noord-Holland</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv23</id>
+    <label>provincie Overijssel</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv26</id>
+    <label>provincie Utrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv29</id>
+    <label>provincie Zeeland</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/id/provincie/pv28</id>
+    <label>provincie Zuid-Holland</label>
+  </Waarde>
+</Waardelijst>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.opengis.net/ogc"
+   xmlns:ogc="http://www.opengis.net/ogc"
+
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   elementFormDefault="qualified"
+   version="1.3.1">
+
+   <xsd:annotation>
+      <xsd:documentation source="https://koop.gitlab.io/lvbb/lvbb-ozon/go/goto.html?to=stop&amp;id=xsd:ogc">
+         This XML Schema defines OGC query filter capabilities documents.
+         
+         *************************************************
+         Ingeperkte versie t.b.v. STOP versie 1.3.1
+         *************************************************
+
+         origineel: http://schemas.opengis.net/filter/1.1.0/filter.xsd
+         filter is an OGC Standard.
+         Copyright (c) 2002,2003,2004,2010 Open Geospatial Consortium, Inc. All Rights Reserved.
+         To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
+
+         Updated: 2010-01-22
+      </xsd:documentation>
+   </xsd:annotation>
+   
+   <xsd:element name="Filter" type="ogc:FilterType"/>
+   <xsd:complexType name="FilterType">
+      <xsd:choice>
+         <xsd:element ref="ogc:comparisonOps"/>
+         <xsd:element ref="ogc:logicOps"/>
+      </xsd:choice>
+   </xsd:complexType>
+
+   <xsd:element name="comparisonOps"
+                type="ogc:ComparisonOpsType"
+                abstract="true"/>
+   <xsd:element name="PropertyIsEqualTo"
+                type="ogc:BinaryComparisonOpType"
+                substitutionGroup="ogc:comparisonOps"/>
+   <xsd:element name="PropertyIsNotEqualTo"
+                type="ogc:BinaryComparisonOpType"
+                substitutionGroup="ogc:comparisonOps"/>
+   <xsd:element name="PropertyIsLessThan"
+                type="ogc:BinaryComparisonOpType"
+                substitutionGroup="ogc:comparisonOps"/>
+   <xsd:element name="PropertyIsGreaterThan"
+                type="ogc:BinaryComparisonOpType"
+                substitutionGroup="ogc:comparisonOps"/>
+   <xsd:element name="PropertyIsLessThanOrEqualTo"
+                type="ogc:BinaryComparisonOpType"
+                substitutionGroup="ogc:comparisonOps"/>
+   <xsd:element name="PropertyIsGreaterThanOrEqualTo"
+                type="ogc:BinaryComparisonOpType"
+                substitutionGroup="ogc:comparisonOps"/>
+   <xsd:element name="PropertyIsBetween"
+                type="ogc:PropertyIsBetweenType"
+                substitutionGroup="ogc:comparisonOps"/>
+   <xsd:complexType name="ComparisonOpsType" abstract="true"/>
+
+   <xsd:element name="logicOps" type="ogc:LogicOpsType" abstract="true"/>
+   <xsd:element name="And"
+                type="ogc:BinaryLogicOpType"
+                substitutionGroup="ogc:logicOps"/>
+   <xsd:complexType name="LogicOpsType" abstract="true"/>
+
+   <xsd:complexType name="BinaryComparisonOpType">
+      <xsd:complexContent>
+         <xsd:extension base="ogc:ComparisonOpsType">
+            <xsd:all>
+               <xsd:element name="PropertyName" type="xsd:string"/>
+               <xsd:element name="Literal" type="xsd:string"/>    
+            </xsd:all>
+            <xsd:attribute name="matchCase" type="xsd:boolean"
+                           use="optional" default="true"/>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="PropertyIsBetweenType">
+      <xsd:complexContent>
+         <xsd:extension base="ogc:ComparisonOpsType">
+            <xsd:sequence>
+               <xsd:element name="PropertyName" type="xsd:string"/>
+               <xsd:element name="LowerBoundary" type="ogc:LowerBoundaryType"/> 
+               <xsd:element name="UpperBoundary" type="ogc:UpperBoundaryType"/> 
+            </xsd:sequence>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+
+   <xsd:complexType name="LowerBoundaryType">
+      <xsd:sequence>
+         <xsd:element name="Literal" type="xsd:double"/> 
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="UpperBoundaryType">
+      <xsd:sequence>
+         <xsd:element name="Literal" type="xsd:double"/> 
+      </xsd:sequence>
+   </xsd:complexType>
+
+   <xsd:complexType name="BinaryLogicOpType">
+      <xsd:complexContent>
+         <xsd:extension base="ogc:LogicOpsType">
+            <xsd:choice minOccurs="2" maxOccurs="unbounded">
+               <xsd:element ref="ogc:comparisonOps"/>
+               <!-- <xsd:element ref="ogc:logicOps"/> -->
+            </xsd:choice>
+         </xsd:extension>
+      </xsd:complexContent>
+   </xsd:complexType>
+
+</xsd:schema>

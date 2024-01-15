@@ -22,11 +22,47 @@
     "invalid-values" : "reject"
   }],
   "field": [ {
-    "field-name": "range",
+    "field-name": "version",
     "metadata": "",
     "stemmed-searches": "off",
     "word-searches": false,
-    "field-value-searches": true,
+    "field-value-searches": false,
+    "fast-phrase-searches": false,
+    "fast-case-sensitive-searches": false,
+    "fast-diacritic-sensitive-searches": false
+  }, {
+    "field-name": "major",
+    "metadata": "",
+    "stemmed-searches": "off",
+    "word-searches": false,
+    "field-value-searches": false,
+    "fast-phrase-searches": false,
+    "fast-case-sensitive-searches": false,
+    "fast-diacritic-sensitive-searches": false
+  }, {
+    "field-name": "minor",
+    "metadata": "",
+    "stemmed-searches": "off",
+    "word-searches": false,
+    "field-value-searches": false,
+    "fast-phrase-searches": false,
+    "fast-case-sensitive-searches": false,
+    "fast-diacritic-sensitive-searches": false
+  }, {
+    "field-name": "patch",
+    "metadata": "",
+    "stemmed-searches": "off",
+    "word-searches": false,
+    "field-value-searches": false,
+    "fast-phrase-searches": false,
+    "fast-case-sensitive-searches": false,
+    "fast-diacritic-sensitive-searches": false
+  }, {
+    "field-name": "namespace",
+    "metadata": "",
+    "stemmed-searches": "off",
+    "word-searches": false,
+    "field-value-searches": false,
     "fast-phrase-searches": false,
     "fast-case-sensitive-searches": false,
     "fast-diacritic-sensitive-searches": false
@@ -35,7 +71,7 @@
     "metadata": "",
     "stemmed-searches": "off",
     "word-searches": false,
-    "field-value-searches": true,
+    "field-value-searches": false,
     "fast-phrase-searches": false,
     "fast-case-sensitive-searches": false,
     "fast-diacritic-sensitive-searches": false
@@ -43,9 +79,33 @@
   "range-field-index": [ {
       "scalar-type": "string",
       "collation": "http://marklogic.com/collation/",
-      "field-name": "range",
+      "field-name": "version",
       "range-value-positions": false,
       "invalid-values": "reject"
+  }, {
+    "scalar-type": "string",
+    "collation": "http://marklogic.com/collation/",
+    "field-name": "major",
+    "range-value-positions": false,
+    "invalid-values": "reject"
+  }, {
+    "scalar-type": "string",
+    "collation": "http://marklogic.com/collation/",
+    "field-name": "minor",
+    "range-value-positions": false,
+    "invalid-values": "reject"
+  }, {
+    "scalar-type": "string",
+    "collation": "http://marklogic.com/collation/",
+    "field-name": "patch",
+    "range-value-positions": false,
+    "invalid-values": "reject"
+  }, {
+    "scalar-type": "string",
+    "collation": "http://marklogic.com/collation/",
+    "field-name": "namespace",
+    "range-value-positions": false,
+    "invalid-values": "reject"
   }, {
     "scalar-type": "string",
     "collation": "http://marklogic.com/collation/",

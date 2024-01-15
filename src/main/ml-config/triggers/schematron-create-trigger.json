@@ -1,0 +1,21 @@
+{
+  "name": "SchematronCreateTrigger",
+  "description": "Trigger that adds collections and permissions to newly created schematron file",
+  "event": {
+    "data-event": {
+      "collection-scope": {
+        "uri": "/opera/options/schematron"
+      },
+      "document-content": {
+        "update-kind": "create"
+      },
+      "when": "post-commit"
+    }
+  },
+  "module": "triggers/schematron-trigger.xqy",
+  "module-db": "%%MODULES_DATABASE%%",
+  "module-root": "/",
+  "enabled": true,
+  "recursive": true,
+  "task-priority": "normal"
+}

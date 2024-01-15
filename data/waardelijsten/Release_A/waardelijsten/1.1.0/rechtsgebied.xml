@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Waardelijst schemaversie="1.1.0"
+  xmlns="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+  https://standaarden.overheid.nl/stop/1.1.0/imop-resources.xsd">
+  <WaardelijstInfo>
+    <id>/tooi/def/concept/conceptScheme_9108cd9c</id>
+    <label>BWB-rechtgebied</label>
+    <beschrijving>Rechtsgebieden gebruikt op wetten.overheid.nl. De BWB-rechtsgebiedlijst is
+      vastgesteld door de BWB-redactie, en kan daarom niet door KOOP zelfstandig worden gewijzigd.
+      In versie 1.1.0 is de hiërarchie van de waardelijst genoteerd door in de beschrijving
+      van de subterm te verwijzen naar zijn hoofdterm. Dit zal overbodig worden als de lijsten van
+      TOOI eenmaal publiek beschikbaar zijn.</beschrijving>
+    <uitbreidbaar>0</uitbreidbaar>
+    <versie>1.1.0</versie>
+  </WaardelijstInfo>
+  <Waarde>
+    <id>/tooi/def/concept/c_8054d6b3</id>
+    <label>agrarisch recht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_7cca4bd5</id>
+    <label>arbeidsrecht en sociaal-zekerheidsrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_825c930b</id>
+    <label>arbitrage</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f381106e</id>
+    <label>bank- en effectenrecht, financiering</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_b69dc535</id>
+    <label>ambtenarenrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_7cca4bd5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_50a06faa</id>
+    <label>arbeidsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_7cca4bd5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_b24639c1</id>
+    <label>militaire ambtenarenrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_7cca4bd5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e77951d0</id>
+    <label>pensioenrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_7cca4bd5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_9a7dd375</id>
+    <label>sociaal zekerheidsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_7cca4bd5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c05c1523</id>
+    <label>bankrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f381106e</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c7ca5138</id>
+    <label>effectenrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f381106e</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_459e5366</id>
+    <label>financiering en zekerheden</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f381106e</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a93f5f66</id>
+    <label>toezicht bank- en kredietwezen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_f381106e</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_ba9504e5</id>
+    <label>belastingrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_47a56149</id>
+    <label>BTW en accijns</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_771aa828</id>
+    <label>dividendbelasting</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_49a0d743</id>
+    <label>formeel belastingrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4921283c</id>
+    <label>heffingen lokale overheden</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8173a6ff</id>
+    <label>inkomstenbelasting</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_149a4823</id>
+    <label>internationale regelingen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a1d2e8d4</id>
+    <label>invoer en douane</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4b09a861</id>
+    <label>invorderingsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_5090ae6f</id>
+    <label>loonbelasting en premieheffing</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e79db34a</id>
+    <label>milieubelasting</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_6e38f3bc</id>
+    <label>successie- en schenkingsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c4534511</id>
+    <label>vennootschapsbelastingrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_ba9504e5</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3405e4a1</id>
+    <label>contracten, schade en aansprakelijkheid</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c531a512</id>
+    <label>aansprakelijkheidsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3405e4a1</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a11eaa90</id>
+    <label>consumentenrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3405e4a1</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_cf521795</id>
+    <label>internationaal contractrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3405e4a1</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_69b82af6</id>
+    <label>verbintenissenrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3405e4a1</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_63c42465</id>
+    <label>verzekeringsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3405e4a1</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_79f2c282</id>
+    <label>cultureel recht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_5bbb3a9b</id>
+    <label>financieel en economisch recht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f4d3b2e1</id>
+    <label>gezondheidsrecht en farmaceutisch recht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e98c35be</id>
+    <label>goederenrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8e783db5</id>
+    <label>eigendomsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_e98c35be</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d14a17d5</id>
+    <label>erfpacht, vruchtgebruik</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_e98c35be</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c43a7334</id>
+    <label>hypotheekrecht en pandrecht (zekerheidsrechten)</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_e98c35be</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_5092de31</id>
+    <label>informatierecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8fbe4664</id>
+    <label>ICT-recht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5092de31</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4a3402ad</id>
+    <label>telecomrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5092de31</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_674c0ac7</id>
+    <label>insolventierecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3d087471</id>
+    <label>faillissement</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_674c0ac7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4361689d</id>
+    <label>schuldsanering</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_674c0ac7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_65b2367c</id>
+    <label>surseance</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_674c0ac7</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_a9160582</id>
+    <label>intellectuele eigendom</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8b3782ea</id>
+    <label>auteursrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_a9160582</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c220f66c</id>
+    <label>intellectueel eigendomsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_a9160582</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_bc9292d4</id>
+    <label>octrooirecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_a9160582</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_ef8758fb</id>
+    <label>internationaal privaatrecht Inclusief internationaal procesrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_b26c78e3</id>
+    <label>internationaal publiekrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_ea564774</id>
+    <label>mensenrechten</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_b26c78e3</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_003c1dd9</id>
+    <label>ontwikkelingssamenwerking</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_b26c78e3</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_cc3cbecb</id>
+    <label>volkenrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_b26c78e3</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_96ed7748</id>
+    <label>levensmiddelenrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_ee165cc3</id>
+    <label>mededingingsrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_6755aa64</id>
+    <label>migratierecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3c8b7fa0</id>
+    <label>nationaliteitsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_6755aa64</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_0f0673b6</id>
+    <label>vreemdelingenrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_6755aa64</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_1dbae688</id>
+    <label>ondernemingspraktijk</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_0c246a16</id>
+    <label>fusies en overnames</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_1dbae688</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e80b3672</id>
+    <label>ondernemingsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_1dbae688</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8285b37e</id>
+    <label>stichtingen en verenigingen</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_1dbae688</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f3405203</id>
+    <label>vennootschapsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_1dbae688</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_84d3929c</id>
+    <label>onderwijsrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c06fcca1</id>
+    <label>openbare orde en veiligheidsrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_5d8350bb</id>
+    <label>personen- en familierecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_02a7f1c4</id>
+    <label>echtscheiding</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5d8350bb</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_6ac30ccf</id>
+    <label>erfrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5d8350bb</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e49bce03</id>
+    <label>familierecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5d8350bb</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_21e7f286</id>
+    <label>jeugdrecht (m.u.v. jeugdstrafrecht)</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5d8350bb</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_d05d9921</id>
+    <label>personenrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5d8350bb</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_66ad74bd</id>
+    <label>privacy</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_82b0ce3b</id>
+    <label>procesrecht</label>
+
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_b52af7e9</id>
+    <label>bestuursprocesrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_82b0ce3b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c60b9092</id>
+    <label>burgerlijk procesrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_82b0ce3b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_093f785e</id>
+    <label>strafprocesrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_82b0ce3b</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8ad05f6d</id>
+    <label>ruimtelijke ordening en milieu</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_0aa457e4</id>
+    <label>milieurecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_8ad05f6d</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_638d8062</id>
+    <label>omgevingsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_8ad05f6d</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_b47c724c</id>
+    <label>waterrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_8ad05f6d</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f3d7c872</id>
+    <label>sportrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_da370768</id>
+    <label>staats- en bestuursrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_052899f0</id>
+    <label>bestuursrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_da370768</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_c2b43841</id>
+    <label>militair recht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_da370768</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_77eb3af8</id>
+    <label>staatsrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_da370768</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_5f2f0b55</id>
+    <label>strafrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_f0f885e5</id>
+    <label>financieel-economisch strafrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5f2f0b55</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_dd17dae0</id>
+    <label>internationaal strafrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5f2f0b55</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_e1b8b455</id>
+    <label>jeugdstrafrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5f2f0b55</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_b84f1591</id>
+    <label>milieustrafrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5f2f0b55</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8a460f2d</id>
+    <label>penitentiair recht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5f2f0b55</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_4641d131</id>
+    <label>strafrecht (algemeen)</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5f2f0b55</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_03d15325</id>
+    <label>verkeersrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_5f2f0b55</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_ff938556</id>
+    <label>tuchtrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_7ed87355</id>
+    <label>vervoersrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3e6b35e2</id>
+    <label>wonen, onroerend goed, bouwrecht</label>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_8a8c5620</id>
+    <label>bouwrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3e6b35e2</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_3dbe5325</id>
+    <label>huurrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3e6b35e2</beschrijving>
+  </Waarde>
+  <Waarde>
+    <id>/tooi/def/concept/c_43c42162</id>
+    <label>onroerend goedrecht</label>
+    <beschrijving>subterm van: /tooi/def/concept/c_3e6b35e2</beschrijving>
+  </Waarde>
+</Waardelijst>

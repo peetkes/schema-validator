@@ -1,22 +1,46 @@
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            name "koop-lvbb-releases"
+            url "https://nexus.cicd.s15m.nl/repository/koop-lvbb-releases"
+            credentials {
+                username System.getenv('NEXUS_ROBOT_NAME')
+                password System.getenv('NEXUS_ROBOT_SECRET')
+            }
+        }
+        mavenLocal()
     }
     dependencies {
         //Needed for CorbTask to dynamically generate properties from CoRB Options class
         classpath "com.marklogic:marklogic-corb:${corbVersion}"
+        classpath "com.marklogic:marklogic-unit-test-client:${mlUnitTestVersion}"
     }
 }
 
 plugins {
-  id "net.saliman.properties" version "1.5.1"
-  id "com.marklogic.ml-gradle" version "4.5.2"
+    id "net.saliman.properties" version "1.5.2"
+    id "com.marklogic.ml-gradle" version "${mlGradleVersion}"
+}
+
+ext {
+    robotName = System.getenv('NEXUS_ROBOT_NAME')
+    robotSecret = System.getenv('NEXUS_ROBOT_SECRET')
 }
 
 repositories {
     mavenCentral()
     // Needed for some mlcp dependencies, such as commons-csv:1.5.1-marklogic
     maven { url "https://developer.marklogic.com/maven2/" }
+    maven {
+        name "koop-lvbb-releases"
+        url "https://nexus.cicd.s15m.nl/repository/koop-lvbb-releases"
+        credentials {
+            username robotName
+            password robotSecret
+        }
+    }
+    mavenLocal()
 }
 
 configurations {
@@ -28,7 +52,12 @@ configurations {
             attribute(Usage.USAGE_ATTRIBUTE, objects.named(Usage, Usage.JAVA_RUNTIME))
         }
     }
-    mlcp
+    mlcp {
+        attributes {
+            attribute(TargetJvmEnvironment.TARGET_JVM_ENVIRONMENT_ATTRIBUTE, objects.named(TargetJvmEnvironment.class, TargetJvmEnvironment.STANDARD_JVM))
+        }
+    }
+//    bundle
 }
 
 dependencies {
@@ -39,11 +68,26 @@ dependencies {
     //corb 'org.jasypt:jasypt:1.9.2' // would be necessary to leverage JasyptDecrypter
     mlcp "com.marklogic:mlcp:${mlVersion}"
     mlcp files("mlcp")
+    mlBundle "com.marklogic:marklogic-unit-test-modules:${mlUnitTestVersion}"
 }
 
 ext {
     // XCC URL for running corb task below
     contentXccUrl = "xcc://${mlUsername}:${mlPassword}@${mlHost}:${mlRestPort}"
+}
+task dockerUp(type: Exec) {
+    workingDir '.'
+    commandLine 'sh', '-c', 'docker compose -p schemas up -d'
+}
+
+task dockerStop(type: Exec) {
+    workingDir '.'
+    commandLine 'sh', '-c', 'docker compose -p schemas stop'
+}
+
+task dockerDown(type: Exec) {
+    workingDir '.'
+    commandLine 'sh', '-c', 'docker compose -p schemas down -v'
 }
 
 task processSchemas(type: com.marklogic.gradle.task.CorbTask) {
@@ -60,11 +104,77 @@ task processSchematrons(type: com.marklogic.gradle.task.CorbTask) {
     processModule = "transform.xqy"
 }
 
-mlReloadModules.finalizedBy(processSchematrons)
-mlLoadData.finalizedBy(processSchemas, processSchematrons)
-mlPostDeploy.finalizedBy(processSchemas, processSchematrons)
+task colourUI(type: com.marklogic.gradle.task.ServerEvalTask) {
+    if (mlVersion.startsWith("11")) {
+        xquery = "import module namespace admin = \"http://marklogic.com/xdmp/admin\" at \"/MarkLogic/admin.xqy\";\n" +
+            "let \$banner-options := map:map()\n" +
+            "  => map:with(\"active\", fn:true())\n" +
+            "  => map:with(\"label\", \"LOCAL DEVELOPMENT ENV\")\n" +
+            "  => map:with(\"headerColor\", \"#33CC99\")\n" +
+            "  => map:with(\"headerTextColor\", \"#000000\")\n" +
+            "return admin:ui-set-banner(\$banner-options)\n"
+    } else xquery="import module namespace admin = \"http://marklogic.com/xdmp/admin\" at \"/MarkLogic/admin.xqy\";\n" +
+        "let \$config := admin:get-configuration()\n" +
+        "return \" Effective version = \" || admin:cluster-get-effective-version(\$config)"
+}
 
-task loadAanleveringen(type: com.marklogic.gradle.task.MlcpTask) {
+//mlReloadModules.finalizedBy(processSchematrons)
+//mlLoadData.finalizedBy(processSchemas, processSchematrons)
+//mlPostDeploy.finalizedBy(processSchemas, processSchematrons)
+mlPostDeploy.finalizedBy(colourUI)
+
+task loadSchemas(type: com.marklogic.gradle.task.MlcpTask) {
+    classpath = configurations.mlcp
+    command = "IMPORT"
+    port = Integer.parseInt(mlRestPort)
+    database = mlAppConfig.contentDatabaseName
+    input_file_path = "data/schemas/Release_A/schema"
+    input_file_pattern = ".*\\.(xsd|xml)"
+    output_collections = "/opera/options/schema"
+    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/schemas,''"
+}
+
+task loadSchematrons(type: com.marklogic.gradle.task.MlcpTask) {
+    classpath = configurations.mlcp
+    command = "IMPORT"
+    port = Integer.parseInt(mlRestPort)
+    database = mlAppConfig.contentDatabaseName
+    input_file_path = "data/schemas/Release_A/schema"
+    input_file_pattern = ".*\\.sch"
+    output_collections = "/opera/options/schematron"
+    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/schemas,''"
+}
+
+task loadValidationplans(type: com.marklogic.gradle.task.MlcpTask) {
+    classpath = configurations.mlcp
+    command = "IMPORT"
+    port = Integer.parseInt(mlRestPort)
+    database = mlAppConfig.contentDatabaseName
+    input_file_path = "data/schemas/Release_A/validatieplannen"
+    output_collections = "/opera/options/validatieplannen"
+    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/schemas,''"
+}
+
+task loadConfiguration {
+    dependsOn(loadSchemas, loadSchematrons, loadValidationplans)
+    finalizedBy(processSchemas,processSchematrons)
+}
+
+task loadWaardelijsten(type: com.marklogic.gradle.task.MlcpTask) {
+    classpath = configurations.mlcp
+    command = "IMPORT"
+    port = Integer.parseInt(mlRestPort)
+    database = mlAppConfig.contentDatabaseName
+    input_file_path = "data/waardelijsten/Release_A"
+    output_collections = "/opera/options/waardelijsten"
+    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/waardelijsten,''"
+}
+
+task loadAanlevering_1(type: com.marklogic.gradle.task.MlcpTask) {
     classpath = configurations.mlcp
     command = "IMPORT"
     port = Integer.parseInt(mlRestPort)
@@ -73,7 +183,27 @@ task loadAanleveringen(type: com.marklogic.gradle.task.MlcpTask) {
     output_collections = "/opera/options/opdrachtbestanden"
     output_permissions = "schema-test-reader,read,schema-test-writer,update"
     output_uri_replace = ".*data/aanleveringen,'/opera/import'"
-    transform_module = "/transform/envelope.xqy"
-    transform_namespace = "http://koop.overheid.nl/lvbb/transform/envelope"
-    transform_param = "oin=1q2w3e4r,id-levering=aanlevering-1,id-bevoegdgezag=bg-1"
+//    transform_module = "/transform/envelope.xqy"
+//    transform_namespace = "http://koop.overheid.nl/lvbb/transform/envelope"
+//    transform_param = "oin=00000001003214345000,id-levering=opdracht_O_2023072411_3215743_1,id-bg=00000001003214345000"
+}
+
+task loadAanlevering_2(type: com.marklogic.gradle.task.MlcpTask) {
+    classpath = configurations.mlcp
+    command = "IMPORT"
+    port = Integer.parseInt(mlRestPort)
+    database = mlAppConfig.contentDatabaseName
+    input_file_path = "data/aanleveringen/opdracht-2-tijdelijk-deel"
+    output_collections = "/opera/options/opdrachtbestanden"
+    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/aanleveringen,'/opera/import'"
+//    transform_module = "/transform/envelope.xqy"
+//    transform_namespace = "http://koop.overheid.nl/lvbb/transform/envelope"
+//    transform_param = "oin=00000001003214345000,id-levering=opdracht_O_2023072411_3215743_2,id-bg=00000001003214345000"
+}
+
+task loadData() {
+    dependsOn 'loadWaardelijsten'
+    dependsOn 'loadAanlevering_1'
+//    dependsOn 'loadAanlevering_2'
 }
