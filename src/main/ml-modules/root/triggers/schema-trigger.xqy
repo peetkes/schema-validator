@@ -1,5 +1,6 @@
 xquery version "1.0-ml";
 import module namespace trgr="http://marklogic.com/xdmp/triggers" at "/MarkLogic/triggers.xqy";
+import module namespace const = "http://marklogic.com/schema-validator/lib/constants" at "/lib/constants.xqy";
 import module namespace helper="http://marklogic.com/schema-validator/trigger/helper" at "helper.xqy";
 import module namespace validation-helper="http://marklogic.com/schema-validator/lib/validation/helper" at "/lib/validation/helper.xqy";
 
@@ -30,19 +31,19 @@ let $metadata := map:map()
   =>map:with("schemaGroup", $group)
   =>map:with("namespace", $targetNamespace)
 
-let $permissions := (xdmp:permission("schema-test-writer", "update"))
+let $permissions := xdmp:default-permissions()(:)(xdmp:permission("schema-test-writer", "update"),xdmp:permission("schema-test-reader", "read")):)
 let $collections := (
-  $helper:OPTION_SCHEMA,
+  $const:OPTION_SCHEMA,
   fn:concat("group/", $group),
-  if (fn:matches($trgr:uri, $schema-pattern)) then $helper:TYPE_SCHEMA else (),
-  if (fn:matches($trgr:uri, $catalog-pattern)) then $helper:TYPE_CATALOG else (),
-  if (fn:matches($trgr:uri, $versieoverzicht-pattern)) then $helper:TYPE_VERSIEOVERZICHT else (),
+  if (fn:matches($trgr:uri, $schema-pattern)) then $const:TYPE_SCHEMA else (),
+  if (fn:matches($trgr:uri, $catalog-pattern)) then $const:TYPE_CATALOG else (),
+  if (fn:matches($trgr:uri, $versieoverzicht-pattern)) then $const:TYPE_VERSIEOVERZICHT else (),
   if (fn:exists($version)) then fn:concat("version/", $version) else ()
 )
 
 return (
-	xdmp:log(fn:concat('*****Document ', $trgr:uri, ' was ', $message, '.*****')),
+	xdmp:log(fn:concat('*****Document ', $trgr:uri, ' was ', $message, " by user ", xdmp:get-current-user(), '.*****' )),
 	if ($update-kind = ("modify", "create"))
 	then helper:set-collections-and-permissions($trgr:uri, $metadata + $version-components, $collections, $permissions)
-	else helper:delete-document($trgr:uri, $helper:TYPE_SCHEMA)
+	else helper:delete-document($trgr:uri, $const:TYPE_SCHEMA)
 )

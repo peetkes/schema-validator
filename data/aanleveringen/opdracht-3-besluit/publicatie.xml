@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lvbba:AanleveringBesluit xmlns:lvbba="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
-                          schemaversie="1.2.0">
+                          schemaversie="1.1.0">
    <lvbba:BesluitVersie>
       <data:ExpressionIdentificatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
          <data:FRBRWork>/akn/nl/bill/gm9920/2024/B_2024011109_1653066_1</data:FRBRWork>

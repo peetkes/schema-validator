@@ -1,5 +1,5 @@
 {
-  "user-name" : "schema-test-writer",
-  "password" : "schema-test-writer",
+  "user-name" : "%%mlRestUserName%%",
+  "password" : "%%mlRestUserPassword%%",
   "role" : [ "schema-test-writer" ]
 }

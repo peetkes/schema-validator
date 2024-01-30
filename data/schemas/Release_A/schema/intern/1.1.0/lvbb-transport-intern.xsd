@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:lvbbt="http://www.overheid.nl/2017/lvbb" xmlns:lvbbi="http://www.overheid.nl/2020/lvbb-intern" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.overheid.nl/2020/lvbb-intern">
+
+  <xs:import namespace="http://www.overheid.nl/2017/lvbb" schemaLocation="https://standaarden.overheid.nl/lvbb/1.1.0/lvbb-transport.xsd"/>
+
+  <xs:element name="valideerRegelingVersie" type="lvbbi:leveringRegelingVersieType">
+    <xs:annotation>
+      <xs:documentation>Valideren van een regelingversie, OW-data en bijbehorende geometrie.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="registreerRegelingVersie" type="lvbbi:leveringRegelingVersieType">
+    <xs:annotation>
+      <xs:documentation>Valideren, registreren in Opera en doorleveren aan OZON van een regelingversie, OW-data en bijbehorende geometrie.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="valideerDoorleverenRegelingVersie" type="lvbbi:leveringRegelingVersieType">
+    <xs:annotation>
+      <xs:documentation>Valideren van een door te leveren regelingversie, OW-data en bijbehorende geometrie.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="doorleverenRegelingVersie" type="lvbbi:leveringRegelingVersieType">
+    <xs:annotation>
+      <xs:documentation>Valideren en doorleveren aan OZON van een regelingversie, OW-data en bijbehorende geometrie.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="leveringRegelingVersieType">
+    <xs:annotation>
+      <xs:documentation>Type voor het opvoeren van een Consolidatie via de regisseur.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element name="consolidatie" type="lvbbt:dtBestandsnaam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Bestandsnaam met XML van de consolidatie van een regelingversie</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="valideerGio" type="lvbbi:leveringGioType">
+    <xs:annotation>
+      <xs:documentation>Valideren van de GIO metadata en geometrie.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="publiceerGio" type="lvbbi:leveringGioType">
+    <xs:annotation>
+      <xs:documentation>Valideren van de GIO metadata en geometrie, publiceren van de GIO.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="leveringGioType">
+    <xs:annotation>
+      <xs:documentation>Type voor het valideren/publiceren van een Gio via de regisseur.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element name="gio" type="lvbbt:dtBestandsnaam" minOccurs="1" maxOccurs="unbounded">
+            <xs:annotation>
+              <xs:documentation>Bestandsnaam met versieinfo voor geografisch informatieobject</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="vastgesteldDoor" type="xs:string" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>AKN-id van de gepubliceerde Officiele publicatie (/akn/nl/officialGazette/...) die de GIO's hebben vastgesteld</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="datumBekendmaking" type="xs:date">
+            <xs:annotation>
+              <xs:documentation>De datum waarop de Gio gepubliceerd moet worden.</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:element name="valideerCio" type="lvbbi:leveringCioType">
+    <xs:annotation>
+      <xs:documentation>Valideren van de CIO consolidatie XML en geometrie.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="publiceerCio" type="lvbbi:leveringCioType">
+    <xs:annotation>
+      <xs:documentation>Valideren en registreren van de CIO consolidatie XML en geometrie, publiceren van de CIO.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:complexType name="leveringCioType">
+    <xs:annotation>
+      <xs:documentation>Type voor het valideren/publiceren van een Cio via de regisseur.</xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="lvbbt:OpdrachtType">
+        <xs:sequence>
+          <xs:element name="consolidatie" type="lvbbt:dtBestandsnaam" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>Bestandsnaam met consolidatie XML van geografisch informatieobject</xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+</xs:schema>

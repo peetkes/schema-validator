@@ -1,0 +1,23 @@
+<xs:schema elementFormDefault="qualified"
+           targetNamespace="https://standaarden.overheid.nl/kaartmodule/stop/" version="1.2.0"
+           xmlns:geo="https://standaarden.overheid.nl/stop/imop/geo/" xmlns:se="http://www.opengis.net/se"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="https://standaarden.overheid.nl/stop/imop/geo/"
+             schemaLocation="imop-geo.xsd" />
+  <xs:import namespace="http://www.opengis.net/se"
+             schemaLocation="se-FeatureStyle-imop.xsd" />
+
+  <!-- UITLEVERING LOSSE GEOMETRIE -->
+
+  <xs:element name="KMGeometrie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="1" minOccurs="1" ref="geo:GeoInformatieObjectVersie" />
+        <xs:element maxOccurs="1" minOccurs="0" ref="se:FeatureTypeStyle" />
+      </xs:sequence>
+      <xs:attribute name="schemaversie" type="xs:token" use="required" />
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

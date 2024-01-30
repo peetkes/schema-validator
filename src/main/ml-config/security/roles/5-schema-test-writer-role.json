@@ -1,7 +1,7 @@
 {
   "role-name" : "schema-test-writer",
   "description" : "Can read and write documents",
-  "role" : [ "rest-writer", "schema-test-reader" ],
+  "role" : [ "schema-ingester", "schema-test-reader" ],
   "privilege" : [ {
     "privilege-name" : "any-uri",
     "action" : "http://marklogic.com/xdmp/privileges/any-uri",
@@ -10,5 +10,5 @@
     "privilege-name" : "unprotected-collections",
     "action" : "http://marklogic.com/xdmp/privileges/unprotected-collections",
     "kind" : "execute"
-  } ]
+  }]
 }

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://www.overheid.nl/2020/lvbb-intern/1.2.0/lvbb-transport-intern.xsd" uri="lvbb-transport-intern.xsd"/>
+  <uri name="https://standaarden.overheid.nl/intern/1.2.0/lvbb-transport.sch" uri="lvbb-transport.sch"/>
+  <uri name="https://standaarden.overheid.nl/intern/1.2.0/lvbb-transport-algemeen.sch" uri="lvbb-transport-algemeen.sch"/>
+  <uri name="https://standaarden.overheid.nl/intern/1.2.0/lvbb-transport-intern.sch" uri="lvbb-transport-intern.sch"/>
+  <uri name="https://standaarden.overheid.nl/intern/1.2.0/aanlevering-besluit.sch" uri="aanlevering-besluit.sch"/>
+  <uri name="https://standaarden.overheid.nl/intern/1.2.0/aanlevering-kennisgeving.sch" uri="aanlevering-kennisgeving.sch"/>
+  <uri name="https://standaarden.overheid.nl/intern/1.2.0/aanlevering-informatieobject.sch" uri="aanlevering-informatieobject.sch"/>
+  <uri name="https://standaarden.overheid.nl/intern/1.2.0/uitlevering-regelingversie.sch" uri="uitlevering-regelingversie.sch"/>
+  <uri name="http://www.geostandaarden.nl/bestanden-ow/manifest-ow.sch" uri="manifest-ow.sch"/>
+</catalog>

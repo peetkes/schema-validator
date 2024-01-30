@@ -1,4 +1,5 @@
 xquery version "1.0-ml";
+import module namespace const = "http://marklogic.com/schema-validator/lib/constants" at "/lib/constants.xqy";
 import module namespace helper = "http://marklogic.com/schema-validator/corb/helper" at "/corb/helper.xqy";
 import module namespace schematron = "http://marklogic.com/schema-validator/lib/validation/schematron/schematron-validator"
   at "/lib/validation/schematron/schematron-validator.xqy";
@@ -27,7 +28,7 @@ let $schematron-collection :=
   if (fn:exists($version))
   then fn:concat("version/", $version)
   else ()
-let $name := helper:get-catalog-name-for-uri($URI, $version)
+let $name := (helper:get-catalog-name-for-uri($URI, $version), $URI)[1]
 let $collections := fn:distinct-values((xdmp:document-get-collections($URI), $schematron-collection))
 let $permissions := xdmp:document-get-permissions($URI)
 let $schematron-to-compile := xdmp:invoke-function(function() { fn:doc($URI) })
@@ -50,7 +51,7 @@ return (
       then (
         let $metadata := xdmp:document-get-metadata($URI)
         return (
-          map:put($metadata, "catalog-name", $name),
+          map:put($metadata, $const:CATALOG_NAME, $name),
           xdmp:document-set-metadata($URI, $metadata)
         )
       )

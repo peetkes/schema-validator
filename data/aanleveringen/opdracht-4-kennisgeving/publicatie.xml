@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lvbba:AanleveringKennisgeving xmlns:lvbba="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+                               schemaversie="1.2.0">
+   <lvbba:KennisgevingVersie>
+      <data:ExpressionIdentificatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:FRBRWork>/akn/nl/doc/gm9920/2022/K_2022122310_3743272_1</data:FRBRWork>
+         <data:FRBRExpression>/akn/nl/doc/gm9920/2022/K_2022122310_3743272_1/nld@2022-12-23;1</data:FRBRExpression>
+         <data:soortWork>/join/id/stop/work_023</data:soortWork>
+      </data:ExpressionIdentificatie>
+      <data:KennisgevingMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:eindverantwoordelijke>/tooi/id/gemeente/gm9920</data:eindverantwoordelijke>
+         <data:maker>/tooi/id/gemeente/gm9920</data:maker>
+         <data:officieleTitel>Officiele titel van de aanlevering</data:officieleTitel>
+         <data:onderwerpen>
+            <data:onderwerp>/tooi/def/concept/c_9d1917e9</data:onderwerp>
+         </data:onderwerpen>
+         <data:soortKennisgeving>KennisgevingVoorgenomenBesluit</data:soortKennisgeving>
+      </data:KennisgevingMetadata>
+      <tekst:Kennisgeving xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <tekst:RegelingOpschrift eId="longTitle" wId="longTitle">
+            <tekst:Al>Officiele titel van de aanlevering</tekst:Al>
+         </tekst:RegelingOpschrift>
+         <tekst:Lichaam eId="body" wId="body">
+            <tekst:Divisietekst eId="content_1" wId="gm9920_1__content_1">
+               <tekst:Kop>
+                  <tekst:Opschrift>Kennisgeving</tekst:Opschrift>
+               </tekst:Kop>
+               <tekst:Inhoud>
+                  <tekst:Al>Inhoud van de kennisgeving</tekst:Al>
+               </tekst:Inhoud>
+            </tekst:Divisietekst>
+         </tekst:Lichaam>
+      </tekst:Kennisgeving>
+   </lvbba:KennisgevingVersie>
+</lvbba:AanleveringKennisgeving>

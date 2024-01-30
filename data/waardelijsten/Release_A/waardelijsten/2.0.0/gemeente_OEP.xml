@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Waardelijst schemaversie="@@@IMOPVERSIE@@@" xmlns="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
-   https://standaarden.overheid.nl/stop/@@@IMOPVERSIE@@@/imop-resources.xsd">
+<Waardelijst schemaversie="2.0.0" xmlns="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:rsc="https://standaarden.overheid.nl/stop/imop/resources/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/resources/
+   https://standaarden.overheid.nl/stop/2.0.0/imop-resources.xsd">
    <WaardelijstInfo>
       <id>/tooi/def/class/Gemeente</id>
       <label>Gemeenten</label>
@@ -13,7 +13,7 @@
          </heeftVindplaats>
       </vindplaatsen>
       <uitbreidbaar>0</uitbreidbaar>
-      <versie>@@@IMOPVERSIE@@@</versie>
+      <versie>2.0.0</versie>
    </WaardelijstInfo>
    <Waarde>
       <id>/tooi/id/gemeente/gm1680</id>

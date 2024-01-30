@@ -1,5 +1,6 @@
 xquery version "1.0-ml";
 import module namespace trgr="http://marklogic.com/xdmp/triggers" at "/MarkLogic/triggers.xqy";
+import module namespace const = "http://marklogic.com/schema-validator/lib/constants" at "/lib/constants.xqy";
 import module namespace helper="http://marklogic.com/schema-validator/trigger/helper" at "helper.xqy";
 import module namespace validation-helper="http://marklogic.com/schema-validator/lib/validation/helper" at "/lib/validation/helper.xqy";
 
@@ -27,19 +28,19 @@ then validation-helper:get-version-components(fn:tokenize($version, " ")[last()]
 else ()
 let $metadata := map:map()
 =>map:with("schemaGroup", $group)
-let $permissions := (xdmp:permission("schema-test-writer", "update"))
+let $permissions := xdmp:default-permissions()(:)(xdmp:permission("schema-test-writer", "update"),xdmp:permission("schema-test-reader", "read")):)
 let $collections := (
-  $helper:OPTION_SCHEMATRON,
+  $const:OPTION_SCHEMATRON,
   fn:concat("group/", $group),
-  if (fn:matches($trgr:uri, $schematron-pattern)) then $helper:TYPE_SCHEMATRON else (),
-  if (map:contains($version-components, $validation-helper:VERSION_KEY))
-  then fn:concat("version/", map:get($version-components, $validation-helper:VERSION_KEY))
+  if (fn:matches($trgr:uri, $schematron-pattern)) then $const:TYPE_SCHEMATRON else (),
+  if (map:contains($version-components, $const:VERSION_KEY))
+  then fn:concat("version/", map:get($version-components, $const:VERSION_KEY))
   else ()
 )
 
 return (
-	xdmp:log(fn:concat('*****Document ', $trgr:uri, ' was ', $message, '.*****')),
+	xdmp:log(fn:concat('*****Document ', $trgr:uri, ' was ', $message, " by user ", xdmp:get-current-user(), '.*****' )),
 	if ($update-kind = ("modify", "create"))
 	then helper:set-collections-and-permissions($trgr:uri, $metadata + $version-components, $collections, $permissions)
-	else helper:delete-document($trgr:uri, $helper:TYPE_SCHEMATRON)
+	else helper:delete-document($trgr:uri, $const:TYPE_SCHEMATRON)
 )

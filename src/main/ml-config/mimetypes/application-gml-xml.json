@@ -1,0 +1,7 @@
+{
+  "name": "application/gml+xml",
+  "extension": [
+    "gml"
+  ],
+  "format": "binary"
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Versieoverzicht xmlns="https://standaarden.overheid.nl/stop/imop/schemata/"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 schemaversie="1.2.0"
+                 xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/schemata/   https://standaarden.overheid.nl/stop/1.3.0/imop-schemata.xsd">
+  <versie>1.2.0</versie>
+  <Module>
+    <localName>Consolidaties</localName>
+    <namespace>https://standaarden.overheid.nl/lvbb/stop/uitlevering/</namespace>
+    <implementatie>
+      <Moduleversie>
+        <introductieversie>1.0.0</introductieversie>
+        <schema>https://standaarden.overheid.nl/lvbb/1.7.0/lvbb-stop-uitlevering.xsd</schema>
+        <schematron></schematron>
+      </Moduleversie>
+    </implementatie>
+  </Module>
+  <Module>
+    <localName>Consolidatie</localName>
+    <namespace>https://standaarden.overheid.nl/lvbb/stop/uitlevering/</namespace>
+    <implementatie>
+      <Moduleversie>
+        <introductieversie>1.0.0</introductieversie>
+        <schema>https://standaarden.overheid.nl/lvbb/1.7.0/lvbb-stop-uitlevering.xsd</schema>
+        <schematron></schematron>
+      </Moduleversie>
+    </implementatie>
+  </Module>
+  <Module>
+    <localName>RegelingVersie</localName>
+    <namespace>https://standaarden.overheid.nl/lvbb/stop/uitlevering/</namespace>
+    <implementatie>
+      <Moduleversie>
+        <introductieversie>1.0.0</introductieversie>
+        <schema>https://standaarden.overheid.nl/lvbb/1.7.0/lvbb-stop-uitlevering.xsd</schema>
+        <schematron>https://standaarden.overheid.nl/intern/1.2.0/uitlevering-regelingversie.sch</schematron>
+      </Moduleversie>
+    </implementatie>
+  </Module>
+</Versieoverzicht>

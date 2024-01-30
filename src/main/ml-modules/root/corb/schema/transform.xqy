@@ -1,4 +1,5 @@
 xquery version "1.0-ml";
+import module namespace const = "http://marklogic.com/schema-validator/lib/constants" at "/lib/constants.xqy";
 import module namespace helper = "http://marklogic.com/schema-validator/corb/helper" at "/corb/helper.xqy";
 
 declare option xdmp:mapping "false";
@@ -22,7 +23,7 @@ return (
   then (
     let $metadata := xdmp:document-get-metadata($URI)
     return (
-      map:put($metadata, "catalog-name", $name),
+      map:put($metadata, $const:CATALOG_NAME, $name),
       xdmp:invoke-function(
         function() { xdmp:document-set-metadata($URI, $metadata) },
         map:map()=>map:with("update", "true")

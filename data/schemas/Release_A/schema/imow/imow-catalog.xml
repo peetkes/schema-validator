@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://www.geostandaarden.nl/bestanden-ow/manifest-ow.xsd" uri="bestanden-ow/generiek/manifest-ow.xsd"/>
+</catalog>

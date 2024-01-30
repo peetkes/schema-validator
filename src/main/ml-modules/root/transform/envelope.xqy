@@ -28,6 +28,7 @@ declare function local:update-content(
 {
   let $doc := map:get($content,"value")
   let $node-kind := xdmp:node-kind($doc)
+  let $is-binary := $content/node() instance of binary()
   return switch ($node-kind)
     case "document"
     return (

@@ -1,7 +1,7 @@
 buildscript {
     repositories {
         mavenCentral()
-        maven {
+/*        maven {
             name "koop-lvbb-releases"
             url "https://nexus.cicd.s15m.nl/repository/koop-lvbb-releases"
             credentials {
@@ -9,7 +9,7 @@ buildscript {
                 password System.getenv('NEXUS_ROBOT_SECRET')
             }
         }
-        mavenLocal()
+*/        mavenLocal()
     }
     dependencies {
         //Needed for CorbTask to dynamically generate properties from CoRB Options class
@@ -21,6 +21,7 @@ buildscript {
 plugins {
     id "net.saliman.properties" version "1.5.2"
     id "com.marklogic.ml-gradle" version "${mlGradleVersion}"
+    id "java"
 }
 
 ext {
@@ -32,7 +33,7 @@ repositories {
     mavenCentral()
     // Needed for some mlcp dependencies, such as commons-csv:1.5.1-marklogic
     maven { url "https://developer.marklogic.com/maven2/" }
-    maven {
+/*    maven {
         name "koop-lvbb-releases"
         url "https://nexus.cicd.s15m.nl/repository/koop-lvbb-releases"
         credentials {
@@ -40,7 +41,7 @@ repositories {
             password robotSecret
         }
     }
-    mavenLocal()
+*/    mavenLocal()
 }
 
 configurations {
@@ -69,11 +70,14 @@ dependencies {
     mlcp "com.marklogic:mlcp:${mlVersion}"
     mlcp files("mlcp")
     mlBundle "com.marklogic:marklogic-unit-test-modules:${mlUnitTestVersion}"
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.1.3'
+    implementation 'org.projectlombok:lombok:1.18.28'
+    implementation 'com.marklogic:marklogic-client-api:4.0.1'
 }
 
 ext {
     // XCC URL for running corb task below
-    contentXccUrl = "xcc://${mlUsername}:${mlPassword}@${mlHost}:${mlRestPort}"
+    contentXccUrl = "xcc://${mlRestUserName}:${mlRestUserPassword}@${mlHost}:${mlRestPort}"
 }
 task dockerUp(type: Exec) {
     workingDir '.'
@@ -127,35 +131,41 @@ task loadSchemas(type: com.marklogic.gradle.task.MlcpTask) {
     classpath = configurations.mlcp
     command = "IMPORT"
     port = Integer.parseInt(mlRestPort)
+    username = mlRestUserName
+    password = mlRestUserPassword
     database = mlAppConfig.contentDatabaseName
     input_file_path = "data/schemas/Release_A/schema"
     input_file_pattern = ".*\\.(xsd|xml)"
     output_collections = "/opera/options/schema"
-    output_permissions = "schema-test-reader,read,schema-test-writer,update"
-    output_uri_replace = ".*data/schemas,''"
+//    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/schemas/Release_A,'/cga/release_a'"
 }
 
 task loadSchematrons(type: com.marklogic.gradle.task.MlcpTask) {
     classpath = configurations.mlcp
     command = "IMPORT"
     port = Integer.parseInt(mlRestPort)
+    username = mlRestUserName
+    password = mlRestUserPassword
     database = mlAppConfig.contentDatabaseName
     input_file_path = "data/schemas/Release_A/schema"
     input_file_pattern = ".*\\.sch"
     output_collections = "/opera/options/schematron"
-    output_permissions = "schema-test-reader,read,schema-test-writer,update"
-    output_uri_replace = ".*data/schemas,''"
+//    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/schemas/Release_A,'/cga/release_a'"
 }
 
 task loadValidationplans(type: com.marklogic.gradle.task.MlcpTask) {
     classpath = configurations.mlcp
     command = "IMPORT"
     port = Integer.parseInt(mlRestPort)
+    username = mlRestUserName
+    password = mlRestUserPassword
     database = mlAppConfig.contentDatabaseName
     input_file_path = "data/schemas/Release_A/validatieplannen"
     output_collections = "/opera/options/validatieplannen"
-    output_permissions = "schema-test-reader,read,schema-test-writer,update"
-    output_uri_replace = ".*data/schemas,''"
+//    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/schemas/Release_A,'/cga/release_a'"
 }
 
 task loadConfiguration {
@@ -167,43 +177,127 @@ task loadWaardelijsten(type: com.marklogic.gradle.task.MlcpTask) {
     classpath = configurations.mlcp
     command = "IMPORT"
     port = Integer.parseInt(mlRestPort)
+    username = mlRestUserName
+    password = mlRestUserPassword
     database = mlAppConfig.contentDatabaseName
     input_file_path = "data/waardelijsten/Release_A"
     output_collections = "/opera/options/waardelijsten"
-    output_permissions = "schema-test-reader,read,schema-test-writer,update"
-    output_uri_replace = ".*data/waardelijsten,''"
+//    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/waardelijsten/Release_A,'/cga/release_a'"
 }
 
 task loadAanlevering_1(type: com.marklogic.gradle.task.MlcpTask) {
     classpath = configurations.mlcp
     command = "IMPORT"
     port = Integer.parseInt(mlRestPort)
+    username = mlRestUserName
+    password = mlRestUserPassword
     database = mlAppConfig.contentDatabaseName
     input_file_path = "data/aanleveringen/opdracht-1-besluit"
-    output_collections = "/opera/options/opdrachtbestanden"
+    output_collections = "/opera/options/aanlevering,/opera/oin/0000000100321434500, /opera/idlevering/opdracht_O_2023072411_3215743_1"
     output_permissions = "schema-test-reader,read,schema-test-writer,update"
     output_uri_replace = ".*data/aanleveringen,'/opera/import'"
-//    transform_module = "/transform/envelope.xqy"
-//    transform_namespace = "http://koop.overheid.nl/lvbb/transform/envelope"
-//    transform_param = "oin=00000001003214345000,id-levering=opdracht_O_2023072411_3215743_1,id-bg=00000001003214345000"
+    transform_module = "/transform/envelope.xqy"
+    transform_namespace = "http://marklogic.com/schema-validator/transform/envelope"
+    transform_param = "oin=00000001003214345000,id-levering=opdracht_O_2023072411_3215743_1,id-bg=00000001003214345000"
 }
 
 task loadAanlevering_2(type: com.marklogic.gradle.task.MlcpTask) {
     classpath = configurations.mlcp
     command = "IMPORT"
     port = Integer.parseInt(mlRestPort)
+    username = mlRestUserName
+    password = mlRestUserPassword
     database = mlAppConfig.contentDatabaseName
     input_file_path = "data/aanleveringen/opdracht-2-tijdelijk-deel"
-    output_collections = "/opera/options/opdrachtbestanden"
+    output_collections = "/opera/options/aanlevering,/opera/oin/0000000100321434500, /opera/idlevering/opdracht_O_2023072411_3215743_2"
     output_permissions = "schema-test-reader,read,schema-test-writer,update"
     output_uri_replace = ".*data/aanleveringen,'/opera/import'"
-//    transform_module = "/transform/envelope.xqy"
-//    transform_namespace = "http://koop.overheid.nl/lvbb/transform/envelope"
-//    transform_param = "oin=00000001003214345000,id-levering=opdracht_O_2023072411_3215743_2,id-bg=00000001003214345000"
+    transform_module = "/transform/envelope.xqy"
+    transform_namespace = "http://marklogic.com/schema-validator/transform/envelope"
+    transform_param = "oin=00000001003214345000,id-levering=opdracht_O_2023072411_3215743_2,id-bg=00000001003214345000"
+}
+
+task loadAanlevering_3(type: com.marklogic.gradle.task.MlcpTask) {
+    classpath = configurations.mlcp
+    command = "IMPORT"
+    port = Integer.parseInt(mlRestPort)
+    username = mlRestUserName
+    password = mlRestUserPassword
+    database = mlAppConfig.contentDatabaseName
+    input_file_path = "data/aanleveringen/opdracht-3-besluit"
+    output_collections = "/opera/options/aanlevering,/opera/oin/0000000100321434500, /opera/idlevering/opdracht_O_2024011109_1653066_1"
+    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/aanleveringen,'/opera/import'"
+    transform_module = "/transform/envelope.xqy"
+    transform_namespace = "http://marklogic.com/schema-validator/transform/envelope"
+    transform_param = "oin=00000001003214345000,id-levering=opdracht_O_2023072411_3215743_2,id-bg=00000001003214345000"
+}
+
+task loadAanlevering_4(type: com.marklogic.gradle.task.MlcpTask) {
+    classpath = configurations.mlcp
+    command = "IMPORT"
+    port = Integer.parseInt(mlRestPort)
+    username = mlRestUserName
+    password = mlRestUserPassword
+    database = mlAppConfig.contentDatabaseName
+    input_file_path = "data/aanleveringen/opdracht-4-kennisgeving"
+    output_collections = "/opera/options/aanlevering,/opera/oin/0000000100321434500, /opera/idlevering/opdracht_O_2022122310_3743272_1"
+    output_permissions = "schema-test-reader,read,schema-test-writer,update"
+    output_uri_replace = ".*data/aanleveringen,'/opera/import'"
+    transform_module = "/transform/envelope.xqy"
+    transform_namespace = "http://marklogic.com/schema-validator/transform/envelope"
+    transform_param = "oin=00000001003214345000,id-levering=opdracht_O_2023072411_3215743_2,id-bg=00000001003214345000"
 }
 
 task loadData() {
-    dependsOn 'loadWaardelijsten'
     dependsOn 'loadAanlevering_1'
-//    dependsOn 'loadAanlevering_2'
+    dependsOn 'loadAanlevering_2'
+    dependsOn 'loadAanlevering_3'
+    dependsOn 'loadAanlevering_4'
+}
+
+task sendFilesToMarkLogic(type: JavaExec) {
+    description 'Send content of folder to MarkLogic'
+    group 'custom'
+    main 'nl.peetkes.SendFilesTask'
+    classpath sourceSets.main.runtimeClasspath
+}
+
+project.properties.each { key, value ->
+    if (key.startsWith("aanlevering") && value) {
+        def recordType = key.substring(11)
+        def uriPrefix = "/opera/import/aanleveringen/" + value.tokenize("/").last()
+        task "LoadAanlevering${recordType}"(type: JavaExec) {
+            group "Ingest Aanleveringen"
+            main 'nl.peetkes.SendFilesTask'
+            classpath sourceSets.main.runtimeClasspath
+            args 'http://localhost:8010/v1/documents', mlRestUserName, mlRestUserPassword, value,  uriPrefix
+        }
+    }
+}
+
+project.properties.each { key, value ->
+    if (key.startsWith("aanlevering") && value) {
+        def recordType = key.substring(11)
+        def uriPrefix = "/opera/import/aanleveringen/" + value.tokenize("/").last()
+        task "MoveToMarkLogic-${recordType}"(type: JavaExec) {
+            group "Move To MarkLogic"
+            main 'nl.peetkes.MoveToMarkLogic'
+            classpath sourceSets.main.runtimeClasspath
+            args 'localhost', 8010, mlRestUserName, mlRestUserPassword, value,  uriPrefix
+        }
+    }
+}
+
+task loadAanleveringen {
+    dependsOn {
+        tasks.findAll { task -> "Ingest Aanleveringen".equals(task.group) }
+    }
+}
+
+task MoveToMarkLogic {
+    dependsOn {
+        tasks.findAll {task -> "Move To MarkLogic".equals(task.group) }
+    }
 }

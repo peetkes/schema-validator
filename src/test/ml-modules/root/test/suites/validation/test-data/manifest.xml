@@ -17,39 +17,23 @@
       <lvbb:contentType>application/xml</lvbb:contentType>
    </lvbb:bestand>
    <lvbb:bestand>
-      <lvbb:bestandsnaam>owRegelingsgebied_3.xml</lvbb:bestandsnaam>
+      <lvbb:bestandsnaam>owRegeltekst.xml</lvbb:bestandsnaam>
       <lvbb:contentType>application/xml</lvbb:contentType>
    </lvbb:bestand>
    <lvbb:bestand>
-      <lvbb:bestandsnaam>owLocaties_3.xml</lvbb:bestandsnaam>
+      <lvbb:bestandsnaam>owLocaties.xml</lvbb:bestandsnaam>
       <lvbb:contentType>application/xml</lvbb:contentType>
    </lvbb:bestand>
    <lvbb:bestand>
-      <lvbb:bestandsnaam>owRegeltekst_3.xml</lvbb:bestandsnaam>
+      <lvbb:bestandsnaam>owRegelingsgebied.xml</lvbb:bestandsnaam>
       <lvbb:contentType>application/xml</lvbb:contentType>
    </lvbb:bestand>
    <lvbb:bestand>
-      <lvbb:bestandsnaam>owLocaties_1.xml</lvbb:bestandsnaam>
+      <lvbb:bestandsnaam>gio-1.xml</lvbb:bestandsnaam>
       <lvbb:contentType>application/xml</lvbb:contentType>
    </lvbb:bestand>
    <lvbb:bestand>
-      <lvbb:bestandsnaam>owRegeltekst_1.xml</lvbb:bestandsnaam>
-      <lvbb:contentType>application/xml</lvbb:contentType>
-   </lvbb:bestand>
-   <lvbb:bestand>
-      <lvbb:bestandsnaam>owLocaties_2.xml</lvbb:bestandsnaam>
-      <lvbb:contentType>application/xml</lvbb:contentType>
-   </lvbb:bestand>
-   <lvbb:bestand>
-      <lvbb:bestandsnaam>owRegeltekst_2.xml</lvbb:bestandsnaam>
-      <lvbb:contentType>application/xml</lvbb:contentType>
-   </lvbb:bestand>
-   <lvbb:bestand>
-      <lvbb:bestandsnaam>owRegelingsgebied_1.xml</lvbb:bestandsnaam>
-      <lvbb:contentType>application/xml</lvbb:contentType>
-   </lvbb:bestand>
-   <lvbb:bestand>
-      <lvbb:bestandsnaam>owRegelingsgebied_2.xml</lvbb:bestandsnaam>
-      <lvbb:contentType>application/xml</lvbb:contentType>
+      <lvbb:bestandsnaam>gio-1.gml</lvbb:bestandsnaam>
+      <lvbb:contentType>application/gml+xml</lvbb:contentType>
    </lvbb:bestand>
 </lvbb:manifest>

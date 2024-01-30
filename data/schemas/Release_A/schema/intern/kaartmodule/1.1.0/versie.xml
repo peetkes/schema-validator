@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Versieoverzicht xmlns="https://standaarden.overheid.nl/stop/imop/schemata/"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 schemaversie="1.1.0"
+                 xsi:schemaLocation="https://standaarden.overheid.nl/stop/imop/schemata/   https://standaarden.overheid.nl/stop/1.2.0/imop-schemata.xsd">
+  <versie>1.1.0</versie>
+  <Module>
+    <localName>KMGeometrie</localName>
+    <namespace>https://standaarden.overheid.nl/kaartmodule/stop/</namespace>
+    <implementatie>
+      <Moduleversie>
+        <introductieversie>1.0.0</introductieversie>
+        <schema>https://standaarden.overheid.nl/intern/kaartmodule/1.1.0/kaartmodule-geometrie.xsd</schema>
+      </Moduleversie>
+    </implementatie>
+  </Module>
+</Versieoverzicht>

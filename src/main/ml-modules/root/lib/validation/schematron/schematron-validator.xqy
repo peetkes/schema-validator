@@ -4,6 +4,7 @@ module namespace schematron = "http://marklogic.com/schema-validator/lib/validat
 import module namespace ml-schematron="http://marklogic.com/xdmp/schematron" at "/MarkLogic/schematron/schematron.xqy";
 
 declare namespace sch = "http://purl.oclc.org/dsdl/schematron";
+declare namespace opera = "http:koop.overheid.nl/lvbb/opera";
 
 declare option xdmp:mapping "false";
 
@@ -13,9 +14,41 @@ declare variable $SVRL-FOR-XSLT2 := "iso-schematron/iso_svrl_for_xslt2_wrapper.x
 declare variable $INCLUDE := "/MarkLogic/schematron/iso-schematron/iso_dsdl_include.xsl";
 declare variable $EXPAND := "/MarkLogic/schematron/iso-schematron/iso_abstract_expand.xsl";
 
+declare variable $SCHEMATRON_REPORT as xs:string := "schematron-report.xsl";
+
 declare variable $eval-options as map:map := map:map()
 =>map:with("isolation", "same-statement")
 =>map:with("update", "false");
+
+(:~
+ : Function: validate-node
+ :
+ : @param $node           node to validate
+ : @param $schematron-uri uri of the schematron file to use for validation
+ : @param $params         optional list of parameters to use for the validation
+ : @result json:object containing the result
+ :)
+declare function validate-node(
+  $node as node(),
+  $schematron-uri as xs:string,
+  $params as map:map?
+) as json:object
+{
+  let $report := schematron:validate($node, schematron:get($schematron-uri), $params)
+  let $result := json:object()
+    =>map:with("uri", $schematron-uri)
+  return (
+    if (fn:exists($report//*[fn:local-name() = ("successful-report","failed-assert")]))
+    then (
+      xdmp:trace($TRACE_ID,("report", $report)),
+      map:put($result,"result", "fail"),
+      map:put($result, "report", xdmp:xslt-invoke($SCHEMATRON_REPORT,$report))
+    )
+    else map:put($result,"result","success"),
+    json:object()
+      =>map:with("schematron", $result)
+  )
+};
 
 (:~
  : Empty params wrapper for the schematron:compile function
@@ -27,7 +60,6 @@ declare function schematron:compile(
     $schema as element(sch:schema)
 ) as document-node()
 {
-  xdmp:trace($TRACE_ID, fn:concat("Inside compile#1")),
   schematron:compile($schema,
     map:map()
     =>map:with("allow-foreign",fn:true())
@@ -49,7 +81,6 @@ declare function schematron:compile(
     $params as map:map?
 ) as document-node()
 {
-  xdmp:trace($TRACE_ID, fn:concat("Inside compile#2")),
   let $step1 := xdmp:xslt-invoke($INCLUDE, document { $schema }, $params)
 
   let $params := if (fn:empty($params))
@@ -76,7 +107,6 @@ declare function schematron:put(
   $schematron-uri as xs:string
 ) as empty-sequence()
 {
-  xdmp:trace($TRACE_ID, fn:concat("Inside put#1")),
   schematron:put($schematron-uri,
     map:map()
     =>map:with("allow-foreign",fn:true())
@@ -98,7 +128,6 @@ declare function schematron:put(
   $params as map:map?
 ) as empty-sequence()
 {
-  xdmp:trace($TRACE_ID, fn:concat("Inside put#2")),
   let $schema := xdmp:eval(
     $ml-schematron:get-schema,
     (xs:QName("schematron-uri"), $schematron-uri),
@@ -140,65 +169,48 @@ declare function schematron:get(
   $schematron-uri as xs:string
 ) as document-node()
 {
-  xdmp:trace($TRACE_ID, fn:concat("Inside get#1")),
-  ml-schematron:get($schematron-uri)
+  try {
+    ml-schematron:get($schematron-uri)
+  } catch ($ex) {
+    xdmp:trace($TRACE_ID, ("recompile schematron", $schematron-uri)),
+    schematron:put($schematron-uri, map:map()=>map:with("allow-foreign", fn:true())),
+    ml-schematron:get($schematron-uri)
+  }
 };
-
-declare function schematron:validate-xml(
-  $uri as xs:string,
-  $schematron-uri as xs:string
-) as node()
-{
-  xdmp:trace($TRACE_ID, fn:concat("Inside validate-xml#2")),
-  schematron:validate(fn:doc($uri), schematron:get($schematron-uri))
-};
-
-declare function schematron:validate-xml(
-  $uri as xs:string,
-  $schematron-uri as xs:string,
-  $params as map:map?
-) as node()
-{
-  xdmp:trace($TRACE_ID, fn:concat("Inside validate-xml#3")),
-  schematron:validate(fn:doc($uri), schematron:get($schematron-uri), $params)
-};
-
 
 (:~
  : Empty params wrapper for the schematron:validate function
  :
- : @param  $document        document node to validate
+ : @param  $node            document node to validate
  : @param  $validator-xslt  validator-xslt node to use for validation
  : @return  output of the validation in SVRL format
  :)
 declare function schematron:validate(
-  $document as node(),
+  $node as node(),
   $validator-xslt as document-node()
 ) as node()
 {
-  xdmp:trace($TRACE_ID, fn:concat("Inside validate#2")),
-  schematron:validate($document, $validator-xslt, ())
+  schematron:validate($node, $validator-xslt, ())
 };
 
 (:~
  : Validator function that validates the given document against teh given validator-xslt with an
  :
- : @param  $document        document node to validate
+ : @param  $node            document node to validate
  : @param  $validator-xslt  validator-xslt node to use for validation
  : @return  output of the validation in SVRL format
  :)
 declare function schematron:validate(
-  $document as node(),
+  $node as node(),
   $validator-xslt as document-node(),
   $params as map:map?
 ) as node()
 {
-  xdmp:trace($TRACE_ID, fn:concat("Inside validate#3")),
   let $parameters := map:map()=>map:with("parameters", if (fn:exists($params)) then $params else map:map())
   return
-    if (xdmp:node-kind($document)="document")
-    then xdmp:xslt-eval($validator-xslt, $document, $parameters)
-    else xdmp:xslt-eval($validator-xslt, document { $document }, $parameters)
+    if (xdmp:node-kind($node)="document")
+    then xdmp:xslt-eval($validator-xslt, $node, $parameters)
+    else xdmp:xslt-eval($validator-xslt, document { $node }, $parameters)
 };
 
 (:~
@@ -212,6 +224,5 @@ declare function schematron:delete(
   $schematron-uri as xs:string
 ) as empty-sequence()
 {
-  xdmp:trace($TRACE_ID, fn:concat("Inside schematron:delete#3")),
   ml-schematron:delete($schematron-uri)
 };

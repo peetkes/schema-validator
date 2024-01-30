@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="https://standaarden.overheid.nl/kaartmodule/stop/1.1.0/kaartmodule-geometrie.xsd" uri="kaartmodule-geometrie.xsd"/>
+</catalog>

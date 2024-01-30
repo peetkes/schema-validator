@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mow:Aanleveringen xmlns:mow="http://www.geostandaarden.nl/bestanden-ow/manifest-ow">
+   <mow:domein>omgevingswet</mow:domein>
+   <mow:Aanlevering>
+      <mow:WorkIDRegeling>/akn/nl/act/gm9920/2024/R_2024012914_2306170</mow:WorkIDRegeling>
+      <mow:DoelID>/join/id/proces/gm9920/2024/D_2024012914_2306170_1</mow:DoelID>
+      <mow:Bestand>
+         <mow:naam>owRegeltekst.xml</mow:naam>
+         <mow:objecttype>Regeltekst</mow:objecttype>
+         <mow:objecttype>RegelVoorIedereen</mow:objecttype>
+      </mow:Bestand>
+      <mow:Bestand>
+         <mow:naam>owLocaties.xml</mow:naam>
+         <mow:objecttype>Gebiedengroep</mow:objecttype>
+         <mow:objecttype>Gebied</mow:objecttype>
+      </mow:Bestand>
+      <mow:Bestand>
+         <mow:naam>owRegelingsgebied.xml</mow:naam>
+         <mow:objecttype>Regelingsgebied</mow:objecttype>
+      </mow:Bestand>
+   </mow:Aanlevering>
+</mow:Aanleveringen>

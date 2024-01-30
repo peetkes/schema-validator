@@ -75,6 +75,15 @@
     "fast-phrase-searches": false,
     "fast-case-sensitive-searches": false,
     "fast-diacritic-sensitive-searches": false
+  }, {
+    "field-name": "catalogName",
+    "metadata": "",
+    "stemmed-searches": "off",
+    "word-searches": false,
+    "field-value-searches": false,
+    "fast-phrase-searches": false,
+    "fast-case-sensitive-searches": false,
+    "fast-diacritic-sensitive-searches": false
   } ],
   "range-field-index": [ {
       "scalar-type": "string",
@@ -110,6 +119,12 @@
     "scalar-type": "string",
     "collation": "http://marklogic.com/collation/",
     "field-name": "schemaGroup",
+    "range-value-positions": false,
+    "invalid-values": "reject"
+  }, {
+    "scalar-type": "string",
+    "collation": "http://marklogic.com/collation/",
+    "field-name": "catalogName",
     "range-value-positions": false,
     "invalid-values": "reject"
   } ]

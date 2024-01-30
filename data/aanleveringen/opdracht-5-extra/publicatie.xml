@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lvbba:AanleveringBesluit xmlns:lvbba="https://standaarden.overheid.nl/lvbb/stop/aanlevering/"
+                          schemaversie="1.2.0">
+   <lvbba:BesluitVersie>
+      <data:ExpressionIdentificatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:FRBRWork>/akn/nl/bill/gm9920/2024/B_2024012914_2306170_1</data:FRBRWork>
+         <data:FRBRExpression>/akn/nl/bill/gm9920/2024/B_2024012914_2306170_1/nld@2024-01-29;1</data:FRBRExpression>
+         <data:soortWork>/join/id/stop/work_003</data:soortWork>
+      </data:ExpressionIdentificatie>
+      <data:BesluitMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:eindverantwoordelijke>/tooi/id/gemeente/gm9920</data:eindverantwoordelijke>
+         <data:informatieobjectRefs>
+            <data:informatieobjectRef>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-1/nld@2024-01-29;1</data:informatieobjectRef>
+            <data:informatieobjectRef>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-2/nld@2024-01-29;1</data:informatieobjectRef>
+            <data:informatieobjectRef>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-3/nld@2024-01-29;1</data:informatieobjectRef>
+            <data:informatieobjectRef>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-4/nld@2024-01-29;1</data:informatieobjectRef>
+            <data:informatieobjectRef>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-consolideren-1/nld@2024-01-29;1</data:informatieobjectRef>
+            <data:informatieobjectRef>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-consolideren-2/nld@2024-01-29;1</data:informatieobjectRef>
+            <data:informatieobjectRef>/join/id/pubdata/gm9920/2024/IO_2024012914_2306170_1-publiceren-1/nld@2024-01-29;1</data:informatieobjectRef>
+         </data:informatieobjectRefs>
+         <data:maker>/tooi/id/gemeente/gm9920</data:maker>
+         <data:officieleTitel>Officiele titel van de aanlevering</data:officieleTitel>
+         <data:onderwerpen>
+            <data:onderwerp>/tooi/def/concept/c_9d1917e9</data:onderwerp>
+         </data:onderwerpen>
+         <data:soortProcedure>/join/id/stop/proceduretype_definitief</data:soortProcedure>
+         <data:soortBestuursorgaan>/tooi/def/thes/kern/c_2a7d8663</data:soortBestuursorgaan>
+      </data:BesluitMetadata>
+      <data:Procedureverloop xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:bekendOp>2024-01-29</data:bekendOp>
+         <data:procedurestappen>
+            <data:Procedurestap>
+               <data:soortStap>/join/id/stop/procedure/stap_003</data:soortStap>
+               <data:voltooidOp>2024-01-29</data:voltooidOp>
+            </data:Procedurestap>
+         </data:procedurestappen>
+      </data:Procedureverloop>
+      <data:ConsolidatieInformatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:BeoogdeRegelgeving>
+            <data:BeoogdeRegeling>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm9920/2024/D_2024012914_2306170_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/akn/nl/act/gm9920/2024/R_2024012914_2306170/nld@1</data:instrumentVersie>
+               <data:eId>art_besluit1</data:eId>
+            </data:BeoogdeRegeling>
+            <data:BeoogdInformatieobject>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm9920/2024/D_2024012914_2306170_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-1/nld@2024-01-29;1</data:instrumentVersie>
+               <data:eId>!main#cmp_ebc1__content_1__ref_1</data:eId>
+            </data:BeoogdInformatieobject>
+            <data:BeoogdInformatieobject>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm9920/2024/D_2024012914_2306170_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-2/nld@2024-01-29;1</data:instrumentVersie>
+               <data:eId>!main#cmp_ebc1__content_2__ref_1</data:eId>
+            </data:BeoogdInformatieobject>
+            <data:BeoogdInformatieobject>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm9920/2024/D_2024012914_2306170_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-3/nld@2024-01-29;1</data:instrumentVersie>
+               <data:eId>!main#cmp_ebc1__content_3__ref_1</data:eId>
+            </data:BeoogdInformatieobject>
+            <data:BeoogdInformatieobject>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm9920/2024/D_2024012914_2306170_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-4/nld@2024-01-29;1</data:instrumentVersie>
+               <data:eId>!main#cmp_ebc1__content_4__ref_1</data:eId>
+            </data:BeoogdInformatieobject>
+            <data:BeoogdInformatieobject>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm9920/2024/D_2024012914_2306170_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-consolideren-1/nld@2024-01-29;1</data:instrumentVersie>
+               <data:eId>!main#cmp_ebc1__content_5__ref_1</data:eId>
+            </data:BeoogdInformatieobject>
+            <data:BeoogdInformatieobject>
+               <data:doelen>
+                  <data:doel>/join/id/proces/gm9920/2024/D_2024012914_2306170_1</data:doel>
+               </data:doelen>
+               <data:instrumentVersie>/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-consolideren-2/nld@2024-01-29;1</data:instrumentVersie>
+               <data:eId>!main#cmp_ebc1__content_6__ref_1</data:eId>
+            </data:BeoogdInformatieobject>
+         </data:BeoogdeRegelgeving>
+         <data:Tijdstempels>
+            <data:Tijdstempel>
+               <data:doel>/join/id/proces/gm9920/2024/D_2024012914_2306170_1</data:doel>
+               <data:soortTijdstempel>juridischWerkendVanaf</data:soortTijdstempel>
+               <data:datum>2024-01-29</data:datum>
+               <data:eId>art_besluit2</data:eId>
+            </data:Tijdstempel>
+         </data:Tijdstempels>
+      </data:ConsolidatieInformatie>
+      <tekst:BesluitCompact xmlns:tekst="https://standaarden.overheid.nl/stop/imop/tekst/">
+         <tekst:RegelingOpschrift eId="longTitle" wId="longTitle">
+            <tekst:Al>Officiele titel van de aanlevering</tekst:Al>
+         </tekst:RegelingOpschrift>
+         <tekst:Aanhef eId="formula_1" wId="formula_1">
+            <tekst:Al>Aanhef van het besluit</tekst:Al>
+         </tekst:Aanhef>
+         <tekst:Lichaam eId="body" wId="body">
+            <tekst:WijzigArtikel eId="art_besluit1" wId="gm9920_1__art_besluit1">
+               <tekst:Kop>
+                  <tekst:Label>Artikel</tekst:Label>
+                  <tekst:Nummer>I</tekst:Nummer>
+               </tekst:Kop>
+               <tekst:Wat>Wijzigingen zoals opgenomen in <tekst:IntRef ref="cmp_besluit">Bijlage A</tekst:IntRef> worden vastgesteld.</tekst:Wat>
+            </tekst:WijzigArtikel>
+            <tekst:Artikel eId="art_besluit2" wId="gm9920_1__art_besluit2">
+               <tekst:Kop>
+                  <tekst:Label>Artikel</tekst:Label>
+                  <tekst:Nummer>II</tekst:Nummer>
+               </tekst:Kop>
+               <tekst:Inhoud>
+                  <tekst:Al>Dit besluit treedt in werking per 29-01-2024</tekst:Al>
+               </tekst:Inhoud>
+            </tekst:Artikel>
+         </tekst:Lichaam>
+         <tekst:Sluiting eId="formula_2" wId="formula_2">
+            <tekst:Al>Sluiting van het besluit</tekst:Al>
+            <tekst:Ondertekening>
+               <tekst:Al>Ondertekening van het besluit</tekst:Al>
+            </tekst:Ondertekening>
+         </tekst:Sluiting>
+         <tekst:WijzigBijlage eId="cmp_besluit" wId="gm9920_1__cmp_besluit">
+            <tekst:Kop>
+               <tekst:Label>Bijlage</tekst:Label>
+               <tekst:Nummer>A</tekst:Nummer>
+               <tekst:Opschrift>Bijlage bij artikel I</tekst:Opschrift>
+            </tekst:Kop>
+            <tekst:RegelingCompact wordt="/akn/nl/act/gm9920/2024/R_2024012914_2306170/nld@1"
+                                   componentnaam="main">
+               <tekst:RegelingOpschrift eId="longTitle" wId="longTitle">
+                  <tekst:Al>Officiele titel van de regeling</tekst:Al>
+               </tekst:RegelingOpschrift>
+               <tekst:Lichaam wId="body" eId="body">
+                  <tekst:Hoofdstuk wId="gm9920_1__chp_1" eId="chp_1">
+                     <tekst:Kop>
+                        <tekst:Label>Hoofdstuk</tekst:Label>
+                        <tekst:Nummer>1</tekst:Nummer>
+                        <tekst:Opschrift>Hoofdstuk 1</tekst:Opschrift>
+                     </tekst:Kop>
+                     <tekst:Artikel wId="gm9920_1__chp_1__art_1" eId="chp_1__art_1">
+                        <tekst:Kop>
+                           <tekst:Label>Artikel</tekst:Label>
+                           <tekst:Nummer>1</tekst:Nummer>
+                           <tekst:Opschrift>Artikel 1</tekst:Opschrift>
+                        </tekst:Kop>
+                        <tekst:Inhoud>
+                           <tekst:Al>Inhoud van artikel 1 binnen hoofdstuk 1 binnen lichaam</tekst:Al>
+                        </tekst:Inhoud>
+                     </tekst:Artikel>
+                  </tekst:Hoofdstuk>
+               </tekst:Lichaam>
+               <tekst:Bijlage eId="cmp_ebc1" wId="gm9920_1__cmp_ebc1">
+                  <tekst:Kop>
+                     <tekst:Label>Bijlage</tekst:Label>
+                     <tekst:Nummer>I</tekst:Nummer>
+                     <tekst:Opschrift>Overzicht Informatieobjecten en/of Plaatjes</tekst:Opschrift>
+                  </tekst:Kop>
+                  <tekst:Divisietekst eId="cmp_ebc1__content_1" wId="gm9920_1__cmp_ebc1__content_1">
+                     <tekst:Inhoud>
+                        <tekst:Al>Het volgende informatie-object wordt vastgesteld:</tekst:Al>
+                        <tekst:Al>Informatie-object <tekst:ExtIoRef eId="cmp_ebc1__content_1__ref_1"
+                                           wId="gm9920_1__cmp_ebc1__content_1__ref_1"
+                                           ref="/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-1/nld@2024-01-29;1">/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-1/nld@2024-01-29;1</tekst:ExtIoRef>
+                        </tekst:Al>
+                     </tekst:Inhoud>
+                  </tekst:Divisietekst>
+                  <tekst:Divisietekst eId="cmp_ebc1__content_2" wId="gm9920_1__cmp_ebc1__content_2">
+                     <tekst:Inhoud>
+                        <tekst:Al>Het volgende informatie-object wordt vastgesteld:</tekst:Al>
+                        <tekst:Al>Informatie-object <tekst:ExtIoRef eId="cmp_ebc1__content_2__ref_1"
+                                           wId="gm9920_1__cmp_ebc1__content_2__ref_1"
+                                           ref="/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-2/nld@2024-01-29;1">/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-2/nld@2024-01-29;1</tekst:ExtIoRef>
+                        </tekst:Al>
+                     </tekst:Inhoud>
+                  </tekst:Divisietekst>
+                  <tekst:Divisietekst eId="cmp_ebc1__content_3" wId="gm9920_1__cmp_ebc1__content_3">
+                     <tekst:Inhoud>
+                        <tekst:Al>Het volgende informatie-object wordt vastgesteld:</tekst:Al>
+                        <tekst:Al>Informatie-object <tekst:ExtIoRef eId="cmp_ebc1__content_3__ref_1"
+                                           wId="gm9920_1__cmp_ebc1__content_3__ref_1"
+                                           ref="/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-3/nld@2024-01-29;1">/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-3/nld@2024-01-29;1</tekst:ExtIoRef>
+                        </tekst:Al>
+                     </tekst:Inhoud>
+                  </tekst:Divisietekst>
+                  <tekst:Divisietekst eId="cmp_ebc1__content_4" wId="gm9920_1__cmp_ebc1__content_4">
+                     <tekst:Inhoud>
+                        <tekst:Al>Het volgende informatie-object wordt vastgesteld:</tekst:Al>
+                        <tekst:Al>Informatie-object <tekst:ExtIoRef eId="cmp_ebc1__content_4__ref_1"
+                                           wId="gm9920_1__cmp_ebc1__content_4__ref_1"
+                                           ref="/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-4/nld@2024-01-29;1">/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-gio-4/nld@2024-01-29;1</tekst:ExtIoRef>
+                        </tekst:Al>
+                     </tekst:Inhoud>
+                  </tekst:Divisietekst>
+                  <tekst:Divisietekst eId="cmp_ebc1__content_5" wId="gm9920_1__cmp_ebc1__content_5">
+                     <tekst:Inhoud>
+                        <tekst:Al>Het volgende informatie-object wordt vastgesteld:</tekst:Al>
+                        <tekst:Al>Informatie-object <tekst:ExtIoRef eId="cmp_ebc1__content_5__ref_1"
+                                           wId="gm9920_1__cmp_ebc1__content_5__ref_1"
+                                           ref="/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-consolideren-1/nld@2024-01-29;1">/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-consolideren-1/nld@2024-01-29;1</tekst:ExtIoRef>
+                        </tekst:Al>
+                     </tekst:Inhoud>
+                  </tekst:Divisietekst>
+                  <tekst:Divisietekst eId="cmp_ebc1__content_6" wId="gm9920_1__cmp_ebc1__content_6">
+                     <tekst:Inhoud>
+                        <tekst:Al>Het volgende informatie-object wordt vastgesteld:</tekst:Al>
+                        <tekst:Al>Informatie-object <tekst:ExtIoRef eId="cmp_ebc1__content_6__ref_1"
+                                           wId="gm9920_1__cmp_ebc1__content_6__ref_1"
+                                           ref="/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-consolideren-2/nld@2024-01-29;1">/join/id/regdata/gm9920/2024/IO_2024012914_2306170_1-consolideren-2/nld@2024-01-29;1</tekst:ExtIoRef>
+                        </tekst:Al>
+                     </tekst:Inhoud>
+                  </tekst:Divisietekst>
+                  <tekst:Divisietekst eId="cmp_ebc1__content_plaatjes"
+                                      wId="gm9920_1__cmp_ebc1__content_plaatjes">
+                     <tekst:Inhoud>
+                        <tekst:Al>De volgende plaatjes worden gebruikt:</tekst:Al>
+                        <tekst:Figuur eId="cmp_ebc1__content_plaatjes__img_1"
+                                      wId="gm9920_1__cmp_ebc1__content_plaatjes__img_1">
+                           <tekst:Illustratie naam="plaatje-1.jpg"
+                                              breedte="70"
+                                              hoogte="21"
+                                              uitlijning="center"
+                                              formaat="image/jpeg"
+                                              dpi="90"/>
+                        </tekst:Figuur>
+                        <tekst:Figuur eId="cmp_ebc1__content_plaatjes__img_2"
+                                      wId="gm9920_1__cmp_ebc1__content_plaatjes__img_2">
+                           <tekst:Illustratie naam="plaatje-2.jpg"
+                                              breedte="70"
+                                              hoogte="21"
+                                              uitlijning="center"
+                                              formaat="image/jpeg"
+                                              dpi="90"/>
+                        </tekst:Figuur>
+                        <tekst:Figuur eId="cmp_ebc1__content_plaatjes__img_3"
+                                      wId="gm9920_1__cmp_ebc1__content_plaatjes__img_3">
+                           <tekst:Illustratie naam="plaatje-3.jpg"
+                                              breedte="70"
+                                              hoogte="21"
+                                              uitlijning="center"
+                                              formaat="image/jpeg"
+                                              dpi="90"/>
+                        </tekst:Figuur>
+                     </tekst:Inhoud>
+                  </tekst:Divisietekst>
+               </tekst:Bijlage>
+            </tekst:RegelingCompact>
+         </tekst:WijzigBijlage>
+         <tekst:Toelichting eId="recital" wId="recital">
+            <tekst:AlgemeneToelichting eId="genrecital" wId="genrecital">
+               <tekst:Kop>
+                  <tekst:Label>Algemene toelichting</tekst:Label>
+                  <tekst:Nummer>I</tekst:Nummer>
+                  <tekst:Opschrift>Overzicht niet-consolideerbare Informatieobjecten</tekst:Opschrift>
+               </tekst:Kop>
+               <tekst:Divisietekst eId="content_1" wId="gm9920_1__content_1">
+                  <tekst:Inhoud>
+                     <tekst:Al>Het volgende informatie-object wordt uitsluitend gepubliceerd:</tekst:Al>
+                     <tekst:Al>Informatie-object <tekst:ExtRef soort="JOIN"
+                                      ref="/join/id/pubdata/gm9920/2024/IO_2024012914_2306170_1-publiceren-1/nld@2024-01-29;1">/join/id/pubdata/gm9920/2024/IO_2024012914_2306170_1-publiceren-1/nld@2024-01-29;1</tekst:ExtRef>
+                     </tekst:Al>
+                  </tekst:Inhoud>
+               </tekst:Divisietekst>
+            </tekst:AlgemeneToelichting>
+         </tekst:Toelichting>
+      </tekst:BesluitCompact>
+   </lvbba:BesluitVersie>
+   <lvbba:RegelingVersieInformatie>
+      <data:ExpressionIdentificatie xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:FRBRWork>/akn/nl/act/gm9920/2024/R_2024012914_2306170</data:FRBRWork>
+         <data:FRBRExpression>/akn/nl/act/gm9920/2024/R_2024012914_2306170/nld@1</data:FRBRExpression>
+         <data:soortWork>/join/id/stop/work_019</data:soortWork>
+      </data:ExpressionIdentificatie>
+      <data:RegelingVersieMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:versienummer>1</data:versienummer>
+      </data:RegelingVersieMetadata>
+      <data:RegelingMetadata xmlns:data="https://standaarden.overheid.nl/stop/imop/data/">
+         <data:eindverantwoordelijke>/tooi/id/gemeente/gm9920</data:eindverantwoordelijke>
+         <data:maker>/tooi/id/gemeente/gm9920</data:maker>
+         <data:officieleTitel>Officiele titel van de regeling</data:officieleTitel>
+         <data:onderwerpen>
+            <data:onderwerp>/tooi/def/concept/c_9d1917e9</data:onderwerp>
+         </data:onderwerpen>
+         <data:soortRegeling>/join/id/stop/regelingtype_003</data:soortRegeling>
+         <data:soortBestuursorgaan>/tooi/def/thes/kern/c_2a7d8663</data:soortBestuursorgaan>
+      </data:RegelingMetadata>
+   </lvbba:RegelingVersieInformatie>
+</lvbba:AanleveringBesluit>

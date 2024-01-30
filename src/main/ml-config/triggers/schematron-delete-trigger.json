@@ -12,7 +12,7 @@
       "when": "post-commit"
     }
   },
-  "module": "triggers/schemtron-trigger.xqy",
+  "module": "triggers/schematron-trigger.xqy",
   "module-db": "%%MODULES_DATABASE%%",
   "module-root": "/",
   "enabled": true,

@@ -3,16 +3,6 @@ module namespace helper = "http://marklogic.com/schema-validator/trigger/helper"
 
 declare option xdmp:mapping "false";
 
-declare variable $OPTION_SCHEMA as xs:string := "/opera/options/schema";
-declare variable $OPTION_SCHEMATRON as xs:string := "/opera/options/schematron";
-declare variable $OPTION_VALIDATIEPLAN as xs:string := "/opera/options/validatieplan";
-
-declare variable $TYPE_SCHEMA as xs:string := "type/schema";
-declare variable $TYPE_SCHEMATRON as xs:string := "type/schematron";
-declare variable $TYPE_VALIDATIEPLAN as xs:string := "type/validatieplan";
-declare variable $TYPE_CATALOG as xs:string := "type/catalog";
-declare variable $TYPE_VERSIEOVERZICHT as xs:string := "type/versieoverzicht";
-
 declare function helper:set-collections-and-permissions(
     $uri as xs:string,
     $metadata as map:map?,

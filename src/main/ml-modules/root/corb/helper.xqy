@@ -47,14 +47,15 @@ declare function local:get-catalog-name-for-uri(
   $version as xs:string?
 ) as xs:string?
 {
-  xdmp:trace($TRACE-ID, ("get-catalog-name-for-uri", "uri", $uri, "version", $version)),
   let $path := fn:tokenize($uri, "/")
   let $file := $path[last()]
   let $catalog-map := local:find-catalog-uri($path[1 to last() - 1], $file, $version)
-  return
+  return (
+    xdmp:trace($TRACE-ID, ("get-catalog-name-for-uri", "uri", $uri, "version", $version, "catalog-map", $catalog-map)),
     if (fn:exists($catalog-map))
     then  fn:doc(map:get($catalog-map,"catalog-uri"))//cat:uri[@uri eq map:get($catalog-map,"uri")]/@name/fn:data()
     else ()
+  )
 };
 
 (: ----------------------------
@@ -186,11 +187,11 @@ declare private function local:query-name(
   cts:and-query((
     cts:collection-query("type/catalog"),
     cts:element-attribute-range-query(xs:QName("cat:uri"), xs:QName("uri"), "=", $uri),
-    cts:or-query((
-      cts:document-query(cts:uri-match(fn:concat("*/", $version,"/*catalog.xml"))),
-      cts:document-query(cts:uri-match("*/extern-catalog.xml"))
+    cts:document-query((
+      cts:uri-match(fn:concat("*/", $version,"/*catalog.xml")),
+      cts:uri-match("*/extern-catalog.xml"),
+      cts:uri-match("*/imow-catalog.xml")
     ))
-
   ))
 };
 

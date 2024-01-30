@@ -55,3 +55,49 @@ return (
     $key || " actual " || map:get($actual, $key) || " not equal to " || map:get($expected, $key))
 );
 
+import module namespace test="http://marklogic.com/test" at "/test/test-helper.xqy";
+import module namespace helper="http://marklogic.com/schema-validator/lib/validation/helper" at "/lib/validation/helper.xqy";
+
+declare variable $files  as map:map := json:object()
+=>map:with("opdracht.xml", "http://www.overheid.nl/2017/lvbb")
+=>map:with("manifest.xml", "http://www.overheid.nl/2017/lvbb")
+=>map:with("gio-1.xml", ("https://standaarden.overheid.nl/lvbb/stop/aanlevering/",
+  "https://standaarden.overheid.nl/stop/imop/data/"))
+=>map:with("manifest-ow.xml", "http://www.geostandaarden.nl/bestanden-ow/manifest-ow")
+=>map:with("owLocaties.xml", ("http://www.geostandaarden.nl/imow/bestanden/deelbestand",
+  "http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek",
+  "http://www.geostandaarden.nl/imow/locatie"))
+=>map:with("owRegelingsgebied.xml", ("http://www.geostandaarden.nl/imow/bestanden/deelbestand",
+  "http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek",
+  "http://www.geostandaarden.nl/imow/regelingsgebied",
+  "http://www.geostandaarden.nl/imow/locatie"))
+=>map:with("owRegeltekst.xml", ("http://www.geostandaarden.nl/imow/bestanden/deelbestand",
+  "http://www.geostandaarden.nl/bestanden-ow/standlevering-generiek",
+  "http://www.geostandaarden.nl/imow/regels",
+  "http://www.geostandaarden.nl/imow/locatie"))
+=>map:with("publicatie.xml",  ("https://standaarden.overheid.nl/lvbb/stop/aanlevering/",
+  "https://standaarden.overheid.nl/stop/imop/data/",
+  "https://standaarden.overheid.nl/stop/imop/tekst/"));
+xdmp:invoke-function(
+  function() {
+    for $file in map:keys($files)
+    return (
+      test:load-test-file($file, xdmp:database(), fn:concat("/test/", $file), (), ("validation/helper-test"))
+    )
+  }
+),
+xdmp:invoke-function(
+  function() {
+    for $file in map:keys($files)
+    let $actual := helper:get-namespaces-in-scope(fn:doc(fn:concat("/test/", $file)))
+    let $expected := map:get($files, $file)
+    return (
+      xdmp:trace("sv-test", ("actual", $actual)),
+      test:assert-true(every $ns in $actual satisfies ($ns = $expected),
+        fn:concat($file, ": actual not equal to expected: actual:",
+        fn:string-join($actual, ","), " expected:",
+         fn:string-join($expected, ",")))
+    )
+  }
+);
+
